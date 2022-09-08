@@ -1,0 +1,21 @@
+### Create
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+
+{
+  "email": "guilherme@gui.dev",
+  "nome": "Guilherme d",
+  "idade": 18
+}
+
+
+### FindAll
+
+GET http://localhost:3000/users
+
+
+### FindOne
+
+GET http://localhost:3000/users/1
