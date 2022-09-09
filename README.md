@@ -57,9 +57,27 @@ Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário
     
 <div align="center">
     
-![product backlog]()
-![sprint backlog]()
-![user stories]()
+
+![Backlog-produto-1](https://user-images.githubusercontent.com/101107794/189246074-6bfcc019-59f2-41c6-b8e5-a6de9ef48331.png)
+
+
+    
+![Backlog-produto-2](https://user-images.githubusercontent.com/101107794/189246096-d088c9ca-3946-4250-8188-03a1cb1130e9.png)
+
+
+    
+![Backlog-sprint-1](https://user-images.githubusercontent.com/101107794/189246126-5847a6d5-849a-4ffe-8197-293ec97df8d6.png)
+
+
+    
+![User-Stories](https://user-images.githubusercontent.com/101107794/189247400-d302d0c3-616f-451e-9275-6262104b14f9.png)
+
+
+
+
+
+
+
 </div>
   
 → [Voltar ao topo](#topo)
