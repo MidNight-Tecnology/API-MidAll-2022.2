@@ -1,7 +1,235 @@
-*{
+/* GLOBAL */
+* {
     margin: 0;
     padding: 0;
 }
-.coluna{
-    
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+section {
+    width: 100%;
+}
+
+button {
+    background-image: linear-gradient(115deg, #F88673, #A92364);
+    color: white;
+    border: none;
+    padding: 10px 5px 10px 5px;
+    border-radius: 5px;
+}
+
+input,
+textarea {
+    display: flex;
+    border: double 3px transparent;
+    border-radius: 6px;
+    background-image: linear-gradient(white, white),
+        linear-gradient(115deg, #F88673, #A92364);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    text-align: justify;
+
+}
+
+input::placeholder,
+textarea::placeholder {
+    text-align: justify;
+    padding-top: 80px;
+    padding-left: 10px;
+}
+
+.gradient {
+    background-image: linear-gradient(115deg, #F88673, #A92364);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+
+.container {
+    display: flex;
+}
+
+/* ALL USE */
+.container nav {
+    background-image: linear-gradient(115deg, #F88673, #A92364);
+    width: 250px;
+    height: 100vh;
+    border-radius: 0 0 150px 0;
+}
+
+.container nav ul {
+    list-style: none;
+}
+
+.container nav ul .imagem {
+    width: 200px;
+    height: 145px;
+    padding: 5px 18px;
+}
+
+.container nav ul li:hover {
+    background-color: #fff;
+}
+
+.container nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding-top: 35px;
+    padding: 16px 5px;
+    font-size: 21px;
+}
+
+.container nav ul li a:hover {
+    background-image: linear-gradient(115deg, #F88673, #A92364);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+
+
+.container nav ul .imagem1 {
+    position: absolute;
+    width: 60px;
+    bottom: 0;
+    padding: 0 5px;
+}
+
+
+/* CADASTRO DE ASSOCIADOS */
+.cadastro_user .coluna {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cadastro_user .coluna h1 {
+    text-align: center;
+    width: 100%;
+    padding-top: 25px;
+    color: #A92364;
+    font-size: 48px;
+}
+
+.cadastro_user .coluna form {
+    padding-top: 25px;
+}
+
+.cadastro_user .coluna form .td {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.cadastro_user .coluna form .td .foto_perfil {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.cadastro_user .coluna form .td .foto_perfil img {
+    width: 100%;
+    display: flex;
+
+}
+
+.cadastro_user .coluna form .td .foto_perfil button {
+    display: flex;
+    margin-top: 20px;
+    padding: 10px 5px 10px 5px;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.cadastro_user .coluna form .td .info input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+/* ALTERAR EMAILS */
+.alterar_emails {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.alterar_emails .column {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+}
+
+.alterar_emails .column .title {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 120px;
+}
+
+.alterar_emails .column .title h1 {
+    width: 100%;
+    font-size: 50px;
+    height: 120px;
+    padding-top: 30px;
+
+}
+
+.alterar_emails .column .inputs_alt {
+    width: 100%;
+    height: 100%;
+}
+
+.alterar_emails .column .inputs_alt .nome_assoc,
+.alterar_emails .column .inputs_alt .ass,
+.alterar_emails .column .inputs_alt .descrit {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.alterar_emails .column .inputs_alt .nome_assoc input {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.alterar_emails .column .inputs_alt .ass input {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.alterar_emails .column .inputs_alt .descrit textarea {
+    resize: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 200px;
+    width: 100%;
+}
+
+.alterar_emails .column .align_buts {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.alterar_emails .column .align_buts button {
+    width: 300px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+/* CLIPPING DE EMAILS */
+/* GERENCIAR ASSOCIADOS */

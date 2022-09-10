@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
     <title>MidAll</title>
 </head>
-<body>
+
+<body class="container">
     <nav>
         <ul>
+            <img src="../img/MIDALL NOVOb.png" class="imagem">
             <li><a href="C,Email.html">Clipping de Email</a></li>
             <li><a href="G,Associados.html">Gerenciar Associados</a></li>
             <li><a href="cadastros.html">Cadastrar Associados</a></li>
+            <img src="../img/MIDALL NOVOb.png" class="imagem1">
         </ul>
     </nav>
-    <section>
+    <section class="cadastro_user">
         <div class="coluna">
-            <h1>Cadastrar Associados</h1>
+            <h1 class="gradient">Cadastrar Associados</h1>
             <form>
-                <img src="img/foto.jpg">
-                <input type="text" placeholder="Nome">
-                <br>
-                <input type="text">
-                <br>
-                <input type="text">
-                <br>
-                <input type="date">
-                <input type="number">
-                <br>
-                <input type="tel">
-                <input type="number">
-                <input type="number">
-                <br>
-                <input type="email">
+                <div class="td">
+                    <div class="foto_perfil">
+                        <img src="../img/foto.jpg">
+                        <button>Upload</button>
+                    </div>
+                    <div class="info">
+                        <input type="text" placeholder="Nome">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <input type="text">
+                        <br>
+                        <div class="ladin">
+                            <input type="date">
+                            <input type="number">
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <div class="info2">
+                    <input type="tel">
+                    <input type="number">
+                    <input type="number">
+                    <br>
+                    <input type="email">
+
+                    <div>
+                        <button>Cancelar</button>
+                        <button>Limpar</button>
+                        <button>Cadastrar</button>
+                    </div>
             </form>
         </div>
     </section>
 </body>
+
 </html>
