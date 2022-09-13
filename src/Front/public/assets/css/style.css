@@ -21,7 +21,9 @@ button {
 }
 
 input,
-textarea {
+textarea, 
+.borda,
+.imag{
     display: flex;
     border: double 3px transparent;
     border-radius: 6px;
@@ -30,7 +32,7 @@ textarea {
     background-origin: border-box;
     background-clip: padding-box, border-box;
     text-align: justify;
-
+    outline: 0;
 }
 
 input::placeholder,
@@ -46,6 +48,7 @@ textarea::placeholder {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: black;
+    outline: 0;
 }
 
 .container {
@@ -102,15 +105,31 @@ textarea::placeholder {
 
 /* CADASTRO DE ASSOCIADOS */
 .cadastro_user .coluna {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+.itens-cadastro{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.itens-cadastro input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 30%;
+    padding-left: 10px;
+}
+
 .cadastro_user .coluna h1 {
     text-align: center;
     width: 100%;
-    padding-top: 25px;
+    padding-top: 30px;
     color: #A92364;
     font-size: 48px;
 }
@@ -122,15 +141,16 @@ textarea::placeholder {
 .cadastro_user .coluna form .td {
     display: flex;
     justify-content: left;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .cadastro_user .coluna form .td .foto_perfil {
-    width: 200px;
+    width: 20%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 .cadastro_user .coluna form .td .foto_perfil img {
@@ -140,18 +160,70 @@ textarea::placeholder {
 }
 
 .cadastro_user .coluna form .td .foto_perfil button {
-    display: flex;
+
     margin-top: 20px;
-    padding: 10px 5px 10px 5px;
+    padding: 0;
     justify-content: space-around;
-    width: 80%;
+    width: 100%;
+    height: 40px;
 }
 
 .cadastro_user .coluna form .td .info input {
     width: 100%;
-    margin-bottom: 10px;
+}
+.cadastro_user .coluna .align_buts {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.cadastro_user .coluna .align_buts button {
+    width: 30%;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+.cadastro_user .coluna .info {
+    width: 100%;
+    height: 100%;
+}
+.cadastro_user .coluna .info  input {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.info_lado{
+    display: flex;
+    gap: 50px;
+}
+.info_email{
+    padding-top: 25px;
+}
+.info_email input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    padding-left: 10px;
 }
 
+.foto_perfil{
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.info2{
+    width: 100%;
+}
+
+.cadastro_user{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 
 
 /* ALTERAR EMAILS */
@@ -203,12 +275,14 @@ textarea::placeholder {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 .alterar_emails .column .inputs_alt .ass input {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 .alterar_emails .column .inputs_alt .descrit textarea {
@@ -217,6 +291,7 @@ textarea::placeholder {
     padding-bottom: 10px;
     height: 200px;
     width: 100%;
+    padding-left: 10px;
 }
 
 .alterar_emails .column .align_buts {
@@ -232,4 +307,53 @@ textarea::placeholder {
 }
 
 /* CLIPPING DE EMAILS */
+
+.clipping_emails .coluna h1{ 
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    font-size: 48px;
+    padding-bottom: 22px;
+}
+
+.clipping_emails .coluna{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.borda{
+    height: 100%;
+    width: 90%;
+    padding: 15px;
+}
+
+.imag img{
+    width: 95px;
+    height: 95px;
+}
+
+h2{
+    padding-left: 20px;
+}
+
+.dados h1{
+    padding-right: 20px;
+}
 /* GERENCIAR ASSOCIADOS */
+
+.Gerenciar_Associados .coluna h1{ 
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    font-size: 48px;
+    padding-bottom: 22px;
+}
+
+.Gerenciar_Associados .coluna{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
