@@ -3,7 +3,7 @@ const app = express();
 
 
 app.get("/", function (req, res) {
-    res.render("./templates/login")
+    res.sendFile(__dirname + "/templates/login.html")
 })
 
 //Faz o app rodar
