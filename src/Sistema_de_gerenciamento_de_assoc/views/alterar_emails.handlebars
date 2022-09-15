@@ -14,6 +14,7 @@
             <div class="title">
                 <h1 class="gradient">Alterar email</h1>
             </div>
+            <form action="/sistema/altera_email" method="post">
             <div class="inputs_alt">
                 <div class="nome_assoc">
                     <input type="text" placeholder="Nome do Associado...">
@@ -26,10 +27,11 @@
                 </div>
             </div>
             <div class="align_buts">
-                <button>Apagar</button>
-                <button>Limpar</button>
-                <button>Salvar</button>
+                <button onclick="voltar()">Apagar</button> {{!-- criar função para voltar em todas as pags --}}
+                <button type="reset">Limpar</button>
+                <button type="submit">Salvar</button>
             </div>
+            </form>
         </div>
 
 

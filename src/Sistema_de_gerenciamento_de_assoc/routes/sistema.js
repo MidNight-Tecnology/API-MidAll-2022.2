@@ -21,6 +21,15 @@ router.get('/gerenc_assoc', (req, res) => {
 router.post('/cadastrar_assoc', (req, res) => {
     res.redirect('gerenc_assoc')
 })
+router.post('/gerenc_associ', (req, res) => {
+    res.redirect('cadastro_assoc') //trocar para cadastro_assoc_alt
+})
+router.post('/alt_email', (req, res) => {
+    res.redirect('alterar_emails')
+})
+router.post('/altera_email', (req, res) => {
+    res.redirect('gerenc_assoc')
+})
 
 
 

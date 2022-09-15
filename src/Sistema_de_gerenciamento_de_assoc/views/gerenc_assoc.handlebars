@@ -12,16 +12,27 @@
         <div class="coluna">
             <h1 class="gradient">Gerenciar Associados</h1>
             <div class="borda">
-                <div class="imag">
-                    <img src="../assets/img/foto.jpg">
-                </div>
-                <div class="dados">
-                    <h2>Nome:
-                        Telefone:
-                        Endereço:
-                    </h2>
+                <form action="/sistema/gerenc_associ" method="post">
+                    <label for="{{id}}"></label>
+                    <div class="imag">
+                        <img src="../assets/img/{{link_foto}}">
+                    </div>
+                    <div class="dados">
 
-                </div>
+                        <input type="checkbox" id="{{id}}" value="{{id}}">
+                        <div class="nome_assoc">
+                            <p>{{nome}} teste</p>
+                        </div>
+                        <div class="desc">
+                            <p>{{desc}} teste</p>
+                        </div>
+
+                    </div>
+                    </label>
             </div>
+            <div class="align_buts">
+                <button type="submit">Alterar</button>
+            </div>
+            </form>
     </section>
 </div>
