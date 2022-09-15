@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-body {
+.fundinho {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('../assets/img/fundo.jpeg');
+    background-image: url('../img/fundo.jpeg');
     background-size: contain;
     background-attachment: fixed;
     display: flex;
@@ -16,30 +16,31 @@ body {
     background-repeat: no-repeat;
 }
 
-div {
+.fundinho div {
     position: absolute;
     top: 27%;
     left: 57%;
     color: #A92364;
     font-size: 20px;
-}
+} 
 
-input {
+.fundinho input {
     padding: 10px;
     font-size: 14px;
     border-color: #A92364;
     border-radius: 10px;
     outline: none;
     width: 88%;
-}
+} 
+
 .info {
     text-align: center;
 }
 
-button {
+.fundinho button {
     background-color: #A92364;
     padding: 6px;
-    /* border: none; */
+    border: none;
     color: white;
     border-radius: 10px;
     width: 24%;
