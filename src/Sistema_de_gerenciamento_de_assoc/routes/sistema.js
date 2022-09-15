@@ -18,7 +18,9 @@ router.get('/gerenc_assoc', (req, res) => {
 
 
 //Redirects -- FOCO, FORÇA E FÉ
-
+router.post('/cadastrar_assoc', (req, res) => {
+    res.redirect('gerenc_assoc')
+})
 
 
 

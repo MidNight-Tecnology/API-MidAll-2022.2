@@ -11,7 +11,7 @@
     <section class="cadastro_user">
         <div class="coluna">
             <h1 class="gradient">Cadastrar Associados</h1>
-            <form>
+            <form action="/sistema/cadastrar_assoc" method="POST">
                 <div class="td">
                     <div class="foto_perfil">
                         <img src="../assets/img/foto.jpg" />
@@ -42,9 +42,8 @@
                         <input type="email" placeholder="Email" />
                     </div>
                     <div class="align_buts">
-                        <button>Cancelar</button>
-                        <button>Limpar</button>
-                        <button>Cadastrar</button>
+                        <button type="reset">Limpar</button>
+                        <button type="submit">Cadastrar</button>
                     </div>
                 </div>
             </form>
