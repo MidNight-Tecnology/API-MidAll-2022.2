@@ -13,22 +13,22 @@
             <h1 class="gradient">Gerenciar Associados</h1>
             <div class="borda">
                 <form action="/sistema/gerenc_associ" method="post">
+                {{#each Assoc}}
                     <label for="{{id}}"></label>
                     <div class="imag">
-                        <img src="../assets/img/{{link_foto}}">
+                        <img src="../assets/img/foto.jpg">
                     </div>
                     <div class="dados">
-
                         <input type="checkbox" id="{{id}}" value="{{id}}">
                         <div class="nome_assoc">
-                            <p>{{nome}} teste</p>
+                            <p>{{nome}}</p>
                         </div>
                         <div class="desc">
-                            <p>{{desc}} teste</p>
+                            <p>{{tel}}</p>
                         </div>
-
                     </div>
                     </label>
+                {{/each}}
             </div>
             <div class="align_buts">
                 <button type="submit">Alterar</button>

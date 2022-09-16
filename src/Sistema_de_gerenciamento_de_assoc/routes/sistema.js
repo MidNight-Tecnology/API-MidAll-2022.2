@@ -8,7 +8,7 @@ const Users = require('../models/Users')
 const Associado = require('../models/Associado')
 
 
-//Renders -- AMEM DEU CERTO
+//Renders -- Sem nada
 router.get('/clipping', (req, res) => {
     res.render('clipping')
 })
@@ -19,12 +19,10 @@ router.get('/cadastro_assoc', (req, res) => {
     res.render('cadastro_assoc')
 
 })
-router.get('/gerenc_assoc', (req, res) => {
-    res.render('gerenc_assoc')
-})
 
 
-//Redirects -- FOCO, FORÇA E FÉ
+
+//Redirects -- FOCO, FORÇA E FÉ  -- Sem nada
 router.post('/gerenc_associ', (req, res) => {
     res.redirect('cadastro_assoc') //trocar para cadastro_assoc_alt
 })
@@ -78,9 +76,19 @@ router.post('/cadastrar_assoc', (req, res) => {
         estado_cv: estado_civil,
         inst_ens: inst_ensino,
         email: email,
-    }).then(function(result) {
+    }).then(function (result) {
         console.log('Cadastrado')
         res.redirect('gerenc_assoc')
     });
 })
+
+router.get('/gerenc_assoc', (req, res) => {
+    const banco = Associado.findAll().then(function(Assoc) {
+        console.log('FOI PORRA')
+        res.render('gerenc_assoc', { Assoc: Assoc })
+    })
+
+})
+
+
 module.exports = router
