@@ -1,3 +1,4 @@
+const { Sequelize } = require('sequelize');
 const db = require('./db')
 const Associado = db.sequelize.define('associado', {
     id: {
@@ -14,29 +15,37 @@ const Associado = db.sequelize.define('associado', {
         type: db.DataTypes.STRING,
         allowNull: false,
     },
-    complemento: {
+    comp: {
         type: db.DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
-    data_nasc: {
-        type: db.DataTypes.STRING,
+    nasc: {
+        type: db.DataTypes.DATE,
         allowNull: false,
     },
     cep: {
         type: db.DataTypes.STRING,
         allowNull: false,
     },
-    telefone: {
+    tel: {
         type: db.DataTypes.STRING,
         allowNull: false,
     },
-    CPF: {
+    cpf: {
         type: db.DataTypes.STRING,
         allowNull: false,
     },
-    RG: {
+    rg: {
         type: db.DataTypes.STRING,
         allowNull: false,
+    },
+    estado_cv: {
+        type: db.DataTypes.STRING,
+        allowNull: false,
+    },
+    inst_ens: {
+        type: db.DataTypes.STRING,
+        allowNull:false,
     },
     email: {
         type: db.DataTypes.STRING,
@@ -46,6 +55,6 @@ const Associado = db.sequelize.define('associado', {
 })
 
 // Sincronizar uma vez somente para criar as tabelas no db e depois comentar
-// Associado.sync({ force: true });
+//Associado.sync({ force: true });
 
 module.exports = Associado

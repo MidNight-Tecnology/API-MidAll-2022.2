@@ -245,6 +245,11 @@ textarea::placeholder {
     padding: 12px;
 }
 
+.cadastro_user .coluna .info2 .novas_infos input {
+    width: 45%;
+    padding: 12px;
+}
+
 /* ALTERAR EMAILS */
 .alterar_emails {
     display: flex;

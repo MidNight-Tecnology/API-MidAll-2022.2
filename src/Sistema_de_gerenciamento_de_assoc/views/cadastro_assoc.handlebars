@@ -20,22 +20,22 @@
                     <div class="info">
                         <input type="text" placeholder="Nome" name="nome" />
                         <br />
-                        <input type="text" placeholder="Endereço" name="endeco" />
+                        <input type="text" placeholder="Endereço" name="endereco" />
                         <br />
                         <input type="text" placeholder="Complemento" name="comp" />
                         <br />
                         <div class="info_lado">
                             <input type="date" placeholder="Data de Nascimento" name="nasc" />
-                            <input type="number" placeholder="CEP" name="cep" />
+                            <input type="text" placeholder="CEP" name="cep" />
                         </div>
                         <br />
                     </div>
                 </div>
                 <div class="info2">
                     <div class="itens-cadastro">
-                        <input type="tel" placeholder="Telefone" name="tel" />
-                        <input type="number" placeholder="CPF" name="cpf" />
-                        <input type="number" placeholder="RG" name="rg" />
+                        <input type="text" placeholder="Telefone" name="tel" />
+                        <input type="text" placeholder="CPF" name="cpf" />
+                        <input type="text" placeholder="RG" name="rg" />
                     </div>
                     <div class="novas_infos">
                         <select name="estado_cv" id="estado_cv">
@@ -43,12 +43,10 @@
                             <option value="Solteiro(a)">Solteiro(a)</option>
                             <option value="Viúvo(a)">Viúvo(a)</option>
                         </select>
-                        <select name="inst_ens" id="inst_ens">
-                            <option value="{{id}} id">{{nome_inst}}nome</option>
-                        </select>
+                        <input type="text" name="inst_ens" placeholder="Instituição de Ensino">
                     </div>
                     <div class="info_email">
-                        <input type="email" placeholder="Email" name="email" />
+                        <input type="text" placeholder="Email" name="email" />
                     </div>
                     <div class="align_buts">
                         <button type="reset">Limpar</button>

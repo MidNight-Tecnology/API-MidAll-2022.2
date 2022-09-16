@@ -5,6 +5,7 @@ const router = express.Router()
 
 //Imports
 const Users = require('../models/Users')
+const Associado = require('../models/Associado')
 
 
 //Renders -- AMEM DEU CERTO
@@ -16,6 +17,7 @@ router.get('/alterar_emails', (req, res) => {
 })
 router.get('/cadastro_assoc', (req, res) => {
     res.render('cadastro_assoc')
+
 })
 router.get('/gerenc_assoc', (req, res) => {
     res.render('gerenc_assoc')
@@ -23,9 +25,6 @@ router.get('/gerenc_assoc', (req, res) => {
 
 
 //Redirects -- FOCO, FORÇA E FÉ
-router.post('/cadastrar_assoc', (req, res) => {
-    res.redirect('gerenc_assoc')
-})
 router.post('/gerenc_associ', (req, res) => {
     res.redirect('cadastro_assoc') //trocar para cadastro_assoc_alt
 })
@@ -55,5 +54,33 @@ router.post('/logar', (req, res) => {
     })
 })
 
-
+router.post('/cadastrar_assoc', (req, res) => {
+    var nome = req.body.nome;
+    var endereco = req.body.endereco;
+    var comp = req.body.comp;
+    var nasc = req.body.nasc;
+    var cep = req.body.cep;
+    var tel = req.body.tel;
+    var cpf = req.body.cpf;
+    var rg = req.body.rg;
+    var estado_civil = req.body.estado_cv;
+    var inst_ensino = req.body.inst_ens;
+    var email = req.body.email;
+    Associado.create({
+        nome: nome,
+        endereco: endereco,
+        comp: comp,
+        nasc: nasc,
+        cep: cep,
+        tel: tel,
+        cpf: cpf,
+        rg: rg,
+        estado_cv: estado_civil,
+        inst_ens: inst_ensino,
+        email: email,
+    }).then(function(result) {
+        console.log('Cadastrado')
+        res.redirect('gerenc_assoc')
+    });
+})
 module.exports = router
