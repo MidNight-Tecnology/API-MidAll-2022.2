@@ -1,5 +1,10 @@
 const express = require("express")
+const { where } = require("sequelize")
 const router = express.Router()
+
+
+//Imports
+const Users = require('../models/Users')
 
 
 //Renders -- AMEM DEU CERTO
@@ -32,7 +37,23 @@ router.post('/altera_email', (req, res) => {
 })
 
 
-
+//CRUD
+router.post('/logar', (req, res) => {
+    var email = req.body.email;
+    var senha = req.body.senha;
+    const banco = Users.findOne({
+        where: {
+            email: email,
+            senha: senha
+        }
+    }).then(function (result) {
+        if (result) {
+            res.redirect('clipping')
+        } else {
+            res.redirect('../')
+        }
+    })
+})
 
 
 module.exports = router

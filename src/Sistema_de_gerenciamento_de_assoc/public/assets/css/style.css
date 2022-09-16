@@ -22,6 +22,7 @@ button {
 
 input,
 textarea,
+select,
 .borda,
 .imag {
     display: flex;
@@ -232,6 +233,17 @@ textarea::placeholder {
     justify-content: space-around;
 }
 
+.cadastro_user .coluna .info2 .novas_infos {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cadastro_user .coluna .info2 .novas_infos select {
+    width: 45%;
+    padding: 12px;
+}
 
 /* ALTERAR EMAILS */
 .alterar_emails {

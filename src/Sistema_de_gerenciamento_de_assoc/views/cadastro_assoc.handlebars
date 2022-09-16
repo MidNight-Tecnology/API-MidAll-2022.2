@@ -15,30 +15,40 @@
                 <div class="td">
                     <div class="foto_perfil">
                         <img src="../assets/img/foto.jpg" />
-                        <button>Upload</button>
+                        <input type="file"></input>
                     </div>
                     <div class="info">
-                        <input type="text" placeholder="Nome" />
+                        <input type="text" placeholder="Nome" name="nome" />
                         <br />
-                        <input type="text" placeholder="Endereço" />
+                        <input type="text" placeholder="Endereço" name="endeco" />
                         <br />
-                        <input type="text" placeholder="Complemento" />
+                        <input type="text" placeholder="Complemento" name="comp" />
                         <br />
                         <div class="info_lado">
-                            <input type="date" placeholder="Data de Nascimento" />
-                            <input type="number" placeholder="CEP" />
+                            <input type="date" placeholder="Data de Nascimento" name="nasc" />
+                            <input type="number" placeholder="CEP" name="cep" />
                         </div>
                         <br />
                     </div>
                 </div>
                 <div class="info2">
                     <div class="itens-cadastro">
-                        <input type="tel" placeholder="Telefone" />
-                        <input type="number" placeholder="CPF" />
-                        <input type="number" placeholder="RG" />
+                        <input type="tel" placeholder="Telefone" name="tel" />
+                        <input type="number" placeholder="CPF" name="cpf" />
+                        <input type="number" placeholder="RG" name="rg" />
+                    </div>
+                    <div class="novas_infos">
+                        <select name="estado_cv" id="estado_cv">
+                            <option value="Casado(a)">Casado(a)</option>
+                            <option value="Solteiro(a)">Solteiro(a)</option>
+                            <option value="Viúvo(a)">Viúvo(a)</option>
+                        </select>
+                        <select name="inst_ens" id="inst_ens">
+                            <option value="{{id}} id">{{nome_inst}}nome</option>
+                        </select>
                     </div>
                     <div class="info_email">
-                        <input type="email" placeholder="Email" />
+                        <input type="email" placeholder="Email" name="email" />
                     </div>
                     <div class="align_buts">
                         <button type="reset">Limpar</button>

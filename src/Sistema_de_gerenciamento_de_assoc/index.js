@@ -34,3 +34,8 @@ db.sequelize.authenticate().then(function () {
 }).catch(function (erro) {
     console.log("Erro ao conectar: " + erro)
 });
+
+
+module.exports = {
+    bodyparser: bodyparser
+}
