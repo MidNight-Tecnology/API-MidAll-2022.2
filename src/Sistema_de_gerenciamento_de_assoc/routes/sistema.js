@@ -84,7 +84,6 @@ router.post('/cadastrar_assoc', (req, res) => {
 
 router.get('/gerenc_assoc', (req, res) => {
     const banco = Associado.findAll().then(function(Assoc) {
-        console.log('FOI PORRA')
         res.render('gerenc_assoc', { Assoc: Assoc })
     })
 
