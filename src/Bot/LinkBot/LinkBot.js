@@ -1,68 +1,77 @@
 // bibliotecas
-const pup = require('puppeteer');  //npm i cheerio puppeteer
-const cheerio = require('cheerio');
-const readlineSync = require('readline-sync');// npm install readline-sync
+const pup = require('puppeteer');  //npm i puppeteer
+const cheerio = require('cheerio'); //npm i cheerio
+const db = require('./models/db');
+const Links_de_pdf = require('./models/link_de_pdf');
+const Links_de_pdf_filtrado = require('./models/link_de_pdf_filtrado');
 
+console.log('<<  Juninho ON! 🤖 >> ')
+//Testa Conexão com o db
+db.sequelize.authenticate().then(function () {
+    console.log("Conectado com sucesso!")
+}).catch(function (erro) {
+    console.log("Erro ao conectar: " + erro)
+});
 
-console.log ('<<  Juninho ON! >> 🤖')
-const url = "https://www.imprensaoficial.com.br/DO/BuscaDO2001Resultado_11_3.aspx?filtropalavraschave=+Rodrigo+garcia+&f=xhitlist&xhitlist_vpc=first&xhitlist_x=Advanced&xhitlist_q=%5bfield+%27dc%3adatapubl%27%3a%3E%3d15.09.2022<%3d15.09.2022%5d(Rodrigo2%bgarcia)&filtrogrupos=Cidade+de+SP%2c+Executivo+&xhitlist_mh=9999&filtrodatafimsalvar=20220915&filtroperiodo=15%2f09%2f2022+a+15%2f09%2f2022&filtrodatainiciosalvar=20220915&filtrogrupossalvar=Cidade+de+SP%2c+Executivo+&xhitlist_hc=%5bXML%5d%5bKwic%2c3%5d&xhitlist_vps=15&filtrotodosgrupos=False&xhitlist_d=Cidade+de+SP%2c+Executivo+&filtrotipopalavraschavesalvar=UP&xhitlist_s=&xhitlist_sel=title%3bField%3adc%3atamanho%3bField%3adc%3adatapubl%3bField%3adc%3acaderno%3bitem-bookmark%3bhit-context&xhitlist_xsl=xhitlist.xsl";
+const url = [[]];
+const banco = Links_de_pdf.findAll().then(function (Link) {
+    Link.forEach(element => {
+        url.push([element[0], element[1], element[2]])
+    });
 
+})
 
+let list = [];
 let c = 1;
+let tramontina = [];
+
+// função assincrona 
+url.forEach(element => {
+    (async () => {
+        const browser = await pup.launch({ headless: true });// chromium true pra nao mostrar abrindo
+        const page = await browser.newPage();
+        console.log('iniciei!');
+        await page.goto(element[1]);
+        console.log('fui pra URL!');
+
+        await page.waitForSelector('.joyride-content-wrapper');
+        await page.click('.joyride-content-wrapper > a', '.joyride-content-wrapper > a'); //
 
 
-(async () => {
-    const browser = await pup.launch({headless: false});
-    const page = await browser.newPage();
-    console.log('iniciei!');
+        await page.click('#content_dtgResultado_lblData_0');
 
-    await page.goto(url);
-    console.log('fui pra URL!');
+        // const links = await page.$$eval('.card-header > a', el => el.map(link => link.href));
+        const links = await (await page.$$eval('.card-body > .card-text> a', el => el.map(link => link.href))); //pega todos os links dos cards
+        links.shift(); // apaga o primeiro indice da lista
 
-    await page.waitForSelector('.joyride-content-wrapper');
-    await page.click('.joyride-content-wrapper > a', '.joyride-content-wrapper > a');
-    
+        //console.log(typeof(links))
 
-    await page.click('#content_dtgResultado_lblData_0');
+        const obj = {};
 
-    const links = await page.$$eval('.card-header > a', el => el.map(link => link.href));
-    // console.log (links)
+        for (const link of links) {
+            if (c === 15) continue; //limitador de paginas
 
-    //for mostrando a pagina com a variavel contando e esperando pra selecionar o link indo pra proxima com o goto
-    for(const link of links){
-        if (c === 15) continue;
-        console.log('Pagina', c);
-        await page.goto(link);
-        // await page.waitForSelector('.card-header > .card-title.h5');
+            console.log('Pagina', c); //contador de paginas
+            obj.link = link;
 
-        // //classe de titulo pra esperar o titulo carregar e mostrar ele na tela *pego pela classe no site do ml
-        // const title = await page.$eval('.card-header > card-title.h5', element => element.innerText);
+            list.push(obj.link); //joga os links do objeto dentro da lista
 
-        // //mostra o preço do elemento na tela *pego pela classe no site do ml
-        // const descricao = await page.$eval('.card-body > a', element => element.innerText);
+            cort = obj.link.split('aspx'); //corta o link ate a palavra aspx do link
 
-        //pegar o elemento do vendedor e se nao tiver o valor retorna nulo
-        // const seller = await page.evaluate( ()=>{
-        //     const el = document.querySelector('.ui-pdp-seller__link-trigger');
-        //     if(!el) return null
-        //     return el.innerText;
+            console.log(cort[1], '\n'); // cortador pega a partir do 1 indice.
+            const banco2 = Links_de_pdf_filtrado.create({
+                id: element[0],
+                link: cort[1],
+                id_assoc: element[2]
+            })
 
-        // })
+            c++;
+        };
 
-        // const obj = {};
-        // obj.title = title;
-        // obj.descricao = descricao;
-        // // // se seller nao é nulo (?) e se tiver algum valor vai ser =  seller, senao retorna vazio
-        // // // (seller ? obj.seller = seller : '');
-        // obj.link=link;
-        // list.push(obj);
 
-        //contador aumenta 1 no final do for
-        c++;
-    }
-    console.log(list);
+        await page.waitForTimeout(3000);
 
-    await page.waitForTimeout(3000);
+        await browser.close();
+    })();
 
-    //await browser.close();
-})();
+});

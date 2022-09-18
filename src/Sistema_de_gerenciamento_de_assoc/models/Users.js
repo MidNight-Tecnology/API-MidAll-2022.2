@@ -22,9 +22,9 @@ const Users = db.sequelize.define('users', {
 // Sincronizar uma vez somente para criar as tabelas no db e depois comentar
 // Users.sync({ force: true });
 
-// Users.create({
-//     nome: 'Guilherme Duarte',
-//     email: 'gui@gui',
-//     senha: '1234',
-// });
+            // Users.create({
+            //     nome: 'Guilherme Duarte',
+            //     email: 'gui@gui',
+            //     senha: '1234',
+            // });
 module.exports = Users
