@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize');
 const db = require('./db')
-const Links_de_pdf_filtrado = db.sequelize.define('links_de_pdf_filtrado', {
+const Links_de_pdf_filtrados = db.sequelize.define('links_de_pdf_filtrados', {
     id: {
         type: db.DataTypes.INTEGER,
         autoIncrement: true,
@@ -18,6 +18,6 @@ const Links_de_pdf_filtrado = db.sequelize.define('links_de_pdf_filtrado', {
 })
 
 // Sincronizar uma vez somente para criar as tabelas no db e depois comentar
-// Links_de_pdf_filtrado.sync({ force: true });
+// Links_de_pdf_filtrados.sync({ force: true });
 
-module.exports = Links_de_pdf_filtrado
+module.exports = Links_de_pdf_filtrados

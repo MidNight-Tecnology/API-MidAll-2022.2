@@ -1,9 +1,17 @@
 // bibliotecas
 const pup = require('puppeteer');  //npm i puppeteer
 const cheerio = require('cheerio'); //npm i cheerio
+const readlineSync = require('readline-sync'); // npm install readline-sync
+
 const db = require('./models/db');
-const Links_de_pdf = require('./models/link_de_pdf');
+const Links_de_pdfs = require('./models/link_de_pdf');
 const Links_de_pdf_filtrado = require('./models/link_de_pdf_filtrado');
+const { link } = require('fs');
+
+
+const searchFor = readlineSync.question('informe o link desejado: ')
+const searchNome = readlineSync.question('informe o Nome desejado: ')
+
 
 console.log('<<  Juninho ON! 🤖 >> ')
 //Testa Conexão com o db
@@ -13,25 +21,20 @@ db.sequelize.authenticate().then(function () {
     console.log("Erro ao conectar: " + erro)
 });
 
-const url = [[]];
-const banco = Links_de_pdf.findAll().then(function (Link) {
-    Link.forEach(element => {
-        url.push([element[0], element[1], element[2]])
-    });
-
-})
+const url = searchFor;
+const nomes = searchNome;
+var conta_nome = 0;
 
 let list = [];
 let c = 1;
 let tramontina = [];
 
 // função assincrona 
-url.forEach(element => {
     (async () => {
-        const browser = await pup.launch({ headless: true });// chromium true pra nao mostrar abrindo
+        const browser = await pup.launch({ headless: false });// chromium true pra nao mostrar abrindo
         const page = await browser.newPage();
         console.log('iniciei!');
-        await page.goto(element[1]);
+        await page.goto(url);
         console.log('fui pra URL!');
 
         await page.waitForSelector('.joyride-content-wrapper');
@@ -60,12 +63,12 @@ url.forEach(element => {
 
             console.log(cort[1], '\n'); // cortador pega a partir do 1 indice.
             const banco2 = Links_de_pdf_filtrado.create({
-                id: element[0],
                 link: cort[1],
-                id_assoc: element[2]
+                assoc_nome: nomes[conta_nome]
             })
 
             c++;
+            conta_nome++
         };
 
 
@@ -73,5 +76,3 @@ url.forEach(element => {
 
         await browser.close();
     })();
-
-});
