@@ -9,29 +9,28 @@ const Associado = require('../models/Associado')
 
 
 //Renders -- Sem nada
-router.get('/clipping', (req, res) => {
-    res.render('clipping')
-})
 router.get('/alterar_emails', (req, res) => {
     res.render('alterar_emails')
 })
 router.get('/cadastro_assoc', (req, res) => {
     res.render('cadastro_assoc')
-
+})
+router.get('/alterar_assoc',(req, res) =>{
+    res.render('alterar_assoc')
 })
 
 
 
 //Redirects -- FOCO, FORÇA E FÉ  -- Sem nada
 router.post('/gerenc_associ', (req, res) => {
-    res.redirect('cadastro_assoc') //trocar para cadastro_assoc_alt
+    res.redirect('alterar_assoc') //trocar para cadastro_assoc_alt
 })
-router.post('/alt_email', (req, res) => {
-    res.redirect('alterar_emails')
-})
-router.post('/altera_email', (req, res) => {
-    res.redirect('gerenc_assoc')
-})
+// router.post('/alt_email', (req, res) => {
+//     res.redirect('alterar_emails')
+// })
+// router.post('/altera_email', (req, res) => {
+//     res.redirect('gerenc_assoc')
+// })
 
 
 //CRUD
@@ -85,6 +84,12 @@ router.post('/cadastrar_assoc', (req, res) => {
 router.get('/gerenc_assoc', (req, res) => {
     const banco = Associado.findAll().then(function(Assoc) {
         res.render('gerenc_assoc', { Assoc: Assoc })
+    })
+
+})
+router.get('/clipping', (req, res) => {
+    const banco = Associado.findAll().then(function(Assoc) {
+        res.render('clipping', { Assoc: Assoc })
     })
 
 })

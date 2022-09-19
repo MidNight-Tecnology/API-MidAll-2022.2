@@ -56,6 +56,19 @@ textarea::placeholder {
     display: flex;
 }
 
+.borda {
+    height: 500px;
+    width: 90%;
+    padding: 15px;
+    overflow: overlay;
+}
+
+.logo3{
+    padding-top: 10px;
+    width: 42px;
+    height: 35px
+}
+
 /* ALL USE */
 .container nav {
     background-image: linear-gradient(115deg, #F88673, #A92364);
@@ -117,7 +130,6 @@ textarea::placeholder {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .itens-cadastro input {
@@ -136,7 +148,8 @@ textarea::placeholder {
 }
 
 .cadastro_user .coluna form {
-    padding-top: 25px;
+    padding-top: 2px;
+    width: 140vh;
 }
 
 .cadastro_user .coluna form .td {
@@ -183,7 +196,7 @@ textarea::placeholder {
     width: 30%;
     cursor: pointer;
     margin-bottom: 30px;
-    margin-top: 100px;
+    margin-top: 5vh;
 }
 
 .cadastro_user .coluna .info {
@@ -214,7 +227,7 @@ textarea::placeholder {
     padding-left: 10px;
 }
 
-.foto_perfil {
+/* .foto_perfil { 
     display: flex;
     flex-direction: row;
     top: 0;
@@ -222,6 +235,33 @@ textarea::placeholder {
     left: 0;
     right: 0;
 }
+
+#picture_input{
+    display: none;
+}
+
+.picture{
+    margin: 18px 20px 0 0;
+    width: 250px;
+    height: 200px;
+    background: rgb(221, 220, 220);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentColor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out;
+}
+
+.fotin{
+    max-width: 100%;
+}
+
+.picture:hover{
+    color: #A92364;
+}*/
 
 .info2 {
     width: 100%;
@@ -260,7 +300,6 @@ textarea::placeholder {
 .alterar_emails .column {
     display: flex;
     width: 90%;
-    justify-content: space-around;
     flex-wrap: nowrap;
     flex-direction: column;
     align-content: space-around;
@@ -284,7 +323,7 @@ textarea::placeholder {
 }
 
 .alterar_emails .column .inputs_alt {
-    width: 100%;
+    width: 140vh;
     height: 100%;
 }
 
@@ -319,15 +358,13 @@ textarea::placeholder {
 }
 
 .alterar_emails .column .align_buts {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
 }
 
 .alterar_emails .column .align_buts button {
-    width: 300px;
-    cursor: pointer;
-    margin-bottom: 30px;
+ width: 260px;
 }
 
 /* CLIPPING DE EMAILS */
@@ -347,12 +384,6 @@ textarea::placeholder {
     flex-wrap: wrap;
 }
 
-.borda {
-    height: 100%;
-    width: 90%;
-    padding: 15px;
-}
-
 .imag img {
     width: 95px;
     height: 95px;
@@ -368,13 +399,17 @@ h2 {
 
 .clipping_emails .coluna .align_buts {
     width: 90%;
-    margin-top: 10vh;
+    margin-top: 3vh;
     display: flex;
     justify-content: right;
 }
 
 .clipping_emails .coluna .align_buts button {
     padding: 15px;
+}
+
+.clipping_emails .coluna p{
+    font-size: 3ch;
 }
 
 /* GERENCIAR ASSOCIADOS */
@@ -394,13 +429,188 @@ h2 {
     flex-wrap: wrap;
 }
 
+.Gerenciar_Associados .imag .dados{
+    display: inline-block;
+}
+
 .Gerenciar_Associados .coluna .align_buts {
     width: 90%;
-    margin-top: 10vh;
+    margin-top: 3vh;
     display: flex;
     justify-content: right;
 }
 
 .Gerenciar_Associados .coluna .align_buts button {
     padding: 15px;
+}
+.dados{
+    display: flex;
+}
+
+.Gerenciar_Associados .coluna p{
+    font-size:x-large;
+}
+
+table{
+    display: flex;
+    justify-content: center;
+}
+
+th, td{
+    padding: 9px 17px;
+}
+
+th{
+    color: #A92364;
+    font-size: 3ch;
+}
+
+/* ALTERAR ASSOCIADOS */
+.alterar_user .coluna {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.itens-cadastro {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.itens-cadastro input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 30%;
+    padding-left: 10px;
+}
+
+.alterar_user .coluna h1 {
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    color: #A92364;
+    font-size: 48px;
+}
+
+.alterar_user .coluna form {
+    padding-top: 25px;
+}
+
+.alterar_user .coluna form .td {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+
+.alterar_user .coluna form .td .foto_perfil {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.alterar_user .coluna form .td .foto_perfil img {
+    width: 100%;
+    display: flex;
+}
+
+.alterar_user .coluna form .td .foto_perfil button {
+
+    margin-top: 20px;
+    padding: 0;
+    justify-content: space-around;
+    width: 100%;
+    height: 40px;
+}
+
+.alterar_user .coluna form .td .info input {
+    width: 100%;
+}
+
+.alterar_user .coluna .align_buts {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.alterar_user .coluna .align_buts button {
+    width: 43%;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+.alterar_user .coluna .info {
+    width: 100%;
+    height: 100%;
+}
+
+.alterar_user .coluna .info input {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.info_lado {
+    display: flex;
+    gap: 25px;
+}
+
+.info_email {
+    padding-top: 25px;
+    width: 140vh;
+}
+
+.info_email input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.foto_perfil {
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.info2 {
+    width: 100%;
+}
+
+.alterar_user {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.alterar_user .coluna .info2 .novas_infos {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.alterar_user .coluna .info2 .novas_infos select {
+    width: 45%;
+    padding: 12px;
+}
+
+.alterar_user .coluna .info2 .novas_infos input {
+    width: 45%;
+    padding: 12px;
+}
+
+.alterar_user .coluna .foto_perfil .arquivo{
+    width: 100%;
 }

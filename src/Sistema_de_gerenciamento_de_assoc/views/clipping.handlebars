@@ -13,23 +13,29 @@
         <div class="coluna">
             <h1 class="gradient">Clipping de Email</h1>
             <div class="borda">
-                <form action="/sistema/alt_email" method="post">
+                <form action="/sistema/alt_email" method="post"></form>
+                <table class="dados1">
+                     <tr class="gradient">
+                            <th>    </th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                        </tr>
+                    {{#each Assoc}}
                     <label for="{{id}}"></label>
-                    {{!-- <div class="imag">
-                        <img src="../assets/img/{{link_foto}}">
-                    </div> --}}
                     <div class="dados">
-
-                        <input type="checkbox" id="{{id}}" value="{{id}}">
-                        <div class="nome_assoc">
-                            <p>{{nome}} teste</p>
+                        <tr>
+                        <td><input type="checkbox" id="{{id}}" value="{{id}}"></td>
+                        <div class="nome_as">
+                            <td><p>{{nome}}</p></td>
                         </div>
-                        <div class="desc">
-                            <p>{{desc}} teste</p>
+                         <div class="ema">
+                            <td><p>{{email}}</p></td>
                         </div>
-
+                        </tr>
                     </div>
-                    </label>
+                     </label>
+                    {{/each}}
+                </table>
             </div>
             <div class="align_buts">
                 <button type="submit">Alterar</button>
