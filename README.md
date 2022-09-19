@@ -24,7 +24,7 @@ A partir da apresentação do desafio enfrentado pela empresa parceira, MidAll[B
 Cada entrega foi realizada a partir da criação de uma **tag** neste repositório, além da criação de branches neste repositório com um relatório completo de tudo o que foi desenvolvido em cada sprint. Observe a relação a seguir:
 | Sprint | Previsão | Status | Histórico |
 |:--:|:----------:|:----------------|:-------------------------------------------------:|
-| 01 | 18/09/2022 |  Finalizado    | [Ver relatório]() |
+| 01 | 18/09/2022 |  Finalizado    | [Ver relatório](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-1) |
 | 02 | 09/10/2022 |  Em andamento    | [Ver relatório]() |
 | 03 | 06/11/2022 |  Não Iniciado    | [Ver relatório]() |
 | 04 | 27/11/2022 |  Não Iniciado    | [Ver relatório]() |
