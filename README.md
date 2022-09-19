@@ -14,7 +14,7 @@
 <span id="sobre">
 
 ## :bookmark_tabs: Sobre o projeto
-A partir da apresentação do desafio enfrentado pela empresa parceira, a solução desenvolvida se configura em um Crowler com sistema de gerenciamento de associados, que consiste em um sistema com 2 frentes: a do **usuário comum**, que se caracteriza no disparo de email a associados da empresa; e a do **usuário administrador**, cuja a função é de cadastrar associados e realizar o disparo dos emails.
+A partir da apresentação do desafio enfrentado pela empresa parceira, MidAll[B], a solução desenvolvida se configura em um Crawler com sistema de gerenciamento de associados, que compreende em um sistema que consiga buscar, ler o arquivo e distinguir o conteúdo referente aos Professores Associados, realizar os cruzamentos essenciais de acordo com as bases de dados de colaboradores que carregam está explicação, registrar todos os processos publicados relacionados aos associados, e emitir relatório diário para que a equipe do Backoffice consiga disparar os e-mails para os docentes citados no Diário Oficial.
 
 > _Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividade, Autonomia, Colaboração e Entrega de Resultados dos estudantes envolvidos_
 
@@ -24,9 +24,10 @@ A partir da apresentação do desafio enfrentado pela empresa parceira, a soluç
 Cada entrega foi realizada a partir da criação de uma **tag** neste repositório, além da criação de branches neste repositório com um relatório completo de tudo o que foi desenvolvido em cada sprint. Observe a relação a seguir:
 | Sprint | Previsão | Status | Histórico |
 |:--:|:----------:|:----------------|:-------------------------------------------------:|
-| 01 | 18/09/2022 |  Não Iniciado    | [ver relatório]() |
-| 02 | 09/10/2022 |  Não Iniciado    | [ver relatório]() |
-| 03 | 06/11/2022 |  Não Iniciado    | [ver relatório]() |
+| 01 | 18/09/2022 |  Finalizado    | [Ver relatório]() |
+| 02 | 09/10/2022 |  Em andamento    | [Ver relatório]() |
+| 03 | 06/11/2022 |  Não Iniciado    | [Ver relatório]() |
+| 04 | 27/11/2022 |  Não Iniciado    | [Ver relatório]() |
 
 <!-- ### :clapper: Apresentação Final
 Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário do sistema:
@@ -57,25 +58,11 @@ Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário
     
 <div align="center">
     
-
-![Backlog-produto-1](https://user-images.githubusercontent.com/101107794/189246074-6bfcc019-59f2-41c6-b8e5-a6de9ef48331.png)
-
-
+![Backlog-Produto-1](https://user-images.githubusercontent.com/101107794/190942000-cd1740f5-1dd9-41b2-93b5-71ebafb268f8.png)
     
-![Backlog-produto-2](https://user-images.githubusercontent.com/101107794/189246096-d088c9ca-3946-4250-8188-03a1cb1130e9.png)
+![Backlog-Produto-2](https://user-images.githubusercontent.com/101107794/190942004-00706d4a-4b70-4c1a-96b0-2b321469f24e.png)
 
-
-    
-![Backlog-sprint-1](https://user-images.githubusercontent.com/101107794/189246126-5847a6d5-849a-4ffe-8197-293ec97df8d6.png)
-
-
-    
-![User-Stories](https://user-images.githubusercontent.com/101107794/189247400-d302d0c3-616f-451e-9275-6262104b14f9.png)
-
-
-
-
-
+![User-Stories](https://user-images.githubusercontent.com/101107794/190941992-395cbb62-6aaa-4f8c-a5f6-60d678ca5236.png)
 
 
 </div>
@@ -90,8 +77,12 @@ Como parte do planejamento do projeto foram criados wireframes e mockups para id
 
     
 > 🔗 **Links gerais** <br>
-> - Documentação do software: [clique aqui para acessar]()
-> - Manual do usuário: [clique aqui para acessar]()
+> - Manual de instalação: [Clique aqui para baixar](https://github.com/JulioL2001/Teste234/files/9595940/Instalacao.1.pdf)
+
+
+> - Manual do usuário: [Clique aqui para baixar](https://github.com/JulioL2001/Teste234/files/9595894/Usuario.pdf)
+
+
 
     
 → [Voltar ao topo](#topo)
@@ -104,18 +95,19 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
 
 <img src="https://img.shields.io/badge/Figma-CED4DA?style=for-the-badge&logo=figma&logoColor=DC143C" alt="Figma" /> 
 <img src="https://img.shields.io/badge/TypeScript-CED4DA?style=for-the-badge&logo=typescript&logoColor=007ACC" alt="Typescript" />
+<img src="https://img.shields.io/badge/Javascript-CED4DA?style=for-the-badge&logo=javascript&logoColor=yellow" alt="Javascipt" />
 <img src="https://img.shields.io/badge/HTML5-CED4DA?style=for-the-badge&logo=html5&logoColor=E34F26" alt="HTML" /> 
 <img src="https://img.shields.io/badge/CSS3-CED4DA?style=for-the-badge&logo=css3&logoColor=1572B6" alt="CSS" /> 	
 <img src="https://img.shields.io/badge/React-CED4DA?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /> 
 <img src="https://img.shields.io/badge/Node.js-CED4DA?style=for-the-badge&logo=nodedotjs&logoColor=339933" alt="Node" />  
 <img src="https://img.shields.io/badge/Java-CED4DA?style=for-the-badge&logo=java&logoColor=DC143C" alt="Java" />
-<img src="https://img.shields.io/badge/MongoDB-CED4DA?style=for-the-badge&logo=mongodb&logoColor=4EA94B" alt="MongoDB" /><br>
 <img src="https://img.shields.io/badge/Python-CED4DA?style=for-the-badge&logo=python&logoColor=yellow" alt="Python" />
+<img src="https://img.shields.io/badge/MySQL-CED4DA?style=for-the-badge&logo=mysql&logoColor=black" alt="MySQL" />
 <img src="https://img.shields.io/badge/VS_Code-CED4DA?style=for-the-badge&logo=visual%20studio%20code&logoColor=0078D4" alt="VS Code" /> 
-<img src="https://img.shields.io/badge/Discord-CED4DA?style=for-the-badge&logo=discord&logoColor=7289DA" alt="Discord" /> 
+<img src="https://img.shields.io/badge/Discord-CED4DA?style=for-the-badge&logo=discord&logoColor=7289DA" alt="Discord" />
+<img src="https://img.shields.io/badge/Slack-CED4DA?style=for-the-badge&logo=slack&logoColor=black" alt="Slack" />
 <img src="https://img.shields.io/badge/GitHub-CED4DA?style=for-the-badge&logo=github&logoColor=20232A" alt="GitHub" /> 
-<img src="https://img.shields.io/badge/Google%20Sheets-CED4DA?style=for-the-badge&logo=google-sheets&logoColor=34A853" alt="Excel" /> 
-<img src="https://img.shields.io/badge/Google%20Docs-CED4DA?style=for-the-badge&logo=google-sheets&logoColor=0D96F6" alt="Word" />
+
     
 → [Voltar ao topo](#topo)
 
@@ -127,7 +119,7 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
 | :-----------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Product Owner | Julio Cesar Rodrigues Lucena Costa           |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/julio-lucena-2001) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/JulioL2001)              |
 | Scrum Master  | Guilherme Duarte Cenzi Dias |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/guilherme-duarte-cenzi-dias-9737621b6) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Guilhermedcdias)     |
-|   Dev Team    | Ana Clara Marques Portes               |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in//) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/AnaMarks)        |
+|   Dev Team    | Ana Clara Marques Portes               |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/AnaMarks)        |
 |   Dev Team    | Gustavo Messa                   |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/gustavo-messa) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/gmessa)        |
 |   Dev Team    | Ryan Quadros Alves                 |   [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/ryan-alves-661ba823b) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/XLryan246)   |
 |   Dev Team    | Julio de Paula Machado       |           [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/JulioPm142)          |
