@@ -3,14 +3,14 @@ const pup = require('puppeteer');  //npm i puppeteer
 const cheerio = require('cheerio'); //npm i cheerio
 const readlineSync = require('readline-sync'); // npm install readline-sync
 
-const db = require('./models/db');
-const Links_de_pdfs = require('./models/link_de_pdf');
-const Links_de_pdf_filtrado = require('./models/link_de_pdf_filtrado');
+const db = require('../../Sistema_de_gerenciamento_de_assoc/models/db');
+const Links_de_pdfs = require('../../Sistema_de_gerenciamento_de_assoc/models/link_de_pdf');
+const Links_de_pdf_filtrado = require('../../Sistema_de_gerenciamento_de_assoc/models/link_de_pdf_filtrado');
 const { link } = require('fs');
 
 
-const searchFor = readlineSync.question('informe o link desejado: ')
-const searchNome = readlineSync.question('informe o Nome desejado: ')
+// const searchFor = readlineSync.question('informe o link desejado: ')
+// const searchNome = readlineSync.question('informe o Nome desejado: ')
 
 
 console.log('<<  Juninho ON! 🤖 >> ')
@@ -21,8 +21,24 @@ db.sequelize.authenticate().then(function () {
     console.log("Erro ao conectar: " + erro)
 });
 
-const url = searchFor;
-const nomes = searchNome;
+// const url = searchFor;
+// const nomes = searchNome;
+
+const url = [];
+const nomes = [];
+
+const banco = Links_de_pdfs.findAll().then(function (response) {
+    Object.keys(response).forEach(function (item) {
+        // console.log(response[item].id + '\n\n\n' + response[item].link + '\n\n\n' + response[item].assoc_nome + '\n\n\n');
+        url.push(response[item].link)
+        nomes.push(response[item].assoc_nome)
+    })
+})
+
+
+
+
+
 var conta_nome = 0;
 
 let list = [];
@@ -30,11 +46,12 @@ let c = 1;
 let tramontina = [];
 
 // função assincrona 
-    (async () => {
-        const browser = await pup.launch({ headless: false });// chromium true pra nao mostrar abrindo
-        const page = await browser.newPage();
-        console.log('iniciei!');
-        await page.goto(url);
+(async () => {
+    const browser = await pup.launch({ headless: true });// chromium true pra nao mostrar abrindo
+    const page = await browser.newPage();
+    console.log('iniciei!');
+    for (i = 0; i < url.length; i++) {
+        await page.goto(url[i]);
         console.log('fui pra URL!');
 
         await page.waitForSelector('.joyride-content-wrapper');
@@ -64,15 +81,15 @@ let tramontina = [];
             console.log(cort[1], '\n'); // cortador pega a partir do 1 indice.
             const banco2 = Links_de_pdf_filtrado.create({
                 link: cort[1],
-                assoc_nome: nomes[conta_nome]
+                assoc_nome: nomes[i]
             })
 
             c++;
-            conta_nome++
         };
 
-
+        console.log('To no: ' + nome[i])
         await page.waitForTimeout(3000);
-
-        await browser.close();
-    })();
+        console.log('Indo no: ' + nome[i+1])
+    }
+    await browser.close();
+})();
