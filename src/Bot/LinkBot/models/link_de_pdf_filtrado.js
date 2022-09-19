@@ -11,13 +11,13 @@ const Links_de_pdf_filtrado = db.sequelize.define('links_de_pdf_filtrado', {
         type: db.DataTypes.TEXT,
         allowNull: false,
     },
-    id_assoc: {
-        type: db.DataTypes.INTEGER,
+    assoc_nome: {
+        type: db.DataTypes.STRING,
         allowNull: false,
     }
 })
 
 // Sincronizar uma vez somente para criar as tabelas no db e depois comentar
-Links_de_pdf_filtrado.sync({ force: true });
+// Links_de_pdf_filtrado.sync({ force: true });
 
 module.exports = Links_de_pdf_filtrado

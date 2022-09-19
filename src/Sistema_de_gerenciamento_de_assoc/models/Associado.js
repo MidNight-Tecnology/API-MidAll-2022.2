@@ -53,7 +53,6 @@ const Associado = db.sequelize.define('associado', {
     }
 
 })
-
 // Sincronizar uma vez somente para criar as tabelas no db e depois comentar
 //Associado.sync({ force: true });
 

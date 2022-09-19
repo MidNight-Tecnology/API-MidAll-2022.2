@@ -14,37 +14,37 @@
             <form action="/sistema/cadastrar_assoc" method="POST">
                 <div class="td">
                     <div class="info">
-                        <input type="text" placeholder="Nome" name="nome" />
+                        <input type="text" placeholder="Nome" name="nome" required />
                         <br />
-                        <input type="text" placeholder="Endereço" name="endereco" />
+                        <input type="text" placeholder="Endereço" name="endereco" required />
                         <br />
-                        <input type="text" placeholder="Complemento" name="comp" />
+                        <input type="text" placeholder="Complemento" name="comp" required />
                         <br />
                         <div class="info_lado">
-                            <input type="date" placeholder="Data de Nascimento" name="nasc" />
+                            <input type="date" placeholder="Data de Nascimento" name="nasc" required />
                             <img class="logo3" src="../assets/img/logo3.jpg">
-                            <input type="text" placeholder="CEP" name="cep" />
+                            <input type="text" placeholder="CEP" name="cep" required />
                         </div>
                         <br />
                     </div>
                 </div>
                 <div class="info2">
                     <div class="itens-cadastro">
-                        <input type="text" placeholder="Telefone" name="tel" />
-                        <input type="text" placeholder="CPF" name="cpf" />
-                        <input type="text" placeholder="RG" name="rg" />
+                        <input type="text" placeholder="Telefone" name="tel" required />
+                        <input type="text" placeholder="CPF" name="cpf" required />
+                        <input type="text" placeholder="RG" name="rg" required />
                     </div>
                     <div class="novas_infos">
-                        <select name="estado_cv" id="estado_cv">
+                        <select name="estado_cv" id="estado_cv" required>
                             <option value="Casado(a)">Casado(a)</option>
                             <option value="Solteiro(a)">Solteiro(a)</option>
                             <option value="Viúvo(a)">Viúvo(a)</option>
                         </select>
                         <img class="logo3" src="../assets/img/logo3.jpg">
-                        <input type="text" name="inst_ens" placeholder="Instituição de Ensino">
+                        <input type="text" name="inst_ens" placeholder="Instituição de Ensino" required>
                     </div>
                     <div class="info_email">
-                        <input type="text" placeholder="Email" name="email" />
+                        <input type="text" placeholder="Email" name="email" required />
                     </div>
                     <div class="align_buts">
                         <button type="reset">Limpar</button>

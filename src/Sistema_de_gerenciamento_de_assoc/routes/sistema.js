@@ -6,6 +6,8 @@ const router = express.Router()
 //Imports
 const Users = require('../models/Users')
 const Associado = require('../models/Associado')
+const Txtpdf = require('../models/Txtpdf')
+const db = require("../models/db")
 
 
 //Renders -- Sem nada
@@ -15,16 +17,14 @@ router.get('/alterar_emails', (req, res) => {
 router.get('/cadastro_assoc', (req, res) => {
     res.render('cadastro_assoc')
 })
-router.get('/alterar_assoc',(req, res) =>{
-    res.render('alterar_assoc')
+router.get('/clipping', (req, res) => {
+    res.render('pdf_viewer')
 })
 
 
 
 //Redirects -- FOCO, FORÇA E FÉ  -- Sem nada
-router.post('/gerenc_associ', (req, res) => {
-    res.redirect('alterar_assoc') //trocar para cadastro_assoc_alt
-})
+
 // router.post('/alt_email', (req, res) => {
 //     res.redirect('alterar_emails')
 // })
@@ -44,7 +44,7 @@ router.post('/logar', (req, res) => {
         }
     }).then(function (result) {
         if (result) {
-            res.redirect('clipping')
+            res.redirect('gerenc_assoc')
         } else {
             res.redirect('../')
         }
@@ -82,17 +82,52 @@ router.post('/cadastrar_assoc', (req, res) => {
 })
 
 router.get('/gerenc_assoc', (req, res) => {
-    const banco = Associado.findAll().then(function(Assoc) {
+    const banco = Associado.findAll().then(function (Assoc) {
         res.render('gerenc_assoc', { Assoc: Assoc })
     })
 
 })
-router.get('/clipping', (req, res) => {
-    const banco = Associado.findAll().then(function(Assoc) {
-        res.render('clipping', { Assoc: Assoc })
+// router.get('/clipping', (req, res) => {
+//     const banco = Txtpdf.findAll().then(function (txt) {
+//         res.render('clipping', { txt: txt })
+//     })
+
+// })
+
+router.get('/gerenc_associ/:id', (req, res) => {
+    id = req.params.id;
+    const banco = Associado.findOne({
+        where: {
+            id: id
+        }
+    }).then((Resultado) => {
+        res.render("alterar_assoc", { Resultado: Resultado })
     })
 
 })
 
+router.post('/alterar_assoc/:id', (req, res) => {
+    const banco = Associado.findOne({
+        where: {
+            id: req.params.id
+        }
+    }).then((Resultado) => {
+        Resultado.nome = req.body.nome,
+            Resultado.endereco = req.body.endereco,
+            Resultado.comp = req.body.comp,
+            Resultado.nasc = req.body.nasc,
+            Resultado.cep = req.body.cep,
+            Resultado.tel = req.body.tel,
+            Resultado.cpf = req.body.cpf,
+            Resultado.rg = req.body.rg,
+            Resultado.estado_cv = req.body.estado_cv,
+            Resultado.inst_ens = req.body.inst_ens,
+            Resultado.email = req.body.email,
 
+
+            Resultado.save().then(() => {
+                res.redirect('../gerenc_assoc')
+            })
+    })
+})
 module.exports = router
