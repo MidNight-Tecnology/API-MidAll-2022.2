@@ -72,14 +72,12 @@ Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário
 <span id="prototipo">
 
 ## :desktop_computer: Protótipo & Documentação
-Como parte do planejamento do projeto foram criados wireframes e mockups para idealização do layout, que, ao ser validado pelo cliente, foram aplicados em um protótipo, possibilitando a interação do usuário com a interface (vide [entrega da primeira sprint]()).
+Como parte do planejamento do projeto foram criados wireframes e mockups para idealização do layout, que, ao ser validado pelo cliente, foram aplicados em um protótipo, possibilitando a interação do usuário com a interface (vide [entrega da primeira sprint](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-1)).
     
 
     
 > 🔗 **Links gerais** <br>
 > - Manual de instalação: [Clique aqui para baixar](https://github.com/JulioL2001/Teste234/files/9595940/Instalacao.1.pdf)
-
-
 > - Manual do usuário: [Clique aqui para baixar](https://github.com/JulioL2001/Teste234/files/9595894/Usuario.pdf)
 
 
