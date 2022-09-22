@@ -18,7 +18,7 @@ router.get('/cadastro_assoc', (req, res) => {
     res.render('cadastro_assoc')
 })
 router.get('/clipping', (req, res) => {
-    res.render('pdf_viewer')
+    res.render('clipping')
 })
 
 
