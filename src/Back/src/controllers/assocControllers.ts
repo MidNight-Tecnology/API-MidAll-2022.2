@@ -18,21 +18,28 @@ class AssocController {
     return User ? res.status(200).json(User) : res.status(204).send();
   }
   async create(req: Request, res: Response) {
-    const { nome, endereco, comp, nasc, cep, tel, cpf, rg, estado_cv, inst_ens, email } = req.body;
-    const User = await AssocModel.create({
-      nome,
-      endereco,
-      comp,
-      nasc,
-      cep,
-      tel,
-      cpf,
-      rg,
-      estado_cv,
-      inst_ens,
-      email
-    });
-    return res.status(201).json(User);
+    // const { nome, endereco, comp, nasc, cep, tel, cpf, rg, estado_cv, inst_ens, email } = req.body;
+   
+    try {
+      const createUser = await AssocModel.create({ ...req.body });
+      return res.json(createUser);
+  } catch (e) {
+      return res.json({ msg: "Fail to create user", status: 500, route: '/create/associate' });
+  }
+    // const User = await AssocModel.create({
+    //   nome,
+    //   endereco,
+    //   comp,
+    //   nasc,
+    //   cep,
+    //   tel,
+    //   cpf,
+    //   rg,
+    //   estado_cv,
+    //   inst_ens,
+    //   email
+    // });
+    // return res.status(201).json(User);
   }
   async update(req: Request, res: Response) {
     const { Id } = req.params;

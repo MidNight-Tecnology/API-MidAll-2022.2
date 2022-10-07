@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Login from './pages/Login';
 import AlterarAssoc from './pages/AlterarAssoc';
 import AlterarEmail from './pages/AlterarEmail';
-import CadastroAssoc from './pages/CadastroAssoc';
+import CadastroAssoc from './pages/CadastroAssoc/antigo';
 import Clipping from './pages/Clipping';
 import GerencAssoc from './pages/GerencAssoc';
 

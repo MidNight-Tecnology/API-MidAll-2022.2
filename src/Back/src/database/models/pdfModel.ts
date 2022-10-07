@@ -21,4 +21,4 @@ export const PdfModel = db.define("pdfs", {
     }
 })
 
-PdfModel.sync({ force: true });
+PdfModel.sync();

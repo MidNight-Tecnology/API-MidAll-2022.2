@@ -2,7 +2,8 @@
 from array import array
 import requests
 from conector import criar_conexao
-
+###Alterar BD
+###Arrumar cod
 ## cria conexao com o bd
 con = criar_conexao("localhost", "root", "root", "api_midall")
 # Seletor de links filtrados

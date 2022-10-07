@@ -55,4 +55,4 @@ export const AssocModel = db.define("associado", {
 
 })
 // Sincronizar uma vez somente para criar as tabelas no db e depois comentar
-AssocModel.sync({ force: true });
+AssocModel.sync();

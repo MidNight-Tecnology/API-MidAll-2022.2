@@ -23,10 +23,4 @@ export const UserModel = db.define("users", {
 
 });
 // Sincronizar uma vez somente para criar as tabelas no db e depois comentar
-UserModel.sync({ force: true });
-
-UserModel.create({
-  nome: 'Guilherme Duarte',
-  email: 'gui@gui',
-  senha: '1234',
-});
+UserModel.sync();

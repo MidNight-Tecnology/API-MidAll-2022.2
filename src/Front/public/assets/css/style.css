@@ -458,10 +458,6 @@ textarea::placeholder {
     font-size: large;
 }
 
-label{
-    
-}
-
 th, td{
     padding: 4px 13px;
 }
@@ -619,4 +615,8 @@ th{
 
 .alterar_user .coluna .foto_perfil .arquivo{
     width: 100%;
+}
+
+.error-message {
+    color: rgb(240, 47, 47);
 }

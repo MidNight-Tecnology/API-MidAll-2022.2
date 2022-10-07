@@ -16,20 +16,18 @@ const Clipping = () => {
                 <th> </th>
                 <th>Nome</th>
               </tr>
-              {/* {{#each txt}} */}
               <label for="{{id}}">
                 <div class="dados">
                   <tr>
                     <td>
                       <div class="align_buts">
-                        <button type="submit">Vizualizar</button>
+                        <button type="submit">Visualizar</button>
                       </div>
                     </td>
-                    <div class="nome_as">{/* <td><p>{{nome}}</p></td> */}</div>
+                    <div class="nome_as"><td><p></p></td></div>
                   </tr>
                 </div>
               </label>
-              {/* {{/each}} */}
             </table>
           </div>
         </div>

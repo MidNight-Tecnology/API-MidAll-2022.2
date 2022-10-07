@@ -6,14 +6,14 @@ from conector import criar_conexao
 
 print('<<< Walter Ta ON 🤖 >>>')
 # Conecta com Banco de dados
-con = criar_conexao("localhost", "root", "root", "api_midall")
+con = criar_conexao("localhost", "root", "root", "crud")
 # Insere link
 
 
 def insere_link(con, link, assoc_nome):
     cursor = con.cursor()
-    sql = "INSERT INTO links_de_pdfs (link, assoc_nome, createdAt, updatedAt) values (%s, %s, %s, %s)"
-    valores = (link, assoc_nome, datetime.date.today(), datetime.date.today())
+    sql = "INSERT INTO pdfs (assoc_nome, link_pdf, link_pdf_filtrado, createdAt, updatedAt) values (%s, %s, %s, %s)"
+    valores = (assoc_nome, link, '', datetime.date.today(), datetime.date.today())
     cursor.execute(sql, valores)
     cursor.close()
     con.commit()

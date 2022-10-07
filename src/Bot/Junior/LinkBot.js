@@ -3,9 +3,8 @@ const pup = require('puppeteer');  //npm i puppeteer
 const cheerio = require('cheerio'); //npm i cheerio
 const readlineSync = require('readline-sync'); // npm install readline-sync
 
-const db = require('../../Sistema_de_gerenciamento_de_assoc/models/db');
-const Links_de_pdfs = require('../../Sistema_de_gerenciamento_de_assoc/models/link_de_pdf');
-const Links_de_pdf_filtrado = require('../../Sistema_de_gerenciamento_de_assoc/models/link_de_pdf_filtrado');
+const db = require('./db');
+const PdfModel = require('../../Back/dist/database/models/pdfModel');
 const { link } = require('fs');
 
 
@@ -27,11 +26,11 @@ db.sequelize.authenticate().then(function () {
 const url = [];
 const nomes = [];
 
-const banco = Links_de_pdfs.findAll().then(function (response) {
+const banco = PdfModel.findAll().then(function (response) {
     Object.keys(response).forEach(function (item) {
         // console.log(response[item].id + '\n\n\n' + response[item].link + '\n\n\n' + response[item].assoc_nome + '\n\n\n');
-        url.push(response[item].link)
-        nomes.push(response[item].assoc_nome)
+        url.push(response[item].link_pdf)
+        nomes.push(response[item].nome_assoc)
     })
 })
 
@@ -79,10 +78,11 @@ let tramontina = [];
             cort = obj.link.split('aspx'); //corta o link ate a palavra aspx do link
 
             console.log(cort[1], '\n'); // cortador pega a partir do 1 indice.
-            const banco2 = Links_de_pdf_filtrado.create({
-                link: cort[1],
-                assoc_nome: nomes[i]
-            })
+            const banco2 = PdfModel.update({
+                link_pdf_filtrado: cort[1],
+                where: 
+                {
+                    nome_assoc: nomes[i]}});
 
             c++;
         };

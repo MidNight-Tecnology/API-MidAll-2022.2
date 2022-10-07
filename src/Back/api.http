@@ -1,0 +1,30 @@
+
+### Create
+
+POST http://localhost:4512/createassoc
+Content-Type: application/json
+
+
+{
+      "nome":"lhaaaaas",
+      "endereco": "rua",
+      "comp": "casa",
+      "nasc": "2004-12-04",
+      "cep": "999999999",
+      "tel": "9999999992",
+      "cpf": "99999999911",
+      "rg": "999999999921",
+      "estado_cv": "casado",
+      "inst_ens":  "fatec",
+      "email": "lukinhas@gmail.com"
+}
+
+
+### FindAll
+
+GET http://localhost:3001/getuser
+
+
+### FindOne
+
+GET http://localhost:4512/getuser/1
