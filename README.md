@@ -18,38 +18,6 @@
 ## :bookmark_tabs: Sprint 1: 29/08 a 18/09 
 Relatório de progresso de como ocorreu a entrega e como foi feito todo o processo da sprint 1,  que se decorreu do dia 29 de Agosto a 18 de Setembro.
 
-<!-- _Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividade, Autonomia, Colaboração e Entrega de Resultados dos estudantes envolvidos_
-
-:pushpin: Status do Projeto: **Em Desenvolvimento** <!-- :heavy_check_mark: -->
-<!-- 
-### 🏁 Entregas de Sprints
-Cada entrega foi realizada a partir da criação de uma **tag** neste repositório, além da criação de branches neste repositório com um relatório completo de tudo o que foi desenvolvido em cada sprint. Observe a relação a seguir:
-| Sprint | Previsão | Status | Histórico |
-|:--:|:----------:|:----------------|:-------------------------------------------------:|
-| 01 | 18/09/2022 |  Não Iniciado    | [ver relatório]() |
-| 02 | 09/10/2022 |  Não Iniciado    | [ver relatório]() |
-| 03 | 06/11/2022 |  Não Iniciado    | [ver relatório]() |
-
-### :clapper: Apresentação Final
-Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário do sistema:
-<details>
-   <summary>Usuário comum</summary>
-    <div align="center">
-        <img src="https://user-images.githubusercontent.com/69374340/172084663-1e8ae95b-0c84-493c-b4ab-5cfcda5a4eb3.gif">
-    </div>
-</details>
-<details>
-   <summary>Usuário suporte</summary>
-    <div align="center">
-        <img src="https://user-images.githubusercontent.com/69374340/172084712-de2d2905-dc65-41af-97e8-f980eff5f2d1.gif">
-    </div>
-</details>
-<details>
-   <summary>Usuário administrador</summary>
-    <div align="center">
-        <img src="./usuario_administrador.gif">
-    </div>
-</details> -->
     
 → [Voltar ao topo](#topo)
 
@@ -57,21 +25,12 @@ Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário
 
 ## :dart: Backlogs & User Stories
     
+Na imagem a seguir é indicado quais foram as entregas que foram acordadas entre o P.O e o cliente, sendo assim priorizadas pela a equipe, seguindo a metodologia Scrum.
+
+   
 <div align="center">
-
-![User-Stories](https://user-images.githubusercontent.com/101107794/190944115-ccffc8be-472a-408a-9d56-8072c800c04d.png)
-
-![Backlog-Sprint-1](https://user-images.githubusercontent.com/101107794/190944190-61e6e2e6-aeb4-451d-823f-609e82bee2fd.png)
-
-![Card-1](https://user-images.githubusercontent.com/101107794/190944194-5a2b3411-2ee8-40da-8f87-f31beb983e6e.png)
-
-![Card-2](https://user-images.githubusercontent.com/101107794/190944198-f2b373cd-8657-4a74-8e34-d68aa9714119.png)
-
-![Card-3](https://user-images.githubusercontent.com/101107794/190944212-c3f8f533-8538-4b05-82fb-bc6a5955a289.png)
-
-![Card-4](https://user-images.githubusercontent.com/101107794/190944229-2f1bc3f1-5e6b-4bc5-8d52-d725c07fe71b.png)
-
-![Card-5](https://user-images.githubusercontent.com/101107794/190944237-8ef6eba6-fe06-44c5-bf3f-576cc252c6f5.png)
+    
+![User Stories](https://user-images.githubusercontent.com/101107794/194464450-623052ea-cb29-4d24-9269-4ac57f57e0b5.png)
 
 </div>
   
@@ -125,8 +84,8 @@ Como parte do planejamento do projeto foram criados wireframes e mockups para id
 
     
 > 🔗 **Links gerais** <br>
-> - Manual de instalação: [Clique aqui para baixar](https://github.com/JulioL2001/Teste234/files/9595940/Instalacao.1.pdf)
-> - Manual do usuário: [Clique aqui para baixar](https://github.com/JulioL2001/Teste234/files/9595894/Usuario.pdf)
+> - Manual de instalação: [Clique aqui para baixar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/raw/Sprint-1/Manual%20Instala%C3%A7%C3%A3o.pdf)
+> - Manual do usuário: [Clique aqui para baixar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/raw/Sprint-1/Manual%20Usu%C3%A1rio.pdf)
 
 Aqui está alguns Mockups iniciais do projeto, com o intuito de auxiliar na visualização das telas de FrontEnd do Projeto:
 
@@ -166,10 +125,10 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
 | :-----------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Product Owner | Julio Cesar Rodrigues Lucena Costa           |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/julio-lucena-2001) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/JulioL2001)              |
 | Scrum Master  | Guilherme Duarte Cenzi Dias |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/guilherme-duarte-cenzi-dias-9737621b6) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Guilhermedcdias)     |
-|   Dev Team    | Ana Clara Marques Portes               |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/AnaMarks)        |
+|   Dev Team    | Ana Clara Marques Portes               |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/AnaMarks)        |
 |   Dev Team    | Gustavo Messa                   |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/gustavo-messa) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/gmessa)        |
 |   Dev Team    | Ryan Quadros Alves                 |   [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/ryan-alves-661ba823b) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/XLryan246)   |
-|   Dev Team    | Julio de Paula Machado       |           [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/JulioPm142)          |
+|   Dev Team    | Julio de Paula Machado       |           [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/JulioPm142)          |
 |   Dev Team    | Ian Ferreira Tupinambá Machado       |        [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/itupii) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/itupii)            |
 
 
