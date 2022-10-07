@@ -20,7 +20,11 @@ A partir da apresentação do desafio enfrentado pela empresa parceira, MidAll[B
 
 :pushpin: Status do Projeto: **Em Desenvolvimento** <!-- :heavy_check_mark: -->
 
+<span id="relato">
+
+
 ### 🏁 Entregas de Sprints
+
 Cada entrega foi realizada a partir da criação de uma **tag** neste repositório, além da criação de branches neste repositório com um relatório completo de tudo o que foi desenvolvido em cada sprint. Observe a relação a seguir:
 | Sprint | Previsão | Status | Histórico |
 |:--:|:----------:|:----------------|:-------------------------------------------------:|
@@ -57,12 +61,15 @@ Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário
 ## :dart: Backlogs & User Stories
     
 <div align="center">
-    
-![Backlog-Produto-1](https://user-images.githubusercontent.com/101107794/190942000-cd1740f5-1dd9-41b2-93b5-71ebafb268f8.png)
-    
-![Backlog-Produto-2](https://user-images.githubusercontent.com/101107794/190942004-00706d4a-4b70-4c1a-96b0-2b321469f24e.png)
 
-![User-Stories](https://user-images.githubusercontent.com/101107794/190941992-395cbb62-6aaa-4f8c-a5f6-60d678ca5236.png)
+    
+![Backlog-RF](https://user-images.githubusercontent.com/101107794/194463281-f6c59ab8-25bd-4210-8cd5-43993d3ff820.png)
+
+![Backlog-RNF](https://user-images.githubusercontent.com/101107794/194463292-963943e1-41c1-4025-9cdc-e91e36929e7f.png)
+
+![User Stories](https://user-images.githubusercontent.com/101107794/194462806-5118fc95-ce2e-4495-adc6-679bc94425f2.png)
+
+
 
 
 </div>
@@ -72,13 +79,13 @@ Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário
 <span id="prototipo">
 
 ## :desktop_computer: Protótipo & Documentação
-Como parte do planejamento do projeto foram criados wireframes e mockups para idealização do layout, que, ao ser validado pelo cliente, foram aplicados em um protótipo, possibilitando a interação do usuário com a interface (vide [entrega da primeira sprint](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-1)).
+Como parte do planejamento do projeto foram criados wireframes e mockups para idealização do layout, que, ao ser validado pelo cliente, foram aplicados em um protótipo, possibilitando a interação do usuário com a interface (vide [relatórios das sprints](#relato)).
     
 
     
 > 🔗 **Links gerais** <br>
-> - Manual de instalação: [Clique aqui para baixar](https://github.com/JulioL2001/Teste234/files/9595940/Instalacao.1.pdf)
-> - Manual do usuário: [Clique aqui para baixar](https://github.com/JulioL2001/Teste234/files/9595894/Usuario.pdf)
+> - Manual de instalação: [Clique aqui para baixar]()
+> - Manual do usuário: [Clique aqui para baixar]()
 
 
 
@@ -117,10 +124,10 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
 | :-----------: | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Product Owner | Julio Cesar Rodrigues Lucena Costa           |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/julio-lucena-2001) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/JulioL2001)              |
 | Scrum Master  | Guilherme Duarte Cenzi Dias |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/guilherme-duarte-cenzi-dias-9737621b6) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Guilhermedcdias)     |
-|   Dev Team    | Ana Clara Marques Portes               |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/AnaMarks)        |
+|   Dev Team    | Ana Clara Marques Portes               |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/AnaMarks)        |
 |   Dev Team    | Gustavo Messa                   |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/gustavo-messa) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/gmessa)        |
 |   Dev Team    | Ryan Quadros Alves                 |   [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/ryan-alves-661ba823b) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/XLryan246)   |
-|   Dev Team    | Julio de Paula Machado       |           [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/JulioPm142)          |
+|   Dev Team    | Julio de Paula Machado       |           [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/JulioPm142)          |
 |   Dev Team    | Ian Ferreira Tupinambá Machado       |        [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/itupii) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/itupii)            |
 
 
