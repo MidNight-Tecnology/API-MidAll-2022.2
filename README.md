@@ -15,8 +15,8 @@
    
 <span id="sobre">
 
-## :bookmark_tabs: Sprint 1: 29/08 a 18/09 
-Relatório de progresso de como ocorreu a entrega e como foi feito todo o processo da sprint 1,  que se decorreu do dia 29 de Agosto a 18 de Setembro.
+## :bookmark_tabs: Sprint 2: 19/09 a 09/10
+Relatório de progresso de como ocorreu a entrega e como foi feito todo o processo da sprint 2, que se decorreu do dia 19 de Setembro a 09 de Outubro.
 
     
 → [Voltar ao topo](#topo)
@@ -26,11 +26,10 @@ Relatório de progresso de como ocorreu a entrega e como foi feito todo o proces
 ## :dart: Backlogs & User Stories
     
 Na imagem a seguir é indicado quais foram as entregas que foram acordadas entre o P.O e o cliente, sendo assim priorizadas pela a equipe, seguindo a metodologia Scrum.
-
-   
+  
 <div align="center">
     
-![User Stories](https://user-images.githubusercontent.com/101107794/194464450-623052ea-cb29-4d24-9269-4ac57f57e0b5.png)
+![User Stories (7) (1)](https://user-images.githubusercontent.com/101107794/194787947-713519aa-e15c-4a3d-a89e-49f3be3d2e23.png)
 
 </div>
   
@@ -44,9 +43,9 @@ Modelo de como está visualmente o banco de dados, sendo assim uma forma de visu
 
 <div align="center">
 
-![47ebc532-0a35-454d-aa0e-8423e3771be1](https://user-images.githubusercontent.com/101107794/190944657-281c5557-2b6b-44e5-a2b5-245476a9fd02.jpg)
+![4a46803f-4904-46be-87ad-10a405711e18](https://user-images.githubusercontent.com/101107794/194788005-6495a12e-45d9-4573-97f8-1e7aca9cb058.jpg)
 
-![13a26042-a81d-4583-8af6-fb0945546b72](https://user-images.githubusercontent.com/101107794/190944699-29f0b585-9709-44b1-b789-8001ae3b4103.jpg)
+![153b7c20-02a5-47a5-a092-1ce179c56560](https://user-images.githubusercontent.com/101107794/194788009-8886c203-c745-4b77-9cb5-044773f00800.jpg)
 
 
 
@@ -63,7 +62,7 @@ Um gráfico de burndown é uma representação gráfica do trabalho a ser feito 
 
 <div align="center">
 
-![image](https://user-images.githubusercontent.com/101107794/190945076-92fd3755-1d02-40ab-b868-51ff889d823d.png)
+![image](https://user-images.githubusercontent.com/101107794/194789482-6fef1fb9-0295-4c8b-b709-423aa417ae0c.png)
 
 
 </div>
@@ -100,13 +99,15 @@ Aqui está alguns Mockups iniciais do projeto, com o intuito de auxiliar na visu
 
 As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na construção do projeto:
 
+
 <img src="https://img.shields.io/badge/Figma-CED4DA?style=for-the-badge&logo=figma&logoColor=DC143C" alt="Figma" /> 
 <img src="https://img.shields.io/badge/Trello-CED4DA?style=for-the-badge&logo=trello&logoColor=blue" alt="Trello" /> 
 <img src="https://img.shields.io/badge/TypeScript-CED4DA?style=for-the-badge&logo=typescript&logoColor=007ACC" alt="Typescript" />
 <img src="https://img.shields.io/badge/Javascript-CED4DA?style=for-the-badge&logo=javascript&logoColor=yellow" alt="Javascipt" />
 <img src="https://img.shields.io/badge/HTML5-CED4DA?style=for-the-badge&logo=html5&logoColor=E34F26" alt="HTML" /> 
 <img src="https://img.shields.io/badge/CSS3-CED4DA?style=for-the-badge&logo=css3&logoColor=1572B6" alt="CSS" /> 	
-<!-- <img src="https://img.shields.io/badge/React-CED4DA?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /> -->
+<img src="https://img.shields.io/badge/React-CED4DA?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+<img src="https://img.shields.io/badge/Axios-CED4DA?style=for-the-badge&logo=axios&logoColor=blue" alt="Axios" />
 <img src="https://img.shields.io/badge/Node.js-CED4DA?style=for-the-badge&logo=nodedotjs&logoColor=339933" alt="Node" />  
 <img src="https://img.shields.io/badge/Python-CED4DA?style=for-the-badge&logo=python&logoColor=yellow" alt="Python" />
 <img src="https://img.shields.io/badge/MySQL-CED4DA?style=for-the-badge&logo=mysql&logoColor=black" alt="MySQL" />
