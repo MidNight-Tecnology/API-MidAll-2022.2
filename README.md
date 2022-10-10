@@ -29,8 +29,8 @@ Cada entrega foi realizada a partir da criação de uma **tag** neste repositór
 | Sprint | Previsão | Status | Histórico |
 |:--:|:----------:|:----------------|:-------------------------------------------------:|
 | 01 | 18/09/2022 |  Finalizado    | [Ver relatório](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-1) |
-| 02 | 09/10/2022 |  Em andamento    | [Ver relatório]() |
-| 03 | 06/11/2022 |  Não Iniciado    | [Ver relatório]() |
+| 02 | 09/10/2022 |  Finalizado    | [Ver relatório](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-2) |
+| 03 | 06/11/2022 |  Em andamento    | [Ver relatório]() |
 | 04 | 27/11/2022 |  Não Iniciado    | [Ver relatório]() |
 
 <!-- ### :clapper: Apresentação Final
