@@ -67,7 +67,7 @@ Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário
 
 ![Backlog-RNF](https://user-images.githubusercontent.com/101107794/194463292-963943e1-41c1-4025-9cdc-e91e36929e7f.png)
 
-![User Stories](https://user-images.githubusercontent.com/101107794/194462806-5118fc95-ce2e-4495-adc6-679bc94425f2.png)
+![User Stories](https://user-images.githubusercontent.com/101107794/194787680-88f43932-5531-49c8-9cc0-9359cf1313cd.png)
 
 
 
@@ -104,7 +104,9 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
 <img src="https://img.shields.io/badge/Javascript-CED4DA?style=for-the-badge&logo=javascript&logoColor=yellow" alt="Javascipt" />
 <img src="https://img.shields.io/badge/HTML5-CED4DA?style=for-the-badge&logo=html5&logoColor=E34F26" alt="HTML" /> 
 <img src="https://img.shields.io/badge/CSS3-CED4DA?style=for-the-badge&logo=css3&logoColor=1572B6" alt="CSS" /> 	
-<!-- <img src="https://img.shields.io/badge/React-CED4DA?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /> -->
+<img src="https://img.shields.io/badge/React-CED4DA?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+<img src="https://img.shields.io/badge/Express-CED4DA?style=for-the-badge&logo=express&logoColor=blue" alt="Express" />
+<img src="https://img.shields.io/badge/Axios-CED4DA?style=for-the-badge&logo=axios&logoColor=blue" alt="Axios" />
 <img src="https://img.shields.io/badge/Node.js-CED4DA?style=for-the-badge&logo=nodedotjs&logoColor=339933" alt="Node" />  
 <img src="https://img.shields.io/badge/Python-CED4DA?style=for-the-badge&logo=python&logoColor=yellow" alt="Python" />
 <img src="https://img.shields.io/badge/MySQL-CED4DA?style=for-the-badge&logo=mysql&logoColor=black" alt="MySQL" />
