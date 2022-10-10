@@ -18,6 +18,9 @@ export const PdfModel = db.define("pdfs", {
     },
     link_pdf_filtrado: {
         type: DataTypes.STRING,
+    },
+    caminho_sys: {
+        type: DataTypes.TEXT
     }
 })
 

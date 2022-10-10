@@ -2,7 +2,6 @@ import React from "react";
 
 const Login = () =>{
     return (
-            
     <div className="container">
         <section class="fundinho">
             <div class="info">

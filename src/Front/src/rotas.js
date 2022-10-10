@@ -14,11 +14,11 @@ export default function Rotas() {
     <BrowserRouter>
       <Routes>
        <Route path='/' element={<Login/>} />
-       <Route path='/AlterAssoc' element={<AlterarAssoc/>} />
-       <Route path='/AlterEmail' element={<AlterarEmail/>} />
-       <Route path='/CadAssoc' element={<CadastroAssoc/>} />
-       <Route path='/Clipping' element={<Clipping/>} />
-       <Route path='/GerencAssoc' element={<GerencAssoc/>} />
+       <Route path='/alterassoc/:id' element={<AlterarAssoc/>} />
+       <Route path='/alteremail' element={<AlterarEmail/>} />
+       <Route path='/cadassoc' element={<CadastroAssoc/>} />
+       <Route path='/clip' element={<Clipping/>} />
+       <Route path='/gerencassoc' element={<GerencAssoc/>} />
       </Routes>
     </BrowserRouter>
   )

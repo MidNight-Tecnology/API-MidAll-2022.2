@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
-import Pdf from "../../pdf";
+import Pdf from "../../components/Modal";
+import crud from "../../services/axios";
 
 const Clipping = () => {
+  const [ Emails, setEmails ] = useState([])
+  useEffect(() =>{
+    crud.get("/getpdf")
+    .then((response) =>{
+      setEmails(response.data)
+    })
+    .catch((error) =>{
+      console.log(error)
+    })
+  }, [])
   return (
     <div className="container">
       <div class="container">
@@ -18,18 +29,20 @@ const Clipping = () => {
                 <th> </th>
                 <th>Nome</th>
               </tr>
-              <label for="{{id}}">
                 <div class="dados">
-                  <tr>
-                    <td>
-                    <div class="align_buts">
-                    <Pdf />
-                    </div>
-                    </td>
-                    <div class="nome_as"><td><p></p></td></div>
-                  </tr>
+                {Emails.map((email, key) =>{
+                    return(
+                      <tr key={key}>
+                        <td>
+                        <div class="align_buts">
+                        <Pdf />
+                        </div>
+                        </td>
+                        <div class="nome_as"><td><p>sdsds </p></td></div>
+                      </tr>
+                    )
+                  })}
                 </div>
-              </label>
             </table>
           </div>
         </div>

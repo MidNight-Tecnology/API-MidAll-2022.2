@@ -1,97 +1,85 @@
-import Axios from "axios";
 import React,{ useState }from "react";
 import Header from "../../components/Header";
+import crud from "../../services/axios";
+import { useForm } from "react-hook-form";
+
 
 const CadastroAssoc = () => {
-    const [values,setValues] = useState([]);
-    const pegar = (value) => {
-        setValues (preValue => ({
-
-            ...preValue,
-            [value.target.name]: value.target.value,
-        }))
-    }
-    
-    const aa = () =>{
-        const a = values
-        console.log(a);
-    }
-    // const cadastrar = () =>{
-    //     Axios.post(`http://localhost:4512/createassoc`, values)
-    //     .then(resp =>{
-    //         console.log(values);
-    //         console.log("deu")
-    //     })
-    //     .catch(error =>{
-    //         console.log(error)
-    //     })
-
-    const cadastrar = () =>{
-        Axios.post(`http://localhost:4512/createassoc`,{
-            nome: values.nome,
-            endereco: values.endereco,
-            comp: values.complemento,
-            nasc: values.nasc,
-            cep:values.cep,
-            tel: values.tel,
-            cpf: values.cpf,
-            rg: values.rg,
-            estado_cv: values.estado_cv,
-            inst_ens: values.inst_ens,
-            email: values.email, 
-        
+        const { register, handleSubmit, watch, formState: { errors } } = useForm();
+        const onSubmit = data => crud.post("/criassoc", {
+            nome: data.nome,
+            endereco: data.endereco,
+            comp: data.comp,
+            nasc: data.nasc,
+            cep: data.cep,
+            tel: data.tel,
+            cpf: data.cpf,
+            rg: data.rg,
+            estado_cv: data.estado_cv,
+            inst_ens: data.inst_ens,
+            email: data.email, 
         }) .then(resp =>{
-                    console.log(values);
-                    console.log("deu")
-                })
+            console.log(resp);
+        })
         .catch(error =>{
             console.log(error)
         })
-    }
+
+    
     return (
         <div className="container">
             <Header />
             <section class="cadastro_user">
                 <div class="coluna">
                     <h1 class="gradient">Cadastrar Associados</h1>
-                    <form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <div class="td">
                             <div class="info">
-                                <input onChange={pegar} type="text" placeholder="Nome" name="nome"/>
+                                <input type="text" placeholder="Nome" name="nome" {...register("nome", { required: true })}/>
+                                {errors.nome && <span>Nome é Requisito Obrigatório</span>}
                                 <br />
-                                <input onChange={pegar} type="text" placeholder="Endereço" name="endereco"/>
+                                <input type="text" placeholder="Endereço" name="endereco" {...register("endereco", { required: true })}/>
+                                {errors.endereco && <span>Endereço é Requisito Obrigatório</span>}
                                 <br />
-                                <input onChange={pegar}type="text" placeholder="Complemento" name="comp"/>
+                                <input type="text" placeholder="Complemento" name="comp" {...register("comp")}/>
                                 <br />
                                 <div class="info_lado">
-                                    <input onChange={pegar} type="date" placeholder="Data de Nascimento" name="nasc"/>
+                                    <input type="date" placeholder="Data de Nascimento" name="nasc" {...register("nasc", { required: true })}/>
+                                    {errors.nasc && <span>Nascimento é Requisito Obrigatório</span>}
                                     <img class="logo3" alt="logo3" src="../assets/img/logo3.jpg"></img>
-                                    <input onChange={pegar} type="text" placeholder="CEP" name="cep"/>
+                                    <input type="text" placeholder="CEP" name="cep" {...register("cep", { required: true })}/>
+                                    {errors.cep && <span>CEP é Requisito Obrigatório</span>}
                                 </div>
                                 <br />
                             </div>
                         </div>
                         <div class="info2">
                             <div class="itens-cadastro">
-                                <input onChange={pegar} type="text" placeholder="Telefone" name="tel"/>
-                                <input onChange={pegar} type="text" placeholder="CPF" name="cpf"/>
-                                <input onChange={pegar} type="text" placeholder="RG" name="rg"/>
+                                <input type="text" placeholder="Telefone" name="tel" {...register("tel", { required: true })}/>
+                                {errors.tel && <span>Telefone é Requisito Obrigatório</span>}
+                                <input type="text" placeholder="CPF" name="cpf" {...register("cpf", { required: true })}/>
+                                {errors.cpf && <span>CPF é Requisito Obrigatório</span>}
+                                <input type="text" placeholder="RG" name="rg" {...register("rg", { required: true })}/>
+                                {errors.rg && <span>RG é Requisito Obrigatório</span>}
                             </div>
                             <div class="novas_infos">
-                                <select onChange={pegar} name="estado_cv" id="estado_cv">
+                                <select name="estado_cv" id="estado_cv" {...register("estado_cv", { required: true })}>
                                     <option value="Casado(a)">Casado(a)</option>
                                     <option value="Solteiro(a)">Solteiro(a)</option>
                                     <option value="Viúvo(a)">Viúvo(a)</option>
                                 </select>
+                                {errors.estado_cv && <span>Estado Civil é Requisito Obrigatório</span>}
                                 <img class="logo3" alt="logo3" src="../assets/img/logo3.jpg"></img>
-                                <input onChange={pegar} type="text" name="inst_ens" placeholder="Instituição de Ensino"></input>
+                                <input type="text" name="inst_ens" placeholder="Instituição de Ensino" {...register("inst_ens", { required: true })}/>
+                                {errors.inst_ens && <span>Instituição de Ensino é Requisito Obrigatório</span>}
                             </div>
                             <div class="info_email">
-                                <input onChange={pegar} type="text" placeholder="Email" name="email"/>
+                                <input type="text" placeholder="Email" name="email" {...register("email", { required: true })}/>
+                                {errors.email && <span>Email é Requisito Obrigatório</span>}
                             </div>
                             <div class="align_buts">
                                 <button type="reset">Limpar</button>
-                                <button type="submit" onClick={() => cadastrar()} >Cadastrar</button>
+                                <button type="submit" >Cadastrar</button>
                             </div>
                         </div>
                     </form>

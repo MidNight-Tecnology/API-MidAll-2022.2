@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
+import crud from "../../services/axios";
+import { Link } from "react-router-dom";
+
 
 const GerencAssoc = () => {
+
+  const [ Assocs, setAssocs ] = useState([])
+  useEffect(() =>{
+    crud.get("/getassoc")
+    .then((response) =>{
+      setAssocs(response.data)
+    })
+    .catch((error) =>{
+      console.log(error)
+    })
+  }, [])
   return (
     <div className="container">
       <div class="container">
@@ -20,38 +34,43 @@ const GerencAssoc = () => {
                 <th>Instituição</th>
                 <th> </th>
               </tr>
-                    <tr>
+                    {Assocs.map((assoc, key) => {
+
+                      return (
+                        <tr key={key}>
                       <td>
-                        <input type="hidden" name="id" value="{{id}}"></input>
+                        <p>{assoc.id}</p>
                       </td>
                       <td>
                         <div class="nome_assoc">
-                          <p>Ryan astolfo da silva roger</p>
+                          <p>{assoc.nome}</p>
                         </div>
                       </td>
                       <td>
                         <div class="desc">
-                          <p>12997974215</p>
+                          <p>{assoc.tel}</p>
                         </div>
                       </td>
                       <td>
                         <div class="ema">
-                          <p>rogerzinryan@gmail.com</p>
+                          <p>{assoc.email}</p>
                         </div>
                       </td>
                       <td>
                         <div class="inst">
-                          <p>fatec</p>
+                          <p>{assoc.inst_ens}</p>
                         </div>
                       </td>
                       <div className="align_buts">
                         <td>
-                          <a href="/sistema/gerenc_associ/{{id}}">
+                          <Link to={{ pathname: `/alterassoc/${assoc.id}` }}>
                             <button type="submit">Alterar</button>
-                          </a>
+                          </Link>
                         </td>
                       </div>
                     </tr>
+                      )
+                    })}
             </table>
           </div>
         </div>

@@ -15,7 +15,7 @@ router.delete("/deleteuser/:UserId", userControllers.destroy);
 
 //Para Associados
 
-router.post('/createassoc', assocControllers.create);
+router.post('/criassoc', assocControllers.create);
 router.get("/getassoc", assocControllers.findAll);
 router.get("/getassoc/:Id", assocControllers.findOne);
 router.put("/editassoc/:Id", assocControllers.update);
