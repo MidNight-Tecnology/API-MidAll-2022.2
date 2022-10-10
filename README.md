@@ -86,7 +86,7 @@ Como parte do planejamento do projeto foram criados wireframes e mockups para id
 > - Manual de instalação: [Clique aqui para baixar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/raw/Sprint-1/Manual%20Instala%C3%A7%C3%A3o.pdf)
 > - Manual do usuário: [Clique aqui para baixar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/raw/Sprint-1/Manual%20Usu%C3%A1rio.pdf)
 
-Aqui está alguns Mockups iniciais do projeto, com o intuito de auxiliar na visualização das telas de FrontEnd do Projeto:
+Adiante será mostrado algumas alterações que foram aplicadas no frontend, afim de melhorar toda a interface do projeto, levando em consideração todas as necessidades do cliente:
 
 ![image](https://user-images.githubusercontent.com/101107794/190945721-37982469-1782-421e-a0be-8ba9032c4ba5.png)
 
@@ -107,6 +107,7 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
 <img src="https://img.shields.io/badge/HTML5-CED4DA?style=for-the-badge&logo=html5&logoColor=E34F26" alt="HTML" /> 
 <img src="https://img.shields.io/badge/CSS3-CED4DA?style=for-the-badge&logo=css3&logoColor=1572B6" alt="CSS" /> 	
 <img src="https://img.shields.io/badge/React-CED4DA?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+<img src="https://img.shields.io/badge/Express-CED4DA?style=for-the-badge&logo=express&logoColor=blue" alt="Express" />
 <img src="https://img.shields.io/badge/Axios-CED4DA?style=for-the-badge&logo=axios&logoColor=blue" alt="Axios" />
 <img src="https://img.shields.io/badge/Node.js-CED4DA?style=for-the-badge&logo=nodedotjs&logoColor=339933" alt="Node" />  
 <img src="https://img.shields.io/badge/Python-CED4DA?style=for-the-badge&logo=python&logoColor=yellow" alt="Python" />
