@@ -15,7 +15,7 @@ export default function Rotas() {
       <Routes>
        <Route path='/' element={<Login/>} />
        <Route path='/alterassoc/:id' element={<AlterarAssoc/>} />
-       <Route path='/alteremail' element={<AlterarEmail/>} />
+       <Route path='/alteremail/:id' element={<AlterarEmail/>} />
        <Route path='/cadassoc' element={<CadastroAssoc/>} />
        <Route path='/clip' element={<Clipping/>} />
        <Route path='/gerencassoc' element={<GerencAssoc/>} />

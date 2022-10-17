@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
-import Pdf from "../../components/Modal";
 import crud from "../../services/axios";
+import { Link } from "react-router-dom";
+
 
 const Clipping = () => {
-  const [ Emails, setEmails ] = useState([])
+  const [ Email, setEmail ] = useState([])
   useEffect(() =>{
-    crud.get("/getpdf")
+    crud.get("/getemail")
     .then((response) =>{
-      setEmails(response.data)
+      setEmail(response.data)
     })
     .catch((error) =>{
       console.log(error)
@@ -23,26 +24,30 @@ const Clipping = () => {
         <div class="coluna">
           <h1 class="gradient">Clipping de Email</h1>
           <div class="borda">
-            <form action="/sistema/alt_email" method="post"></form>
+            <form method="post"></form>
             <table class="dados1">
               <tr class="gradient">
-                <th> </th>
                 <th>Nome</th>
+                <th></th>
               </tr>
-                <div class="dados">
-                {Emails.map((email, key) =>{
-                    return(
+              <div class="dados">
+              {Email.map((Email, key) => {
+              return (
                       <tr key={key}>
                         <td>
+                        <div class="nome_as"><td><p>{Email.nome_assoc}</p></td></div>
+                        </td>
+                        <td>
                         <div class="align_buts">
-                        <Pdf />
+                        <Link to={{ pathname: `/alteremail/${Email.id}` }}>
+                          <button>ver</button>
+                        </Link>
                         </div>
                         </td>
-                        <div class="nome_as"><td><p>sdsds </p></td></div>
                       </tr>
-                    )
-                  })}
-                </div>
+                )
+              })}
+              </div>
             </table>
           </div>
         </div>

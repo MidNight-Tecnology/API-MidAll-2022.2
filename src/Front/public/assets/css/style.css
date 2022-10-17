@@ -405,6 +405,7 @@ textarea::placeholder {
 
 .clipping_emails .coluna .borda  table{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -452,6 +453,11 @@ textarea::placeholder {
 }
 .dados{
     display: flex;
+    flex-wrap: wrap;
+
+}
+tr{
+    width: 100%;
 }
 
 .Gerenciar_Associados .coluna p{

@@ -1,6 +1,7 @@
 import express from "express";
 import userControllers from "./controllers/userControllers";
 import assocControllers from "./controllers/assocControllers";
+import EmailControllers from "./controllers/emailControllers";
 import pdfControllers from "./controllers/pdfControllers";
 
 
@@ -28,4 +29,10 @@ router.get("/getpdf/:Id", pdfControllers.findOne);
 router.put("/editpdf/:Id", pdfControllers.update);
 router.delete("/deletepdf/:Id", pdfControllers.destroy);
 
+
+router.post("/createemail", EmailControllers.create);
+router.get("/getemail", EmailControllers.findAll);
+router.get("/getemail/:Id", EmailControllers.findOne);
+router.put("/editemail/:Id", EmailControllers.update);
+router.delete("/deleteemail/:Id", EmailControllers.destroy);
 export { router };
