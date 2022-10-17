@@ -62,7 +62,7 @@ Um gráfico de burndown é uma representação gráfica do trabalho a ser feito 
 
 <div align="center">
 
-![image](https://user-images.githubusercontent.com/101107794/194789482-6fef1fb9-0295-4c8b-b709-423aa417ae0c.png)
+![image](https://user-images.githubusercontent.com/101107794/196099284-454e70ee-4b17-4f49-a879-a7f344d64783.png)
 
 
 </div>
@@ -83,12 +83,14 @@ Como parte do planejamento do projeto foram criados wireframes e mockups para id
 
     
 > 🔗 **Links gerais** <br>
-> - Manual de instalação: [Clique aqui para baixar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/raw/Sprint-1/Manual%20Instala%C3%A7%C3%A3o.pdf)
-> - Manual do usuário: [Clique aqui para baixar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/raw/Sprint-1/Manual%20Usu%C3%A1rio.pdf)
+> - Manual de Instalação: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-2/Manual%20Instalação.pdf)
+> - Manual do Usuário: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-2/Manual%20Usuário.pdf)
 
 Adiante será mostrado algumas alterações que foram aplicadas no frontend, afim de melhorar toda a interface do projeto, levando em consideração todas as necessidades do cliente:
 
-![image](https://user-images.githubusercontent.com/101107794/190945721-37982469-1782-421e-a0be-8ba9032c4ba5.png)
+
+![Image01](https://user-images.githubusercontent.com/101107794/196098914-2effdaa5-63cc-4b35-8543-8e7e1073ca2d.jpeg)
+![Image02](https://user-images.githubusercontent.com/101107794/196098990-5340d14e-729b-4881-afda-8fc827160db0.jpeg)
 
     
 → [Voltar ao topo](#topo)
