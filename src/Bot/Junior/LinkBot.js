@@ -2,38 +2,38 @@
 const pup = require('puppeteer');  //npm i puppeteer
 const cheerio = require('cheerio'); //npm i cheerio
 const readlineSync = require('readline-sync'); // npm install readline-sync
-
-const db = require('./db');
-const PdfModel = require('../../Back/dist/database/models/pdfModel');
 const { link } = require('fs');
-
+const axios = require('axios');
+const crud = axios.create({
+    baseURL: "http://localhost:4512",
+  });
 
 // const searchFor = readlineSync.question('informe o link desejado: ')
 // const searchNome = readlineSync.question('informe o Nome desejado: ')
 
 
 console.log('<<  Juninho ON! 🤖 >> ')
-//Testa Conexão com o db
-db.sequelize.authenticate().then(function () {
-    console.log("Conectado com sucesso!")
-}).catch(function (erro) {
-    console.log("Erro ao conectar: " + erro)
-});
+
 
 // const url = searchFor;
 // const nomes = searchNome;
 
 const url = [];
 const nomes = [];
+crud.get('/getpdf')
+.then(function (response) {
+    // console.log(typeof response)
+    const obj = response.data
+    obj.map((item, key) =>{
+        // console.log(item.id);
+        // console.log(item.link_pdf);
+        // console.log(item.nome_assoc);
+        url.push(item.link_pdf)
+        nomes.push(item.nome_assoc)
 
-const banco = PdfModel.findAll().then(function (response) {
-    Object.keys(response).forEach(function (item) {
-        // console.log(response[item].id + '\n\n\n' + response[item].link + '\n\n\n' + response[item].assoc_nome + '\n\n\n');
-        url.push(response[item].link_pdf)
-        nomes.push(response[item].nome_assoc)
     })
-})
-
+    })
+        
 
 
 
@@ -46,7 +46,7 @@ let tramontina = [];
 
 // função assincrona 
 (async () => {
-    const browser = await pup.launch({ headless: true });// chromium true pra nao mostrar abrindo
+    const browser = await pup.launch({ headless: false });// chromium true pra nao mostrar abrindo
     const page = await browser.newPage();
     console.log('iniciei!');
     for (i = 0; i < url.length; i++) {

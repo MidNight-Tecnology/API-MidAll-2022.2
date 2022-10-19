@@ -15,12 +15,11 @@ export const PdfModel = db.define("pdfs", {
     },
     link_pdf: {
         type: DataTypes.STRING,
+        allowNull: true,
     },
     link_pdf_filtrado: {
         type: DataTypes.STRING,
-    },
-    caminho_sys: {
-        type: DataTypes.TEXT
+        allowNull: true,
     }
 })
 

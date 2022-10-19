@@ -12,7 +12,7 @@ con = criar_conexao("localhost", "root", "root", "crud")
 
 def insere_link(con, link, assoc_nome):
     cursor = con.cursor()
-    sql = "INSERT INTO pdfs (assoc_nome, link_pdf, link_pdf_filtrado, createdAt, updatedAt) values (%s, %s, %s, %s)"
+    sql = "INSERT INTO pdfs (nome_assoc, link_pdf, link_pdf_filtrado, createdAt, updatedAt) values (%s, %s, %s, %s, %s)"
     valores = (assoc_nome, link, '', datetime.date.today(), datetime.date.today())
     cursor.execute(sql, valores)
     cursor.close()
