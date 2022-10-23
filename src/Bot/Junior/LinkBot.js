@@ -50,7 +50,9 @@ let tramontina = [];
     const page = await browser.newPage();
     console.log('iniciei!');
     for (i = 0; i < url.length; i++) {
-        await page.goto(url[i]);
+        await page.goto(url[65]);
+        // if associado (i) tem link pega o link do amigo
+        // else pula pro amigo do lado
         console.log('fui pra URL!');
 
         await page.waitForSelector('.joyride-content-wrapper');
