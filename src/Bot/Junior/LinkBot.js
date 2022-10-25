@@ -1,4 +1,6 @@
 // bibliotecas
+const {PdfModel} = require ('../../Back/src/database/models/pdfModel')
+
 const pup = require('puppeteer');  //npm i puppeteer
 const cheerio = require('cheerio'); //npm i cheerio
 const readlineSync = require('readline-sync'); // npm install readline-sync
@@ -7,6 +9,8 @@ const axios = require('axios');
 const crud = axios.create({
     baseURL: "http://localhost:4512",
   });
+
+
 
 // const searchFor = readlineSync.question('informe o link desejado: ')
 // const searchNome = readlineSync.question('informe o Nome desejado: ')
@@ -50,14 +54,17 @@ let tramontina = [];
     const page = await browser.newPage();
     console.log('iniciei!');
     for (i = 0; i < url.length; i++) {
-        await page.goto(url[65]);
+        await page.goto(url[3]);
         // if associado (i) tem link pega o link do amigo
         // else pula pro amigo do lado
         console.log('fui pra URL!');
 
-        await page.waitForSelector('.joyride-content-wrapper');
-        await page.click('.joyride-content-wrapper > a', '.joyride-content-wrapper > a'); //
 
+
+        await page.waitForSelector('.joyride-content-wrapper');
+        const box = await page.click('.joyride-content-wrapper > a', '.joyride-content-wrapper > a'); //
+
+    
 
         await page.click('#content_dtgResultado_lblData_0');
 

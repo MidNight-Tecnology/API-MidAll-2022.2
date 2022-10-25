@@ -33,10 +33,15 @@ def selecionar_associados(con):
 
 
 # Geração de data atual
-calendar = str(datetime.date.today())
-day = calendar[8:10]
-month = calendar[5:7]
-year = calendar[0:4]
+# calendar = str(datetime.date.today())
+
+day = str(input("Coloque o dia desejado (dd): "))
+month = str(input("Coloque o mês desejado (mm): "))
+year = str(input("Coloque o ano desejado (aaaa): "))
+
+# day = calendar[8:10]
+# month = calendar[5:7]
+# year = calendar[0:4]
 
 
 # GERAÇÃO/FILTRAGEM DE NOMES DOS ASSOCIADOS

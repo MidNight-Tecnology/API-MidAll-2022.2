@@ -14,7 +14,7 @@ export const PdfModel = db.define("pdfs", {
         allowNull: false,
     },
     link_pdf: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true,
     },
     link_pdf_filtrado: {
