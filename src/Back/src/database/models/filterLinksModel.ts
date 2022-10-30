@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import { db } from "../db";
 
 
-export const PdfModel = db.define("pdfs", {
+export const FilterLinksModel = db.define("filterLinks", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -16,11 +16,7 @@ export const PdfModel = db.define("pdfs", {
     link_pdf: {
         type: DataTypes.TEXT,
         allowNull: true,
-    },
-    link_pdf_filtrado: {
-        type: DataTypes.TEXT,
-        allowNull: true,
     }
 })
 
-PdfModel.sync();
+FilterLinksModel.sync();

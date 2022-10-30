@@ -17,7 +17,7 @@ export const EmailModel = db.define("emails", {
         type: DataTypes.STRING,
     },
     email: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
     },
 })
 
