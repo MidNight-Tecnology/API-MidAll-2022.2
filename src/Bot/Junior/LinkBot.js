@@ -53,47 +53,64 @@ let tramontina = [];
     if (!urlzinha.includes("ResultadoNegativo")) {
       console.log("Parte que pega os links de cada box");
       console.log(urlzinha)
-
-      await page.waitForSelector(".joyride-content-wrapper");
-      await page.click(
+      
+      
+      const esperar = await page.waitForSelector(".joyride-content-wrapper");
+      const fechar = await page.click(
         ".joyride-content-wrapper > a",
         ".joyride-content-wrapper > a"
-      ); //
-      await page.click("#content_dtgResultado_lblData_0");
+      );
 
-      const links = await page.$$eval(".card-body > .card-text> a", (el) =>
-        el.map((link) => link.href)
-      ); //pega todos os links dos cards
-      links.shift(); // apaga o primeiro indice da lista
+      
+      // if se budeguinha/esperar aparecer fechar a budeguinha/esperar e roda o programa,
+      // else a budeguinha/esperar não aparecer roda o programa
+      
+      switch(esperar){
+
+        
+        case true:
+          fechar
+
+
+        case false:
+          
+
+          await page.click("#content_dtgResultado_lblData_0");
+
+          const links = await page.$$eval(".card-body > .card-text> a", (el) =>
+          el.map((link) => link.href)
+        ); //pega todos os links dos cards
+        links.shift(); // apaga o primeiro indice da lista
 
       //console.log(typeof(links))
 
-      const obj = {};
+        const obj = {};
 
-      for (const link of links) {
-        if (c === 15) continue; //limitador de paginas
+        for (const link of links) {
+          if (c === 15) continue; //limitador de paginas pega as 15 boxes das paginas
 
-        console.log("Pagina", c); //contador de paginas
-        obj.link = link;
+          console.log("Pagina", c); //contador de paginas
+          obj.link = link;
 
-        list.push(obj.link); //joga os links do objeto dentro da lista
+          list.push(obj.link); //joga os links do objeto dentro da lista
 
-        cort = obj.link.split("aspx"); //corta o link ate a palavra aspx do link
+          cort = obj.link.split("aspx"); //corta o link ate a palavra aspx do link
 
-        console.log(cort[1], "\n"); // cortador pega a partir do 1 indice.
+          console.log(cort[1], "\n"); // cortador pega a partir do 1 indice.
         // const banco2 = PdfModel.update({
         //     link_pdf_filtrado: cort[1],
         //     where:
         //     {
         //         nome_assoc: nomes[i]}});
 
-        c++;
+          c++;
+        }
+        console.log("pegou");
+        await page.waitForTimeout(500);
+        
+      }} else {
+        console.log("não tem nada");
       }
-      console.log("pegou");
-      await page.waitForTimeout(500);
-    } else {
-      console.log("não tem nada");
-    }
   }
   await browser.close();
 })();
