@@ -20,34 +20,33 @@ const Clipping = () => {
       <div class="container">
         <Header />
       </div>
-      <section class="clipping_emails">
-        <div class="coluna">
-          <h1 class="gradient">Clipping de Email</h1>
-          <div class="borda">
-            <form method="post"></form>
+      <section className="clipping_emails">
+        <div className="coluna">
+          <h1 className="gradient">Clipping de Email</h1>
+          <div className="borda">
             <table class="dados1">
-              <tr class="gradient">
+              <tr className="gradient">
                 <th>Nome</th>
-                <th></th>
+                <th> </th>
               </tr>
-              <div class="dados">
               {Email.map((Email, key) => {
               return (
                       <tr key={key}>
                         <td>
-                        <div class="nome_as"><td><p>{Email.nome_assoc}</p></td></div>
+                          <div class="nome_as">
+                            <p>{Email.nome_assoc}</p>
+                          </div>
                         </td>
-                        <td>
                         <div class="align_buts">
-                        <Link to={{ pathname: `/alteremail/${Email.id}` }}>
-                          <button>ver</button>
-                        </Link>
+                          <td>
+                            <Link to={{ pathname: `/alteremail/${Email.id}` }}>
+                            <button>vesualizar</button>
+                            </Link>
+                          </td>
                         </div>
-                        </td>
                       </tr>
                 )
               })}
-              </div>
             </table>
           </div>
         </div>
@@ -57,3 +56,4 @@ const Clipping = () => {
 };
 
 export default Clipping;
+
