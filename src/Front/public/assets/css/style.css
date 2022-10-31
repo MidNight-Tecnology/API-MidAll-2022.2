@@ -369,6 +369,10 @@ textarea::placeholder {
 
 /* CLIPPING DE EMAILS */
 
+.clipping_emails .borda {
+    display: block;
+}
+
 .clipping_emails .coluna h1 {
     text-align: center;
     width: 100%;
@@ -384,36 +388,30 @@ textarea::placeholder {
     flex-wrap: wrap;
 }
 
-.imag img {
-    width: 95px;
-    height: 95px;
-}
-
-.h2 {
-    padding-left: 20px;
-}
-
-.dados h1 {
-    padding-right: 20px;
-}
-
 .clipping_emails .coluna .align_buts {
     width: 90%;
+    margin-top: 3vh;
     display: flex;
     justify-content: right;
 }
-
-.clipping_emails .coluna .borda  table{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .clipping_emails .coluna .align_buts button {
-    padding: 6px;
+    padding: 10px 5px 10px 5px;
 }
 
 .clipping_emails .coluna p{
+    font-size: large;
+}
+
+tr{
+    width: 100%;
+}
+
+th, td{
+    padding: 4px 13px;
+}
+
+th{
+    color: #A92364;
     font-size: 3ch;
 }
 
@@ -436,10 +434,6 @@ textarea::placeholder {
     justify-content: center;
     flex-wrap: wrap;
 }
-
-/* .Gerenciar_Associados .imag .dados{
-    display: inline-block;
-} */
 
 .Gerenciar_Associados .coluna .align_buts {
     width: 90%;
