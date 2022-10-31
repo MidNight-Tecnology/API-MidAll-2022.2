@@ -55,62 +55,55 @@ let tramontina = [];
       console.log(urlzinha)
       
       
-      const esperar = await page.waitForSelector(".joyride-content-wrapper");
-      const fechar = await page.click(
-        ".joyride-content-wrapper > a",
-        ".joyride-content-wrapper > a"
-      );
+      // const esperar = await page.waitForSelector(".joyride-content-wrapper");
+      // const fechar = await page.click(".joyride-content-wrapper > a");
 
       
       // if se budeguinha/esperar aparecer fechar a budeguinha/esperar e roda o programa,
       // else a budeguinha/esperar não aparecer roda o programa
+
       
-      switch(esperar){
-
-        
-        case true:
-          fechar
-
-
-        case false:
           
 
-          await page.click("#content_dtgResultado_lblData_0");
+          // await page.click("#content_dtgResultado_lblData_0");
 
-          const links = await page.$$eval(".card-body > .card-text> a", (el) =>
-          el.map((link) => link.href)
-        ); //pega todos os links dos cards
-        links.shift(); // apaga o primeiro indice da lista
+          const links = await page.$$eval(".card-body > .card-text> a", (el) => el.map((link) => link.href)); //pega todos os links dos cards
+          links.shift(); // apaga o primeiro indice da lista
 
       //console.log(typeof(links))
 
         const obj = {};
 
-        for (const link of links) {
-          if (c === 15) continue; //limitador de paginas pega as 15 boxes das paginas
+            for (const link of links) {
+              // if (fechar==false || esperar == false) continue;
+              
 
-          console.log("Pagina", c); //contador de paginas
-          obj.link = link;
+               //limitador de paginas pega as 15 boxes das paginas
 
-          list.push(obj.link); //joga os links do objeto dentro da lista
+              console.log("Pagina", c); //contador de paginas
+              obj.link = link;
 
-          cort = obj.link.split("aspx"); //corta o link ate a palavra aspx do link
+              list.push(obj.link); //joga os links do objeto dentro da lista
 
-          console.log(cort[1], "\n"); // cortador pega a partir do 1 indice.
-        // const banco2 = PdfModel.update({
-        //     link_pdf_filtrado: cort[1],
-        //     where:
-        //     {
-        //         nome_assoc: nomes[i]}});
+              cort = obj.link.split("aspx"); //corta o link ate a palavra aspx do link
 
-          c++;
-        }
-        console.log("pegou");
-        await page.waitForTimeout(500);
+              console.log(cort[1], "\n"); // cortador pega a partir do 1 indice.
+            // const banco2 = PdfModel.update({
+            //     link_pdf_filtrado: cort[1],
+            //     where:
+            //     {
+            //         nome_assoc: nomes[i]}});
+
+              c++;
+            
+            console.log("Pegou link de associade número "+i+".");
+            await page.waitForTimeout(500);
+          }
         
-      }} else {
-        console.log("não tem nada");
+    } else {
+        console.log("O associade de número "+i+" não tem pdfs no dia");
       }
   }
   await browser.close();
 })();
+
