@@ -2,21 +2,29 @@ import { DataTypes } from "sequelize";
 import { db } from "../db";
 
 
-export const PdfModel = db.define("pdfs", {
+export const RelatoriosModel = db.define("relatorios", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true,
     },
-    nome_assoc: {
+    nome_do_associado: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    link_pdf: {
+    data: {
+        type: DataTypes.DATE,
+    },
+    caderno: {
+        type: DataTypes.STRING,
+    },
+    pagina: {
+        type: DataTypes.STRING,
+    },
+    texto_do_bloco: {
         type: DataTypes.TEXT,
-        allowNull: true,
     },
 })
 
-PdfModel.sync();
+RelatoriosModel.sync();

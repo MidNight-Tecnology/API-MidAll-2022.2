@@ -1,16 +1,16 @@
-import { PdfModel } from "../database/models/pdfModel";
+import { FilterLinksModel } from "../database/models/filterLinksModel";
 import { Request, Response } from "express";
 
-class PdfController {
+class FilterLinksControllers {
   async findAll(req: Request, res: Response) {
-    const Users = await PdfModel.findAll();
+    const Users = await FilterLinksModel.findAll();
     return Users.length > 0
       ? res.status(200).json(Users)
       : res.status(204).send();
   }
   async findOne(req: Request, res: Response) {
     const { Id } = req.params;
-    const User = await PdfModel.findOne({
+    const User = await FilterLinksModel.findOne({
       where: {
         id: Id,
       },
@@ -19,7 +19,7 @@ class PdfController {
   }
   async create(req: Request, res: Response) {
     const { nome_assoc, link_pdf } = req.body;
-    const User = await PdfModel.create({
+    const User = await FilterLinksModel.create({
       nome_assoc,
       link_pdf,
     });
@@ -27,17 +27,17 @@ class PdfController {
   }
   async update(req: Request, res: Response) {
     const { Id } = req.params;
-    const User = await PdfModel.update(req.body, 
+    const User = await FilterLinksModel.update(req.body, 
       {where:
     { id: Id,}});
     return res.status(204).send();
   }
   async destroy(req: Request, res: Response) {
     const { Id } = req.params;
-    await PdfModel.destroy({ where: 
+    await FilterLinksModel.destroy({ where: 
       { id: Id,}});
       return res.status(204).send();
   }
 }
 
-export default new PdfController();
+export default new FilterLinksControllers();

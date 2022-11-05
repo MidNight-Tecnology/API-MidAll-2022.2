@@ -88,11 +88,6 @@ let tramontina = [];
               cort = obj.link.split("aspx"); //corta o link ate a palavra aspx do link
 
               console.log(cort[1], "\n"); // cortador pega a partir do 1 indice.
-            // const banco2 = PdfModel.update({
-            //     link_pdf_filtrado: cort[1],
-            //     where:
-            //     {
-            //         nome_assoc: nomes[i]}});
 
               c++;
             

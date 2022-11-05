@@ -17,6 +17,15 @@ class UserController {
     });
     return User ? res.status(200).json(User) : res.status(204).send();
   }
+  async findOneemail(req: Request, res: Response) {
+    const { UserEmail } = req.params;
+    const User = await UserModel.findOne({
+      where: {
+        email: UserEmail,
+      },
+    });
+    return User ? res.status(200).json(User) : res.status(204).send();
+  }
   async create(req: Request, res: Response) {
     const { nome, email, senha } = req.body;
     const User = await UserModel.create({
