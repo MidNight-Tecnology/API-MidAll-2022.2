@@ -90,13 +90,21 @@ let tramontina = [];
               console.log(cort[1], "\n"); // cortador pega a partir do 1 indice.
 
               c++;
-            
-            console.log("Pegou link de associade número "+i+".");
+            crud.post("/createfilterlink", {
+              nome_assoc: nomes[i],
+              link_pdf: cort[1],
+            }).then(resp =>{
+              console.log(resp);
+          })
+          .catch(error =>{
+              console.log(error);
+          })
+            console.log("Pegou link de associade número "+i+nomes[i]+".");
             await page.waitForTimeout(500);
           }
         
     } else {
-        console.log("O associade de número "+i+" não tem pdfs no dia");
+        console.log("O associade de número "+i+nomes[i]+" não tem pdfs no dia");
       }
   }
   await browser.close();
