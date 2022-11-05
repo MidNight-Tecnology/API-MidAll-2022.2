@@ -7,6 +7,7 @@ import AlterarEmail from './pages/AlterarEmail';
 import CadastroAssoc from './pages/CadastroAssoc/antigo';
 import Clipping from './pages/Clipping';
 import GerencAssoc from './pages/GerencAssoc';
+import Sender from './pages/Clipping/sender';
 
 export default function Rotas() {
   return(
@@ -19,6 +20,7 @@ export default function Rotas() {
        <Route path='/cadassoc' element={<CadastroAssoc/>} />
        <Route path='/clip' element={<Clipping/>} />
        <Route path='/gerencassoc' element={<GerencAssoc/>} />
+       <Route path='/sender' element={<Sender/>} />
       </Routes>
     </BrowserRouter>
   )
