@@ -3,10 +3,13 @@ import Header from "../../components/Header";
 import crud from "../../services/axios";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
+import axios from 'axios';
+
 // dfdf
 const AlterarEmail = () => {
     const { id } = useParams();
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
+
     const onSubmit = data => crud.put(`/editemail/${id}`, {
         nome_assoc: data.nome_assoc,
         assunto: data.assunto,
@@ -17,6 +20,32 @@ const AlterarEmail = () => {
     .catch(error =>{
         console.log(error)
     })
+    
+    const [campos, setCampos] = useState({  // Variaveis que tem que mudar para cada usuario:
+        nome: 'nome_assoc',
+        email: 'email',
+        mensagem: 'assunto'
+    });
+    
+
+    function handleFormSubmit2(event){ 
+        event.preventDefault(); 
+        console.log(campos); 
+        send(campos);
+      }
+
+    function send(){
+        const formData = new FormData();
+        Object.keys(campos).forEach(key => formData.append(key, campos[key]));
+        axios.post('http://localhost:3030/send', 
+                  formData,
+                  {
+                    headers: {
+                     "Content-Type": `multipart/form-data; boundary=${formData._boundary}`,
+                    }
+                  })
+          .then(response => { console.log(response.data); })
+      }
 
     useEffect(() =>{
         crud.get(`/getemail/${id}`)
@@ -54,12 +83,12 @@ const AlterarEmail = () => {
                             </div>
                         </div>
                         <div class="align_buts">
-                            <button onclick="voltar()">Apagar</button> 
+                            <button onClick="voltar()">Apagar</button> 
                             <button type="reset">Limpar</button>
                             <button type="submit">Salvar</button>
-                            {/* <button>enviar</button> */}
+                            <button onClick={handleFormSubmit2}>enviar </button> 
 
-                        </div>
+                        </div>  
                     </form>
                 </div>
             </section>
