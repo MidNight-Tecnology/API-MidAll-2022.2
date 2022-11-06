@@ -9,11 +9,12 @@ import pdfControllers from "./controllers/pdfControllers";
 
 
 const router = express.Router();
+router.post("/getuseremail", userControllers.userauth);
+
 //Essa aqui é pra login
 router.post("/createuser", userControllers.create);
 router.get("/getuser", userControllers.findAll);
 router.get("/getuser/:UserId", userControllers.findOne);
-router.get("/getuseremail/:UserEmail", userControllers.findOneemail);
 router.put("/edituser/:UserId", userControllers.update);
 router.delete("/deleteuser/:UserId", userControllers.destroy);
 

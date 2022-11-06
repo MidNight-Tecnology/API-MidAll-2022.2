@@ -1,5 +1,6 @@
 import { UserModel } from "./../database/models/userModel";
 import { Request, Response } from "express";
+import emailControllers from "./emailControllers";
 
 class UserController {
   async findAll(req: Request, res: Response) {
@@ -17,15 +18,6 @@ class UserController {
     });
     return User ? res.status(200).json(User) : res.status(204).send();
   }
-  async findOneemail(req: Request, res: Response) {
-    const { UserEmail } = req.params;
-    const User = await UserModel.findOne({
-      where: {
-        email: UserEmail,
-      },
-    });
-    return User ? res.status(200).json(User) : res.status(204).send();
-  }
   async create(req: Request, res: Response) {
     const { nome, email, senha } = req.body;
     const User = await UserModel.create({
@@ -37,17 +29,36 @@ class UserController {
   }
   async update(req: Request, res: Response) {
     const { UserId } = req.params;
-    const User = await UserModel.update(req.body, 
-      {where:
-    { id: UserId,}});
+    const User = await UserModel.update(req.body,
+      {
+        where:
+          { id: UserId, }
+      });
     return res.status(204).send();
   }
   async destroy(req: Request, res: Response) {
     const { UserId } = req.params;
-    await UserModel.destroy({ where: 
-      { id: UserId,}});
-      return res.status(204).send();
+    await UserModel.destroy({
+      where:
+        { id: UserId, }
+    });
+    return res.status(204).send();
+  }
+  async userauth(req: Request, res: Response) {
+    const { email, senha } = req.body;
+    const resp = await UserModel.findOne({
+      where: {
+        email: email,
+        senha: senha
+      }
+    });
+    if (resp) {
+      return res.status(201).send(resp);
+    } else {
+      return res.status(404).send()
+    }
   }
 }
+
 
 export default new UserController();
