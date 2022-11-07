@@ -35,7 +35,7 @@ O DOR (Definition of Ready) que traduzindo para o português, significa a defini
 ## 📝⏱ DoD
 O conceito de DOD (Definition of Done), ou traduzindo definição de feito, ajuda o time a elencar os pontos necessários para que uma determinada tarefa seja classificada como concluída.
     
-> - Link DoR: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-3/DoD.md)
+> - Link DoD: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-3/DoD.md)
 
 </div>
   
