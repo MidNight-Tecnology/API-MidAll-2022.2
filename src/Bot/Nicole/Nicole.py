@@ -74,12 +74,12 @@ for x in array_final:
     cont = cont+1
 
 
-# a = 0
+a = 0
 # # Um while para percorrer as paginas (qt_pag_cidade = nome da variavel que armazena as paginas), na linha de código só está um exemplo dá variavel;
-# while a < x:
-#     a = a + 1
-#     b = str(a)
-#     num = b.zfill(4)
+while (a <= cont):
+    a = a + 1
+    b = str(a)
+    num = b.zfill(4)
 
 
 cont = len(array_final)
@@ -90,7 +90,6 @@ for assoc_nome in array_final_nomes:
         pdf = open(f'./PDFS/{assoc_nome}{numero}.pdf', 'rb')
         # Vai ler a variavel pdf depois que ela for aberta
         reader2 = PyPDF2.PdfFileReader(pdf)
-        
 
         for n in range(reader2.getNumPages()):
             pagina = reader2.getPage(n)
@@ -98,7 +97,7 @@ for assoc_nome in array_final_nomes:
             for paragrafo in conteudo.replace('"', "'").split('\n'):
                 if assoc_nome.upper() in paragrafo.upper():  # um if para percorrer o nome do associado dentro dos pdf
                     print(
-                        f'-==--=-=-=-=-=-=-=-=-==--=-=-=-PAGINA {assoc_nome} {numero} -==--=-=-=-=-=-=-=-=-==--=-=-=-')
+                        f'-==--=-=-=-=-=-=-=-=-==--=-=-=-PAGINA {num} {assoc_nome}-==--=-=-=-=-=-=-=-=-==--=-=-=-')
                     print(paragrafo)
 
                     # # Jogar informação do associado no banco
@@ -107,7 +106,7 @@ for assoc_nome in array_final_nomes:
 
 # Remoção dos pdf's (Joaum)
 contadapaga = 1
-for apaga in array_final_nomes:   
+for apaga in array_final_nomes:
     pdf_files = glob.glob(f'./PDFS/{apaga}{contadapaga}.pdf')
     contadapaga = contadapaga+1
     for pdf_file in pdf_files:
