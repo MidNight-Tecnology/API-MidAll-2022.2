@@ -30,29 +30,9 @@ Cada entrega foi realizada a partir da criação de uma **tag** neste repositór
 |:--:|:----------:|:----------------|:-------------------------------------------------:|
 | 01 | 18/09/2022 |  Finalizado    | [Ver relatório](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-1) |
 | 02 | 09/10/2022 |  Finalizado    | [Ver relatório](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-2) |
-| 03 | 06/11/2022 |  Em andamento    | Ver relatório |
+| 03 | 06/11/2022 |  Finalizado    | [Ver relatório](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-3) |
 | 04 | 27/11/2022 |  Não Iniciado    | Ver relatório |
 
-<!-- ### :clapper: Apresentação Final
-Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário do sistema:
-<details>
-   <summary>Usuário comum</summary>
-    <div align="center">
-        <img src="https://user-images.githubusercontent.com/69374340/172084663-1e8ae95b-0c84-493c-b4ab-5cfcda5a4eb3.gif">
-    </div>
-</details>
-<details>
-   <summary>Usuário suporte</summary>
-    <div align="center">
-        <img src="https://user-images.githubusercontent.com/69374340/172084712-de2d2905-dc65-41af-97e8-f980eff5f2d1.gif">
-    </div>
-</details>
-<details>
-   <summary>Usuário administrador</summary>
-    <div align="center">
-        <img src="./usuario_administrador.gif">
-    </div>
-</details> -->
     
 → [Voltar ao topo](#topo)
 
@@ -67,9 +47,7 @@ Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário
 
 ![Backlog-RNF](https://user-images.githubusercontent.com/101107794/194463292-963943e1-41c1-4025-9cdc-e91e36929e7f.png)
 
-![User Stories](https://user-images.githubusercontent.com/101107794/194787680-88f43932-5531-49c8-9cc0-9359cf1313cd.png)
-
-
+![User Stories](https://user-images.githubusercontent.com/101107794/200231067-460ee4b5-3937-4063-9775-88f6937b2575.png)
 
 
 </div>
@@ -78,17 +56,22 @@ Confira a seguir uma demonstraão das funcionalidades para cada tipo de usuário
 
 <span id="prototipo">
 
-## :desktop_computer: Protótipo & Documentação
+## :desktop_computer: Mockups, Protótipo & Documentação
 Como parte do planejamento do projeto foram criados wireframes e mockups para idealização do layout, que, ao ser validado pelo cliente, foram aplicados em um protótipo, possibilitando a interação do usuário com a interface (vide [relatórios das sprints](#relato)).
-    
+Para melhor visualizar a interface do projeto, será apresentado um gif animado de como o projeto estava caminhando até o ponto desta entrega, fora que também no gif é mostrado um pouco do funcionamento do backend em processo até então.
 
     
 > 🔗 **Links gerais** <br>
-> - Manual de instalação: [Clique aqui para baixar]()
-> - Manual do usuário: [Clique aqui para baixar]()
+> - Manual de instalação: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-3/Manual%20Instalação.pdf)
+> - Manual do usuário: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-3/Manual%20Usuário.pdf)
+> - Link Figma: Clique aqui para visualizar
 
+<div align="center">
+    
 
+![Protótipo](https://user-images.githubusercontent.com/101107794/200231047-fc9ac6e8-1b28-4d5e-a6a6-ec14fabaea85.gif)
 
+</div>
     
 → [Voltar ao topo](#topo)
 
@@ -127,7 +110,6 @@ As seguintes ferramentas, linguagens, bibliotecas e tecnologias foram usadas na 
 | Product Owner | Julio Cesar Rodrigues Lucena Costa           |     [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/julio-lucena-2001) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/JulioL2001)              |
 | Scrum Master  | Guilherme Duarte Cenzi Dias |      [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/guilherme-duarte-cenzi-dias-9737621b6) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Guilhermedcdias)     |
 |   Dev Team    | Ana Clara Marques Portes               |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/AnaMarks)        |
-|   Dev Team    | Gustavo Messa                   |         [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/gustavo-messa) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/gmessa)        |
 |   Dev Team    | Ryan Quadros Alves                 |   [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/ryan-alves-661ba823b) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/XLryan246)   |
 |   Dev Team    | Julio de Paula Machado       |           [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)]() [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/JulioPm142)          |
 |   Dev Team    | Ian Ferreira Tupinambá Machado       |        [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/itupii) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/itupii)            |
