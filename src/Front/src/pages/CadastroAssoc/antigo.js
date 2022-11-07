@@ -2,30 +2,37 @@ import React,{ useState }from "react";
 import Header from "../../components/Header";
 import crud from "../../services/axios";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+
 
 
 const CadastroAssoc = () => {
+        const navigate = useNavigate();
         const { register, handleSubmit, watch, formState: { errors } } = useForm();
-        const onSubmit = data => crud.post("/criassoc", {
-            nome: data.nome,
-            endereco: data.endereco,
-            comp: data.comp,
-            nasc: data.nasc,
-            cep: data.cep,
-            tel: data.tel,
-            cpf: data.cpf,
-            rg: data.rg,
-            estado_cv: data.estado_cv,
-            inst_ens: data.inst_ens,
-            email: data.email, 
-        }) .then(resp =>{
-            console.log(resp);
-        })
-        .catch(error =>{
-            console.log(error)
-        })
-
-    
+        const onSubmit = data => {
+            try{
+                crud.post("/criassoc", {
+                nome: data.nome,
+                endereco: data.endereco,
+                comp: data.comp,
+                nasc: data.nasc,
+                cep: data.cep,
+                tel: data.tel,
+                cpf: data.cpf,
+                rg: data.rg,
+                estado_cv: data.estado_cv,
+                inst_ens: data.inst_ens,
+                email: data.email, 
+            }) .then(resp =>{
+                if(resp){
+                    navigate("/gerencassoc");
+                }
+            })
+            
+        } catch(err) {
+            console.error(err)
+        }
+    }
     return (
         <div className="container">
             <Header />

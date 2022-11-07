@@ -6,6 +6,7 @@ import AlterarAssoc from "./pages/AlterarAssoc";
 import AlterarEmail from "./pages/AlterarEmail";
 import CadastroAssoc from "./pages/CadastroAssoc/antigo";
 import Clipping from "./pages/Clipping";
+import Relatorio from "./pages/Relatorio";
 import GerencAssoc from "./pages/GerencAssoc";
 import Sender from "./pages/Clipping/sender";
 import { AuthProvider, AuthContext } from "./contexts/auth";
@@ -61,6 +62,14 @@ const Rotas = () => {
             }
           />
           <Route
+            path="/relatorio"
+            element={
+              <Private>
+                <Relatorio />
+              </Private>
+            }
+          />
+          <Route
             path="/gerencassoc"
             element={
               <Private>
@@ -74,6 +83,12 @@ const Rotas = () => {
               <Private>
                 <Sender />
               </Private>
+            }
+          />
+          <Route
+            path="*"
+            element={
+                <Login />
             }
           />
         </Routes>

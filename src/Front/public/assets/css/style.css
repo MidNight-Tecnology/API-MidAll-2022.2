@@ -415,6 +415,54 @@ th{
     font-size: 3ch;
 }
 
+/* EMISSÃO DE ROLATÓRIO */
+
+.relatorio .borda {
+    display: block;
+}
+
+.relatorio .coluna h1 {
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    font-size: 48px;
+    padding-bottom: 22px;
+}
+
+.relatorio .coluna {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.relatorio .coluna .align_buts {
+    width: 90%;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: right;
+}
+.relatorio .coluna .align_buts button {
+    padding: 10px 5px 10px 5px;
+}
+
+.relatorio .coluna p{
+    font-size: large;
+}
+
+tr{
+    width: 100%;
+}
+
+th, td{
+    padding: 4px 13px;
+}
+
+th{
+    color: #A92364;
+    font-size: 3ch;
+}
+
 /* GERENCIAR ASSOCIADOS */
 .Gerenciar_Associados .borda {
     display: block;
