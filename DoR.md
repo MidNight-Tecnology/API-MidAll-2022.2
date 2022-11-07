@@ -6,10 +6,8 @@
 <p align="center">
     <a href="#sobre">Sobre</a>  |  
     <a href="#backlogs">Backlogs & User Stories</a>  |  
-    <a href="#MdB">Modelos Conceituais e Lógicos do Banco de Dados</a>  |
-    <a href="#Burn">BurnDown da Equipe</a>  | 
-    <a href="#prototipo">Protótipo & Documentação</a>  |  
-    <a href="#tecnologias">Tecnologias</a>  |  
+    <a href="#MdB">Modelos Conceituais e Lógicos do Banco de Dados</a>  | 
+    <a href="#prototipo">Mockups</a>  |   
     <a href="#equipe">Equipe</a>
 </p>
    
@@ -63,7 +61,7 @@ Como parte do planejamento do projeto foram criados wireframes e mockups para id
 
     
 > 🔗 **Links gerais** <br>
-> - Link Figma: [Clique aqui para visualizar]()
+> - Link Figma: Clique aqui para visualizar
 
 Adiante será mostrado algumas alterações que foram aplicadas no frontend, afim de melhorar toda a interface do projeto, levando em consideração todas as necessidades do cliente:
 
