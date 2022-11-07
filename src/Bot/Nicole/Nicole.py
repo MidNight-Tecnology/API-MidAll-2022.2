@@ -31,80 +31,84 @@ def insere_info(con, assoc_nome):
 
 
 # Selecionar os usuários no banco
-def selecionar_associados(con):
-    cursor = con.cursor()
-    sql = "SELECT nome FROM associados"
-    cursor.execute(sql)
-    array_assoc = []
-    for nome in cursor:
-        a = str(nome).split("'")
-        array_assoc.append(a[1])
-    cursor.close()
-    return array_assoc
-
 # Seletor de links filtrados (Marcelo)
-def selecionar_links(con):
+def selecionar_links(con, op):
     cursor = con.cursor()
     sql = "SELECT * FROM filterlinks"
     cursor.execute(sql)
+    array = []
+    array_nomes = []
     array_links = []
     # cont = 0
     for link_pdf in cursor:
-        array_links.append(link_pdf)
+        array.append(link_pdf)
+
+    for nl in array:
+        array_nomes.append(nl[1])
+        array_links.append(nl[2])
     # cont = cont + 1
     cursor.close()
-    return array_links
+    if (op == 1):
+        return array_links
+    if (op == 2):
+        return array_nomes
 
-array_final = selecionar_links(con)
-num = len(array_final)
-for links in range(num):
-    print(array_final)
 
+array_final = selecionar_links(con, 1)
+array_final_nomes = selecionar_links(con, 2)
+# num = len(array_final)
+# for links in range(num):
+#     print(array_final)
 
 
 #                                               FUNÇÃO QUE FILTRA AS INFORMAÇÕES DOS ASSOCIADOS DENTRO DO PDF
 
 # Geração do download via html (Marcelo)
-for x in range(len(array_final)):
-        filterlink_id = 'http://www.imprensaoficial.com.br/DO/GatewayPDF.aspx' + str(array_final[x])
-        pdfcreate = requests.get(filterlink_id, stream=True)
-        with open(f'./PDFS/DOU{assoc}{x+1}.pdf', "wb") as creation:
-            creation.write(pdfcreate.content)
-        # count = count + 1
+cont = 0
+for x in array_final:
+    filterlink_id = 'http://www.imprensaoficial.com.br/DO/GatewayPDF.aspx' + \
+        str(array_final[cont])
+    pdfcreate = requests.get(filterlink_id, stream=True)
+    with open(f'./PDFS/{array_final_nomes[cont]}{cont+1}.pdf', "wb") as creation:
+        creation.write(pdfcreate.content)
+    cont = cont+1
 
-assoc = selecionar_associados(con)
-count = len(assoc)
 
-a = 0
-while a < x: # Um while para percorrer as paginas (qt_pag_cidade = nome da variavel que armazena as paginas), na linha de código só está um exemplo dá variavel;
-    a = a + 1
-    b = str(a)
-    num = b.zfill(4)
+# a = 0
+# # Um while para percorrer as paginas (qt_pag_cidade = nome da variavel que armazena as paginas), na linha de código só está um exemplo dá variavel;
+# while a < x:
+#     a = a + 1
+#     b = str(a)
+#     num = b.zfill(4)
 
-pdf = open(f'./PDFS/DOU1.pdf', 'rb') #Aqui é para colocar o diretorio que o pdf esta sendo direcionado, na linha de código só está um exemplo do diretório
-reader2 = PyPDF2.PdfFileReader(pdf) # Vai ler a variavel pdf depois que ela for aberta
 
-for i in range(count):
-    assoc_nome = str(assoc[i])
+cont = len(array_final)
+numero = 1
+for assoc_nome in array_final_nomes:
+    while numero <= cont:
+        # Aqui é para colocar o diretorio que o pdf esta sendo direcionado, na linha de código só está um exemplo do diretório
+        pdf = open(f'./PDFS/{assoc_nome}{numero}.pdf', 'rb')
+        # Vai ler a variavel pdf depois que ela for aberta
+        reader2 = PyPDF2.PdfFileReader(pdf)
+        
 
-for n in range(reader2.getNumPages()):
-    pagina = reader2.getPage(n)
-    conteudo = pagina.extractText()
-    for paragrafo in conteudo.replace('"',"'").split('\n'):
-        if assoc_nome.upper() in paragrafo.upper():# um if para percorrer o nome do associado dentro dos pdf
-            print(f'-==--=-=-=-=-=-=-=-=-==--=-=-=-PAGINA DOU_{x+1} -==--=-=-=-=-=-=-=-=-==--=-=-=-')
-            print(paragrafo)
-            
-            # Jogar informação do associado no banco
-            insere_info(con, paragrafo, assoc_nome)
+        for n in range(reader2.getNumPages()):
+            pagina = reader2.getPage(n)
+            conteudo = pagina.extractText()
+            for paragrafo in conteudo.replace('"', "'").split('\n'):
+                if assoc_nome.upper() in paragrafo.upper():  # um if para percorrer o nome do associado dentro dos pdf
+                    print(
+                        f'-==--=-=-=-=-=-=-=-=-==--=-=-=-PAGINA {assoc_nome} {numero} -==--=-=-=-=-=-=-=-=-==--=-=-=-')
+                    print(paragrafo)
 
-        else:
-            print()
+                    # # Jogar informação do associado no banco
+                    # insere_info(con, paragrafo, assoc_nome)
+        numero = numero+1
 
 # Remoção dos pdf's (Joaum)
-
-            
-pdf_files = glob.glob(f'./PDFS/DOU{x+1}.pdf')
-
-for pdf_file in pdf_files:
-    os.remove(pdf_file)
+contadapaga = 1
+for apaga in array_final_nomes:   
+    pdf_files = glob.glob(f'./PDFS/{apaga}{contadapaga}.pdf')
+    contadapaga = contadapaga+1
+    for pdf_file in pdf_files:
+        os.remove(pdf_file)
