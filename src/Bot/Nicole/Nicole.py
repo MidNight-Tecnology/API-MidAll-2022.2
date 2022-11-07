@@ -45,20 +45,20 @@ def selecionar_associados(con):
 # Seletor de links filtrados (Marcelo)
 def selecionar_links(con):
     cursor = con.cursor()
-    sql = "SELECT * FROM links_de_pdf_filtrados"
+    sql = "SELECT * FROM filterlinks"
     cursor.execute(sql)
-    array_links = [[]]
-    cont = 0
-    for link in cursor:
-        array_links.append(cont[link[1], link[2]])
-    cont = cont + 1
+    array_links = []
+    # cont = 0
+    for link_pdf in cursor:
+        array_links.append(link_pdf)
+    # cont = cont + 1
     cursor.close()
     return array_links
 
-array_final = selecionar_links()
+array_final = selecionar_links(con)
 num = len(array_final)
 for links in range(num):
-    print(array_final[[0], [1]])
+    print(array_final)
 
 
 
@@ -66,11 +66,11 @@ for links in range(num):
 
 # Geração do download via html (Marcelo)
 for x in range(len(array_final)):
-        filterlink_id = 'http://www.imprensaoficial.com.br/DO/GatewayPDF.aspx' + array_final
+        filterlink_id = 'http://www.imprensaoficial.com.br/DO/GatewayPDF.aspx' + str(array_final[x])
         pdfcreate = requests.get(filterlink_id, stream=True)
-        with open(f'../../Sistema_de_gerenciamento_de_assoc/public/assets/PDFS/DOU{x+1}.pdf', "wb") as creation:
+        with open(f'./PDFS/DOU{assoc}{x+1}.pdf', "wb") as creation:
             creation.write(pdfcreate.content)
-        count = count + 1
+        # count = count + 1
 
 assoc = selecionar_associados(con)
 count = len(assoc)
@@ -81,7 +81,7 @@ while a < x: # Um while para percorrer as paginas (qt_pag_cidade = nome da varia
     b = str(a)
     num = b.zfill(4)
 
-pdf = open(f'../../Sistema_de_gerenciamento_de_assoc/public/assets/PDFS/DOU{num}.pdf', 'rb') #Aqui é para colocar o diretorio que o pdf esta sendo direcionado, na linha de código só está um exemplo do diretório
+pdf = open(f'./PDFS/DOU1.pdf', 'rb') #Aqui é para colocar o diretorio que o pdf esta sendo direcionado, na linha de código só está um exemplo do diretório
 reader2 = PyPDF2.PdfFileReader(pdf) # Vai ler a variavel pdf depois que ela for aberta
 
 for i in range(count):
@@ -92,7 +92,7 @@ for n in range(reader2.getNumPages()):
     conteudo = pagina.extractText()
     for paragrafo in conteudo.replace('"',"'").split('\n'):
         if assoc_nome.upper() in paragrafo.upper():# um if para percorrer o nome do associado dentro dos pdf
-            print(f'-==--=-=-=-=-=-=-=-=-==--=-=-=-PAGINA DOU_{num} -==--=-=-=-=-=-=-=-=-==--=-=-=-')
+            print(f'-==--=-=-=-=-=-=-=-=-==--=-=-=-PAGINA DOU_{x+1} -==--=-=-=-=-=-=-=-=-==--=-=-=-')
             print(paragrafo)
             
             # Jogar informação do associado no banco
@@ -104,7 +104,7 @@ for n in range(reader2.getNumPages()):
 # Remoção dos pdf's (Joaum)
 
             
-pdf_files = glob.glob(f'../../Sistema_de_gerenciamento_de_assoc/public/assets/PDFS/DOU{num}.pdf')
+pdf_files = glob.glob(f'./PDFS/DOU{x+1}.pdf')
 
 for pdf_file in pdf_files:
     os.remove(pdf_file)

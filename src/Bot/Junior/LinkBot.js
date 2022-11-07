@@ -39,7 +39,7 @@ let tramontina = [];
 
 // função assincrona
 (async () => {
-  const browser = await pup.launch({ headless: false }); // chromium true pra nao mostrar abrindo
+  const browser = await pup.launch({ headless: true }); // chromium true pra nao mostrar abrindo
   const page = await browser.newPage();
   console.log("iniciei!");
   for (i = 0; i < url.length; i++) {
