@@ -6,7 +6,8 @@
 <p align="center">
     <a href="#sobre">Sobre</a>  |   
     <a href="#prototipo">Protótipo & Documentação</a>  |  
-    <a href="#tecnologias">Tecnologias</a>  |  
+    <a href="#tecnologias">Tecnologias</a>  | 
+    <a href="#Burn">BurnDown da Equipe | 
     <a href="#equipe">Equipe</a>
 </p>
    
@@ -35,11 +36,28 @@ Relatório de progresso de como ocorreu a entrega e como foi feito todo o proces
 > - Manual de instalação: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-3/Manual%20Instalação.pdf)
 > - Manual do usuário: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-3/Manual%20Usuário.pdf)
 
-  
+<div align="center"> 
+    
 ![Protótipo](https://user-images.githubusercontent.com/101107794/200229845-20300834-6bf8-47c4-a62b-becd0bfd8f03.gif)
 
-
+</div>
     
+→ [Voltar ao topo](#topo)
+    
+<span id="Burn">
+
+## 📈 BurnDown da Equipe
+Um gráfico de burndown é uma representação gráfica do trabalho a ser feito versus tempo estimado.
+
+
+<div align="center">
+
+![Burndown](https://user-images.githubusercontent.com/101107794/200230813-2665f77d-d46e-44e9-845a-2e9e7cb78934.png)
+
+
+
+</div>
+  
 → [Voltar ao topo](#topo)
 
 <span id="tecnologias">
