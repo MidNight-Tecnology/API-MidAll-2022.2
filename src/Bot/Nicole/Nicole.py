@@ -10,6 +10,8 @@ import requests
 # Imports Joaum
 import os
 import glob
+from datetime import datetime
+
 
 #                                               CONEXÃO BANCO
 
@@ -21,10 +23,12 @@ con = criar_conexao("localhost", "root", "root", "crud")
 
 
 # Inserção de informações do usuário no BD
-def insere_info(con, assoc_nome):
+def insere_info(con, assoc_nome, x, email):
     cursor = con.cursor()
-    sql = "INSERT INTO emails (nome_assoc, assunto, email, createdAt, updatedAt) values (%s, %s, %s, %s)"
-    valores = (assoc_nome, '')
+    sql = "INSERT INTO emails (nome_assoc, assunto, email, createdAt, updatedAt) values (%s, %s, %s, %s, %s)"
+    assunto = f'Você foi citado(a) na pagina {x} do diario de hoje.'
+    now = datetime.now()
+    valores = (assoc_nome, assunto, email, now, now)
     cursor.execute(sql, valores)
     cursor.close()
     con.commit()
@@ -101,7 +105,7 @@ for assoc_nome in array_final_nomes:
                     print(paragrafo)
 
                     # # Jogar informação do associado no banco
-                    # insere_info(con, paragrafo, assoc_nome)
+                    insere_info(con, assoc_nome, num, paragrafo)
         numero = numero+1
 
 # Remoção dos pdf's (Joaum)
