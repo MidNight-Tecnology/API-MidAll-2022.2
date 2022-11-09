@@ -1,0 +1,33 @@
+#VERRELA{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+#VERRELA .column {
+    display: flex;
+    width: 90%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+}
+#VERRELA .infosver{
+    flex-wrap: wrap;
+}
+
+#VERRELA p{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+#VERRELA h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+#VERRELA .align_buts{
+    margin-top: 10px;
+    width: 90%;
+}
+#VERRELA .align_buts button{
+    width: 100%;
+}

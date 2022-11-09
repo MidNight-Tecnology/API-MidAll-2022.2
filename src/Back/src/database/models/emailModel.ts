@@ -19,6 +19,15 @@ export const EmailModel = db.define("emails", {
     email: {
         type: DataTypes.TEXT,
     },
+    data: {
+        type: DataTypes.STRING,
+    },
+    caderno: {
+        type: DataTypes.STRING,
+    },
+    pagina: {
+        type: DataTypes.STRING,
+    },
 })
 
 EmailModel.sync();

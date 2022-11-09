@@ -9,6 +9,7 @@ import Clipping from "./pages/Clipping";
 import Relatorio from "./pages/Relatorio";
 import GerencAssoc from "./pages/GerencAssoc";
 import Sender from "./pages/Clipping/sender";
+import VerRela from "./pages/VerRela/index";
 import { AuthProvider, AuthContext } from "./contexts/auth";
 
 const Rotas = () => {
@@ -62,7 +63,7 @@ const Rotas = () => {
             }
           />
           <Route
-            path="/relatorio"
+            path="/rela"
             element={
               <Private>
                 <Relatorio />
@@ -82,6 +83,14 @@ const Rotas = () => {
             element={
               <Private>
                 <Sender />
+              </Private>
+            }
+          />
+          <Route
+            path="/verrela/:id"
+            element={
+              <Private>
+                <VerRela />
               </Private>
             }
           />

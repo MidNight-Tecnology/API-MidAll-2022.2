@@ -18,11 +18,14 @@ class EmailController {
     return Email ? res.status(200).json(Email) : res.status(204).send();
   }
   async create(req: Request, res: Response) {
-    const { nome_assoc, assunto, email } = req.body;
+    const { nome_assoc, assunto, email, data, caderno, pagina } = req.body;
     const Email = await EmailModel.create({
       nome_assoc,
       assunto,
       email,
+      data,
+      caderno,
+      pagina
     });
     return res.status(201).json(Email);
   }

@@ -18,10 +18,13 @@ class FilterLinksControllers {
     return User ? res.status(200).json(User) : res.status(204).send();
   }
   async create(req: Request, res: Response) {
-    const { nome_assoc, link_pdf } = req.body;
+    const { nome_assoc, link_pdf, data, caderno, pagina } = req.body;
     const User = await FilterLinksModel.create({
       nome_assoc,
       link_pdf,
+      data,
+      caderno,
+      pagina
     });
     return res.status(201).json(User);
   }

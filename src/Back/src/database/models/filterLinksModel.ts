@@ -16,7 +16,16 @@ export const FilterLinksModel = db.define("filterLinks", {
     link_pdf: {
         type: DataTypes.TEXT,
         allowNull: true,
-    }
+    },
+    data: {
+        type: DataTypes.STRING,
+    },
+    caderno: {
+        type: DataTypes.STRING,
+    },
+    pagina: {
+        type: DataTypes.STRING,
+    },
 })
 
 FilterLinksModel.sync();

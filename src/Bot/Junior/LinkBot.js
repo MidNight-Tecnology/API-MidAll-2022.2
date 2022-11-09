@@ -44,41 +44,26 @@ let tramontina = [];
   console.log("iniciei!");
   for (i = 0; i < url.length; i++) {
     await page.goto(url[i]);
-    // if associado (i) tem link pega o link do amigo
-    // else pula pro amigo do lado
     await page.waitForTimeout(500);
     console.log("fui pra URL!");
 
     const urlzinha = page.url();
     if (!urlzinha.includes("ResultadoNegativo")) {
       console.log("Parte que pega os links de cada box");
-      console.log(urlzinha)
-      
-      
-      // const esperar = await page.waitForSelector(".joyride-content-wrapper");
-      // const fechar = await page.click(".joyride-content-wrapper > a");
+      // console.log(urlzinha)
 
       
-      // if se budeguinha/esperar aparecer fechar a budeguinha/esperar e roda o programa,
-      // else a budeguinha/esperar não aparecer roda o programa
 
       
-          
-
-          // await page.click("#content_dtgResultado_lblData_0");
 
           const links = await page.$$eval(".card-body > .card-text> a", (el) => el.map((link) => link.href)); //pega todos os links dos cards
           links.shift(); // apaga o primeiro indice da lista
 
-      //console.log(typeof(links))
+      
 
         const obj = {};
 
             for (const link of links) {
-              // if (fechar==false || esperar == false) continue;
-              
-
-               //limitador de paginas pega as 15 boxes das paginas
 
               console.log("Pagina", c); //contador de paginas
               obj.link = link;
@@ -89,25 +74,63 @@ let tramontina = [];
 
               console.log(cort[1], "\n"); // cortador pega a partir do 1 indice.
 
+              if (cort[1].includes("executivo+secao+i")) {
+            
+                
+
+                obj.pagina = cort[1].split("fpag_")[1].split("_")[0];
+                obj.data = cort[1].split("data=")[1].split("&caderno")[0];
+                obj.caderno = cort[1].split("?link=%2f2022%2f")[1].split("%2f")[0].replace(/\+/g, " ");
+                
+                // obj.dia = cort[1].split("data=")[1].split("&caderno")[0].split("/")[0];
+                // obj.mes = cort[1].split("data=")[1].split("&caderno")[0].split("/")[1];
+                // obj.ano = cort[1].split("data=")[1].split("&caderno")[0].split("/")[2];
+                
+
+              } else if (cort[1].includes("executivo+secao+ii")) {
+          
+                obj.pagina = cort[1].split("fpag_")[1].split("_")[0];
+                obj.data = cort[1].split("data=")[1].split("&caderno")[0];
+                obj.caderno = cort[1].split("?link=%2f2022%2f")[1].split("%2f")[0].replace(/\+/g, " ");
+                
+
+              } else {
+            
+                obj.pagina = cort[1].split("fpag_")[1].split("_")[0];
+                obj.data = cort[1].split("data=")[1].split("&caderno")[0];
+                obj.caderno = cort[1].split("?link=%2f2022%2f")[1].split("%2f")[0].replace(/\+/g, " ");
+              
+              }
+              const data = obj.data
+              const caderno = obj.caderno
+              const pagina = obj.pagina
               c++;
+
+
             crud.post("/createfilterlink", {
               nome_assoc: nomes[i],
               link_pdf: cort[1],
+              data: data,
+              caderno: caderno,
+              pagina: pagina,
+              
             }).then(resp =>{
               console.log(resp);
           })
           .catch(error =>{
               console.log(error);
           })
-            console.log("Pegou link de associade número "+i+nomes[i]+".");
+            console.log("Pegou link do(a) associado(a) número "+i+ nomes[i]+".");
             await page.waitForTimeout(500);
           }
         
     } else {
-        console.log("O associade de número "+i+nomes[i]+" não tem pdfs no dia");
+        console.log("O(a) associado(a) de número "+i+ nomes[i]+" não tem pdfs no dia");
       }
   }
   await browser.close();
 })();
 
-// Agora é commitar
+
+ 
+
