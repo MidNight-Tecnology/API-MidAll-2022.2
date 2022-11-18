@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import crud from "../../services/axios";
 import { Link } from "react-router-dom";
+import "../../assets/css/style.css";
+
 
 
 const GerencAssoc = () => {

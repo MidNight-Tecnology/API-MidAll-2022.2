@@ -4,6 +4,8 @@ import crud from "../../services/axios";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import axios from 'axios';
+import "../../assets/css/style.css";
+
 
 // dfdf
 const AlterarEmail = () => {

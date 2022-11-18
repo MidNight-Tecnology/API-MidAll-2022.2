@@ -3,6 +3,7 @@ import crud from "../../services/axios";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth";
+import "./login.css";
 
 const Login = () => {
   const navigate = useNavigate();

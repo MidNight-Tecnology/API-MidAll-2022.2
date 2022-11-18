@@ -1,0 +1,55 @@
+#PDF{
+    width: 50%;
+}
+#PDF #Leitor{
+    margin-top: 30px;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#PDF #Leitor iframe{
+    border-radius: 10px;
+    height: 80%;
+    width: 90%;
+}
+#PDF #Leitor .bot{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#PDF #Leitor .bot button{
+    width: 40%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 10px 10px;
+    background-image: linear-gradient(115deg, #F88673, #A92364);
+    border: 0px;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    #PDF{
+        width: 100%;
+    }
+}
+/* @media (max-width: 530px) {
+    
+}
+@media (max-width: 323px) {
+    
+}
+@media (max-width: 280px) {
+    
+}
+@media (max-width: 235px) {
+    
+}
+@media (max-width: 210px) {
+    
+} */

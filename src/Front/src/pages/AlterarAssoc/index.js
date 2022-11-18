@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import crud from "../../services/axios";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
+import "../../assets/css/style.css";
 
 const AlterarAssoc = () => {
     const { id } = useParams();

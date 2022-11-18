@@ -1,0 +1,168 @@
+#HEADER {
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    position: absolute;
+    z-index: 1;
+    }
+#HEADER .container nav {
+    background-image: linear-gradient(115deg, #F88673, #A92364);
+    height: 100vh;
+    width: 100%;
+    border-radius: 0 0 150px 0;
+}
+
+#HEADER .container nav ul {
+    list-style: none;
+}
+#HEADER .container nav ul .img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#HEADER .container nav ul .img1 {
+    width: 100%;
+    display: flex;
+}
+#HEADER .container nav ul .img .imagem {
+    width: 60%;
+    height: 20%;
+}
+
+#HEADER .container nav ul li:hover {
+    background-color: #fff;
+}
+
+#HEADER .container nav ul li a {
+    text-decoration: none;
+    text-align: justify;
+    color: white;
+    display: block;
+    padding-top: 35px;
+    padding: 16px 30px;
+    font-size: 26px;
+}
+
+#HEADER .container nav ul li a:hover {
+    background-image: linear-gradient(115deg, #F88673, #A92364);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+
+
+#HEADER .container nav ul .imagem1 {
+    position: absolute;
+    width: 60px;
+    bottom: 0;
+    padding: 0 5px;
+}
+
+@media (max-width: 1445px) {
+    #HEADER .container nav ul li a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1175px) {
+    #HEADER .container nav ul li a {
+        font-size: 18px;
+    }
+}
+@media (max-width: 1080px) {
+    #HEADER .container nav ul li a {
+        font-size: 15px;
+    }
+}
+@media (max-width: 952px) {
+    #HEADER .container nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 920px) {
+    #HEADER .container nav ul li a {
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 800px) {
+    #HEADER {
+        width: 100%;
+    }
+    #HEADER .container nav {
+        border-radius: 0 0 0 0;
+        position: fixed;
+        overflow: scroll;
+
+    }
+    #HEADER .container nav ul{
+        margin-top: 30px;
+    }
+    #HEADER .container nav ul .img .imagem {
+        width: 30%;
+        height: 20%;
+    }
+    #HEADER .container nav ul li a {
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        display: block;
+        padding-top: 25px;
+        font-size: 40px;
+    }
+    #HEADER .container nav ul .img1 {
+        justify-content: center;
+    }
+    #HEADER .container nav ul .img1 .imagem1 {
+        width: 10%;
+        bottom: 0;
+        padding: 0 5px;
+        position: relative;
+    }
+
+}
+@media (max-width: 530px) {
+    #HEADER .container nav ul li a {
+        font-size: 30px;
+    }
+    #HEADER .container nav ul .img1 .imagem1 {
+        width: 30%;
+        
+    }
+}
+@media (max-width: 323px) {
+    #HEADER .container nav ul li a {
+        font-size: 25px;
+    }
+    #HEADER .container nav ul .img1 .imagem1 {
+        width: 20%;
+        
+    }
+}
+@media (max-width: 280px) {
+    #HEADER .container nav ul li a {
+        font-size: 20px;
+    }
+    #HEADER .container nav ul .img1 .imagem1 {
+        width: 20%;
+        
+    }
+}
+@media (max-width: 235px) {
+    #HEADER .container nav ul li a {
+        font-size: 18px;
+    }
+    #HEADER .container nav ul .img1 .imagem1 {
+        width: 20%;
+        
+    }
+}
+@media (max-width: 210px) {
+    #HEADER .container nav ul li a {
+        font-size: 15px;
+    }
+    #HEADER .container nav ul .img1 .imagem1 {
+        width: 20%;
+        
+    }
+}

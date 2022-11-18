@@ -62,6 +62,8 @@ const Relatorio = () => {
                         <td>
                           <div class="nome_as">
                             <p>{rela.nome_assoc}</p>
+                            <p>{rela.data}</p>
+                            <p>{rela.pagina}</p>
                           </div>
                         </td>
                         <div class="align_buts">

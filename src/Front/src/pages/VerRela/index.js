@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import "./sty.css";
+import "../../assets/css/style.css";
+
 
 const VerRela = () => {
   const { id } = useParams();

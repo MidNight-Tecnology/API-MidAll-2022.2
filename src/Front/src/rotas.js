@@ -8,8 +8,8 @@ import CadastroAssoc from "./pages/CadastroAssoc/antigo";
 import Clipping from "./pages/Clipping";
 import Relatorio from "./pages/Relatorio";
 import GerencAssoc from "./pages/GerencAssoc";
-import Sender from "./pages/Clipping/sender";
 import VerRela from "./pages/VerRela/index";
+import EmailPdf from "./pages/Clipping/alternativo";
 import { AuthProvider, AuthContext } from "./contexts/auth";
 
 const Rotas = () => {
@@ -30,6 +30,7 @@ const Rotas = () => {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/teste" element={<EmailPdf />} />
           <Route
             path="/alterassoc/:id"
             element={
@@ -75,14 +76,6 @@ const Rotas = () => {
             element={
               <Private>
                 <GerencAssoc />
-              </Private>
-            }
-          />
-          <Route
-            path="/sender"
-            element={
-              <Private>
-                <Sender />
               </Private>
             }
           />
