@@ -64,12 +64,16 @@ Como parte do planejamento do projeto foram criados wireframes e mockups para id
 > 🔗 **Links gerais** <br>
 > - Link Figma: [Clique aqui para visualizar](https://www.figma.com/file/yeUkyS8cgm8wVefsG9YVCU/ROBO---FRONT-(Copy)?node-id=0%3A1)
 
-Adiante será mostrado algumas alterações que foram aplicadas no frontend, afim de melhorar toda a interface do projeto, levando em consideração todas as necessidades do cliente:
+Adiante será mostrado algumas alterações que foram aplicadas no frontend, afim de melhorar toda a interface do projeto, transformando-a em responsiva podendo ser utilizadas em diversas plataformas agora, levando em consideração todas as necessidades do cliente:
     
     
 <div align="center">
     
-![relatorios](https://user-images.githubusercontent.com/101107794/200473826-b159e367-2e05-4d01-99b4-26bdb6f531ff.png)
+![04c2a5ee-3b82-4229-b26c-5273543a1235](https://user-images.githubusercontent.com/101107794/204189631-22a5d436-854a-4a16-b660-76c8548ae4b8.jpg)
+    
+![76e356a7-13e9-43a1-959c-e188542c796b](https://user-images.githubusercontent.com/101107794/204189600-5c4b7843-8604-43d2-a686-89395601ae59.jpg) 
+
+![2c8e7bbc-475b-41b5-8d31-18b6d50a259a](https://user-images.githubusercontent.com/101107794/204189236-4a7dabc4-6f7e-414f-b476-5e94b14bce8b.jpg)
 
 </div>
 
