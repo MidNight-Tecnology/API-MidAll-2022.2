@@ -12,8 +12,8 @@
    
 <span id="sobre">
 
-## :bookmark_tabs: Sprint 3: 17/10 a 06/11
-Relatório de progresso de como ocorreu a entrega e como foi feito todo o processo da sprint 3, que se decorreu do dia 17 de Outubro a 06 de Novembro.
+## :bookmark_tabs: Sprint 4: 07/11 a 27/11
+Relatório de progresso de como ocorreu a entrega e como foi feito todo o processo da sprint 4, que se decorreu do dia 07 de Novembro a 27 de Novembro.
 
     
 → [Voltar ao topo](#topo)
@@ -24,7 +24,7 @@ Relatório de progresso de como ocorreu a entrega e como foi feito todo o proces
     
 O DOR (Definition of Ready) que traduzindo para o português, significa a definição de preparado.  O DOR, trata-se de uma listagem de requisitos que determinada história ou tarefa necessita para que possa estar apta a entrar no backlog da Sprint. 
     
-> - Link DoR: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-3/DoR.md)
+> - Link DoR: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-4/DoR.md)
 
 </div>
   
@@ -35,7 +35,7 @@ O DOR (Definition of Ready) que traduzindo para o português, significa a defini
 ## 📝⏱ DoD
 O conceito de DOD (Definition of Done), ou traduzindo definição de feito, ajuda o time a elencar os pontos necessários para que uma determinada tarefa seja classificada como concluída.
     
-> - Link DoD: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-3/DoD.md)
+> - Link DoD: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-4/DoD.md)
 
 </div>
   
