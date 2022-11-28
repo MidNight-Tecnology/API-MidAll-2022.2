@@ -13,8 +13,8 @@
    
 <span id="sobre">
 
-## :bookmark_tabs: Sprint 3: 17/10 a 06/11
-Relatório de progresso de como ocorreu a entrega e como foi feito todo o processo da sprint 3, que se decorreu do dia 17 de Outubro a 06 de Novembro.
+## :bookmark_tabs: Sprint 4: 07/11 a 27/11
+Relatório de progresso de como ocorreu a entrega e como foi feito todo o processo da sprint 4, que se decorreu do dia 07 de Novembro a 27 de Novembro.
 
     
 → [Voltar ao topo](#topo)
