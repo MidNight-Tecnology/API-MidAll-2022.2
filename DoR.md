@@ -27,7 +27,8 @@ Na imagem a seguir é indicado quais foram as entregas que foram acordadas entre
   
 <div align="center">
     
-![User Stories (1)](https://user-images.githubusercontent.com/101107794/200218181-4c99a86b-7b7e-4397-940b-120e6416dbcf.png)
+![ User Stories (1)](https://user-images.githubusercontent.com/101107794/204179763-eefbc9f7-52a7-4fb9-8076-6080edb6f901.png)
+
 
 
 </div>
