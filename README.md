@@ -18,9 +18,19 @@ A partir da apresentação do desafio enfrentado pela empresa parceira, MidAll[B
 
 > _Projeto baseado na metodologia ágil SCRUM, procurando desenvolver a Proatividade, Autonomia, Colaboração e Entrega de Resultados dos estudantes envolvidos_
 
-:pushpin: Status do Projeto: **Em Desenvolvimento** <!-- :heavy_check_mark: -->
+:pushpin: Status do Projeto: **Finalizado** <!-- :heavy_check_mark: -->
 
 <span id="relato">
+
+<span id="arquitetura">
+
+### 🥽 Arquitetura de Software
+
+A arquitetura de software de um sistema consiste na definição dos componentes de software, suas propriedades externas, e seus relacionamentos com outros softwares. O termo também se refere à documentação da arquitetura de software do sistema.
+
+![Arqui](https://user-images.githubusercontent.com/101107794/204186302-67eb0039-59ae-4570-af26-b58ee9693429.png)
+
+
 
 
 ### 🏁 Entregas de Sprints
@@ -31,7 +41,7 @@ Cada entrega foi realizada a partir da criação de uma **tag** neste repositór
 | 01 | 18/09/2022 |  Finalizado    | [Ver relatório](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-1) |
 | 02 | 09/10/2022 |  Finalizado    | [Ver relatório](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-2) |
 | 03 | 06/11/2022 |  Finalizado    | [Ver relatório](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-3) |
-| 04 | 27/11/2022 |  Não Iniciado    | Ver relatório |
+| 04 | 27/11/2022 |  Finalizado    | [Ver relatório](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/tree/Sprint-4) |
 
     
 → [Voltar ao topo](#topo)
