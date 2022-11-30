@@ -1,19 +1,19 @@
-import React,{ useState }from "react";
-import Header from "../../components/Header";
+import React from "react";
+import App from "../../components/Header/App";
 import crud from "../../services/axios";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import "../../assets/css/style.css";
-
+import imglogo from "../../assets/img/logo3.jpg"
 
 
 
 const CadastroAssoc = () => {
         const navigate = useNavigate();
-        const { register, handleSubmit, watch, formState: { errors } } = useForm();
+        const { register, handleSubmit, formState: { errors } } = useForm();
         const onSubmit = data => {
             try{
-                crud.post("/criassoc", {
+                crud.post("/criassoc",{
                 nome: data.nome,
                 endereco: data.endereco,
                 comp: data.comp,
@@ -37,7 +37,7 @@ const CadastroAssoc = () => {
     }
     return (
         <div className="container">
-            <Header />
+            <App />
             <section class="cadastro_user">
                 <div class="coluna">
                     <h1 class="gradient">Cadastrar Associados</h1>
@@ -55,7 +55,7 @@ const CadastroAssoc = () => {
                                 <div class="info_lado">
                                     <input type="date" placeholder="Data de Nascimento" name="nasc" {...register("nasc", { required: true })}/>
                                     {errors.nasc && <span>Nascimento é Requisito Obrigatório</span>}
-                                    <img class="logo3" alt="logo3" src="../assets/img/logo3.jpg"></img>
+                                    <img class="logo3" alt="logo3" src={imglogo}></img>
                                     <input type="text" placeholder="CEP" name="cep" {...register("cep", { required: true })}/>
                                     {errors.cep && <span>CEP é Requisito Obrigatório</span>}
                                 </div>
@@ -78,7 +78,7 @@ const CadastroAssoc = () => {
                                     <option value="Viúvo(a)">Viúvo(a)</option>
                                 </select>
                                 {errors.estado_cv && <span>Estado Civil é Requisito Obrigatório</span>}
-                                <img class="logo3" alt="logo3" src="../assets/img/logo3.jpg"></img>
+                                <img class="logo3" alt="logo3" src={imglogo}></img>
                                 <input type="text" name="inst_ens" placeholder="Instituição de Ensino" {...register("inst_ens", { required: true })}/>
                                 {errors.inst_ens && <span>Instituição de Ensino é Requisito Obrigatório</span>}
                             </div>

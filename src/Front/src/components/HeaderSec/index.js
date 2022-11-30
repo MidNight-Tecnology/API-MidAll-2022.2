@@ -27,9 +27,6 @@ function Header2() {
             <li>
               <Link to="/cadassoc">Cadastrar Associados</Link>
             </li>
-            <li>
-              <Link to="/rela">Relatorios</Link>
-            </li>
             <div className="img1">
               <img
                 alt="lnovob"

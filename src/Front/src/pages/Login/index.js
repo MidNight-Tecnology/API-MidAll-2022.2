@@ -12,7 +12,7 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { authenticated, login } = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
 
   const onSubmit = (data) => {
     crud

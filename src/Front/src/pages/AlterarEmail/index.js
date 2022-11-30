@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "../../components/Header";
+import App from "../../components/Header/App";
 import crud from "../../services/axios";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
@@ -22,18 +22,60 @@ const AlterarEmail = () => {
     .catch(error =>{
         console.log(error)
     })
+
+
+
+    const [ Email, setEmail ] = useState([]);
+    const [ semNada, setSemNada ] = useState(false)
+    useEffect(() =>{
+      crud.get(`/getemail/${id}`)
+      .then((response) =>{
+        if(response.data){    
+          setEmail(response.data)
+          setSemNada(false)
+        } else {
+          setSemNada(true);
+        }
+      })
+      .catch((error) =>{
+        console.log(error)
+      })
+    }, [])
+
+    const [ UserEmail, setUserEmail ] = useState([]);
+    useEffect(() =>{
+      crud.get(`/getAssocName/${id}`)
+      .then((response) =>{
+        if(response.data){    
+          setUserEmail(response.data)
+          setSemNada(false)
+        }
+      })
+      .catch((error) =>{
+        console.log(error)
+      })
+    }, [])
+
     
     const [campos, setCampos] = useState({  // Variaveis que tem que mudar para cada usuario:
-        nome: 'nome_assoc',
-        email: 'email',
-        mensagem: 'assunto'
+        nome: '',
+        email: '',
+        mensagem: ''
     });
-    
+
+    campos.nome=Email.nome_assoc
+    campos.mensagem = Email.email
+    campos.email = UserEmail.email
 
     function handleFormSubmit2(event){ 
         event.preventDefault(); 
         console.log(campos); 
         send(campos);
+      }
+
+    function handleInputChange(event){
+        campos.mensagem = event.target.value;
+        setCampos(campos);
       }
 
     function send(){
@@ -52,15 +94,22 @@ const AlterarEmail = () => {
     useEffect(() =>{
         crud.get(`/getemail/${id}`)
         .then((response) =>{
-          reset(response.data)
+            setEmail(response.data)
+            reset(response.data)
         })
         .catch((error) =>{
           console.log(error)
         })
       }, [])
+
+      
+    function mostrar(){
+      console.log(campos)
+    }
+      
     return (
         <div class="container">
-            <Header />
+            <App />
             <section class="alterar_emails">
                 <div class="column">
                     <div class="title">
@@ -69,7 +118,7 @@ const AlterarEmail = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div class="inputs_alt">
                             <div class="nome_assoc">
-                                <input type="text" placeholder="Nome do Associado..." name="nome_assoc" {...register("nome_assoc", { required: true })}/>
+                                <input type="text" placeholder="Nome do Associado..." name="nome_assoc"{...register("nome_assoc", { required: true })} />
                                 {errors.nome_assoc && <span>Nome é Requisito Obrigatório</span>}
 
                             </div>
@@ -79,7 +128,7 @@ const AlterarEmail = () => {
 
                             </div>
                             <div class="descrit">
-                                <textarea name="email" id="desc_em" placeholder="Descrição do Email..." {...register("email", { required: true })}></textarea>
+                                <textarea name="mensagem" id="mensagem" placeholder="Descrição do Email..."{...register("email", { required: true })} onChange={handleInputChange}></textarea>
                                 {errors.email && <span>Nome é Requisito Obrigatório</span>}
 
                             </div>

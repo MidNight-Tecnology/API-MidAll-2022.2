@@ -1,5 +1,6 @@
 import { AssocModel } from "./../database/models/assocModel";
 import { Request, response, Response } from "express";
+import { EmailModel } from "../database/models/emailModel";
 
 class AssocController {
   async findAll(req: Request, res: Response) {
@@ -16,6 +17,29 @@ class AssocController {
       },
     });
     return User ? res.status(200).json(User) : res.status(204).send();
+  }
+  async getAssocName(req: Request, res: Response) {
+    const { Id } = req.params;
+    const AssocName = await EmailModel.findOne({
+      attributes: ['nome_assoc'],
+      where: {
+        id: Id,
+      },
+    });
+
+    const NomeAssoc = AssocName['nome_assoc']
+
+    const Email = await AssocModel.findOne({
+      attributes: ['email'],
+      where: {
+        nome: NomeAssoc
+      },
+    });
+
+    return Email
+      ? res.status(200).json(Email)
+      : res.status(204).send();
+
   }
   async create(req: Request, res: Response) {   
     const nome = req.body.nome

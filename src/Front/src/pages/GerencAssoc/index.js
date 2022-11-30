@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "../../components/Header";
+import App from "../../components/Header/App";
 import crud from "../../services/axios";
 import { Link } from "react-router-dom";
 import "../../assets/css/style.css";
@@ -27,7 +27,7 @@ const GerencAssoc = () => {
     return(
       <div className="container">
       <div class="container">
-        <Header />
+        <App />
       </div>
       <section className="Gerenciar_Associados">
           <div className="coluna">
@@ -48,7 +48,7 @@ const GerencAssoc = () => {
     return (
       <div className="container">
         <div class="container">
-          <Header />
+          <App />
         </div>
         <section className="Gerenciar_Associados">
           <div className="coluna">

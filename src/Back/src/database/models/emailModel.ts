@@ -19,7 +19,13 @@ export const EmailModel = db.define("emails", {
     email: {
         type: DataTypes.TEXT,
     },
-    data: {
+    dia: {
+        type: DataTypes.STRING,
+    },
+    mes: {
+        type: DataTypes.STRING,
+    },
+    ano: {
         type: DataTypes.STRING,
     },
     caderno: {

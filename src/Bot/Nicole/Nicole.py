@@ -21,12 +21,12 @@ con = criar_conexao("localhost", "root", "root", "crud")
 
 
 # Inserção de informações do usuário no BD
-def insere_info(con, assoc_nome, data, caderno, pagina, x, email):
+def insere_info(con, assoc_nome, dia, mes, ano, caderno, pagina, x, email):
     cursor = con.cursor()
-    sql = "INSERT INTO emails (nome_assoc, assunto, email, data, caderno, pagina, createdAt, updatedAt) values (%s, %s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO emails (nome_assoc, assunto, email, dia, mes, ano, caderno, pagina, createdAt, updatedAt) values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     assunto = f'Você foi citado(a) na pagina {x} do diario de hoje.'
     now = datetime.now()
-    valores = (assoc_nome, assunto, email, data, caderno, pagina, now, now)
+    valores = (assoc_nome, assunto, email, dia, mes, ano, caderno, pagina, now, now)
     cursor.execute(sql, valores)
     cursor.close()
     con.commit()
@@ -49,7 +49,7 @@ def selecionar_links(con, op):
     for nl in array:
         array_nomes.append(nl[1])
         array_links.append(nl[2])
-        other.append([nl[3],nl[4], nl[5]])
+        other.append([nl[3],nl[4], nl[5], nl[6], nl[7]])
     # cont = cont + 1
     cursor.close()
     if (op == 1):
@@ -79,7 +79,7 @@ for x in array_final:
     pdfcreate = requests.get(filterlink_id, stream=True)
     with open(f'./PDFS/{array_final_nomes[cont]}{cont+1}.pdf', "wb") as creation:
         creation.write(pdfcreate.content)
-    array_lerdepois.append([array_final_nomes[cont], cont+1, other[cont][0],other[cont][1],other[cont][2]])
+    array_lerdepois.append([array_final_nomes[cont], cont+1, other[cont][0],other[cont][1],other[cont][2], other[cont][3], other[cont][4]])
     cont = cont+1
 
 
@@ -102,7 +102,7 @@ for assoc in array_lerdepois:
 
                     # # Jogar informação do associado no bancoasso
                     # con, assoc[0], assoc[1], paragrafo, assoc[2], assoc[3], assoc[4]
-                    insere_info(con,assoc[0],assoc[2],assoc[3],assoc[4],assoc[4],paragrafo)
+                    insere_info(con,assoc[0],assoc[2],assoc[3],assoc[4], assoc[5], assoc[6], assoc[1] ,paragrafo)
 
                     # Assoc [0] = nome do associado
                     # assoc [1] = id

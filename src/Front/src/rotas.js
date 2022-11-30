@@ -3,13 +3,10 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import Login from "./pages/Login";
 import AlterarAssoc from "./pages/AlterarAssoc";
-import AlterarEmail from "./pages/AlterarEmail";
 import CadastroAssoc from "./pages/CadastroAssoc/antigo";
 import Clipping from "./pages/Clipping";
-import Relatorio from "./pages/Relatorio";
 import GerencAssoc from "./pages/GerencAssoc";
-import VerRela from "./pages/VerRela/index";
-import EmailPdf from "./pages/Clipping/alternativo";
+import EmailPdf from "./pages/Alternativa/alternativo";
 import { AuthProvider, AuthContext } from "./contexts/auth";
 
 const Rotas = () => {
@@ -30,7 +27,6 @@ const Rotas = () => {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/teste" element={<EmailPdf />} />
           <Route
             path="/alterassoc/:id"
             element={
@@ -43,7 +39,7 @@ const Rotas = () => {
             path="/alteremail/:id"
             element={
               <Private>
-                <AlterarEmail />
+                <EmailPdf />
               </Private>
             }
           />
@@ -64,26 +60,10 @@ const Rotas = () => {
             }
           />
           <Route
-            path="/rela"
-            element={
-              <Private>
-                <Relatorio />
-              </Private>
-            }
-          />
-          <Route
             path="/gerencassoc"
             element={
               <Private>
                 <GerencAssoc />
-              </Private>
-            }
-          />
-          <Route
-            path="/verrela/:id"
-            element={
-              <Private>
-                <VerRela />
               </Private>
             }
           />

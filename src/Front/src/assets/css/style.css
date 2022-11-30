@@ -149,7 +149,7 @@ textarea::placeholder {
 
 .cadastro_user .coluna form {
     padding-top: 2px;
-    width: 140vh;
+    width: 90%;
 }
 
 .cadastro_user .coluna form .td {
@@ -208,7 +208,6 @@ textarea::placeholder {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 10px;
 }
 
 .info_lado {
@@ -227,42 +226,6 @@ textarea::placeholder {
     padding-left: 10px;
 }
 
-/* .foto_perfil { 
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-#picture_input{
-    display: none;
-}
-
-.picture{
-    margin: 18px 20px 0 0;
-    width: 250px;
-    height: 200px;
-    background: rgb(221, 220, 220);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #aaa;
-    border: 2px dashed currentColor;
-    cursor: pointer;
-    font-family: sans-serif;
-    transition: color 300ms ease-in-out;
-}
-
-.fotin{
-    max-width: 100%;
-}
-
-.picture:hover{
-    color: #A92364;
-}*/
-
 .info2 {
     width: 100%;
 }
@@ -276,7 +239,7 @@ textarea::placeholder {
 .cadastro_user .coluna .info2 .novas_infos {
     margin-top: 3%;
     display: flex;
-    gap: 25px;
+    gap: 50px;
     width: 100%;
 }
 
@@ -289,84 +252,64 @@ textarea::placeholder {
     width: 100%;
     padding: 12px;
 }
-
-/* ALTERAR EMAILS */
-.alterar_emails {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+@media (max-width: 800px) {
+    .cadastro_user .coluna h1 {
+        font-size: 42px;
+    }
+    .cadastro_user .coluna form {
+        width: 90%;
+    }
+    .cadastro_user .coluna .info2 .novas_infos {
+        gap: 40px;
+    }
+    .info_lado {
+        gap: 40px;
+    }
 }
-
-.alterar_emails .column {
-    display: flex;
-    width: 90%;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-content: space-around;
-    align-items: center;
+@media (max-width: 670px) {
+    .cadastro_user .coluna h1 {
+        font-size: 38px;
+    }
+    .cadastro_user .coluna form {
+        width: 86%;
+    }
+    .cadastro_user .coluna .info2 .novas_infos {
+        gap: 35px;
+    }
+    .info_lado {
+        gap: 35px;
+    }
 }
-
-.alterar_emails .column .title {
-    width: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    height: 120px;
+@media (max-width: 510px) {
+    .cadastro_user .coluna h1 {
+        font-size: 34px;
+        padding-top: 33px;
+    }
+    .cadastro_user .coluna form {
+        width: 81%;
+    }
+    .cadastro_user .coluna .info2 .novas_infos {
+        gap: 20px;
+    }
+    .info_lado {
+        gap: 20px;
+    }
 }
-
-.alterar_emails .column .title h1 {
-    width: 100%;
-    font-size: 50px;
-    height: 120px;
-    padding-top: 30px;
-
+@media (max-width: 420px) {
+    .cadastro_user .coluna h1 {
+        font-size: 26px;
+        padding-top: 36px;
+    }
+    .cadastro_user .coluna form {
+        width: 78%;
+    }
+    .cadastro_user .coluna .info2 .novas_infos {
+        gap: 12px;
+    }
+    .info_lado {
+        gap: 12px;
+    }
 }
-
-.alterar_emails .column .inputs_alt {
-    width: 140vh;
-    height: 100%;
-}
-
-.alterar_emails .column .inputs_alt .nome_assoc,
-.alterar_emails .column .inputs_alt .ass,
-.alterar_emails .column .inputs_alt .descrit {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.alterar_emails .column .inputs_alt .nome_assoc input {
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-}
-
-.alterar_emails .column .inputs_alt .ass input {
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-}
-
-.alterar_emails .column .inputs_alt .descrit textarea {
-    resize: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    height: 200px;
-    width: 100%;
-    padding-left: 10px;
-}
-
-.alterar_emails .column .align_buts {
-   display: flex;
-   justify-content: space-around;
-   width: 100%;
-}
-
-.alterar_emails .column .align_buts button {
- width: 260px;
-}
-
 /* CLIPPING DE EMAILS */
 
 .clipping_emails .borda {
@@ -414,53 +357,25 @@ th{
     color: #A92364;
     font-size: 3ch;
 }
-
-/* EMISSÃO DE ROLATÓRIO */
-
-.relatorio .borda {
-    display: block;
+@media (max-width: 800px) {
+    .clipping_emails .coluna h1 {
+        font-size: 42px;
+    }
 }
-
-.relatorio .coluna h1 {
-    text-align: center;
-    width: 100%;
-    padding-top: 30px;
-    font-size: 48px;
-    padding-bottom: 22px;
+@media (max-width: 670px) {
+    .clipping_emails .coluna h1 {
+        font-size: 38px;
+    }
 }
-
-.relatorio .coluna {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+@media (max-width: 510px) {
+    .clipping_emails .coluna h1 {
+        font-size: 34px;
+    }
 }
-
-.relatorio .coluna .align_buts {
-    width: 90%;
-    margin-top: 3vh;
-    display: flex;
-    justify-content: right;
-}
-.relatorio .coluna .align_buts button {
-    padding: 10px 5px 10px 5px;
-}
-
-.relatorio .coluna p{
-    font-size: large;
-}
-
-tr{
-    width: 100%;
-}
-
-th, td{
-    padding: 4px 13px;
-}
-
-th{
-    color: #A92364;
-    font-size: 3ch;
+@media (max-width: 420px) {
+    .clipping_emails .coluna h1 {
+        font-size: 26px;
+    }
 }
 
 /* GERENCIAR ASSOCIADOS */
@@ -513,6 +428,26 @@ th, td{
 th{
     color: #A92364;
     font-size: 3ch;
+}
+@media (max-width: 800px) {
+    .Gerenciar_Associados .coluna h1 {
+        font-size: 42px;
+    }
+}
+@media (max-width: 670px) {
+    .Gerenciar_Associados .coluna h1 {
+        font-size: 38px;
+    }
+}
+@media (max-width: 510px) {
+    .Gerenciar_Associados .coluna h1 {
+        font-size: 34px;
+    }
+}
+@media (max-width: 420px) {
+    .Gerenciar_Associados .coluna h1 {
+        font-size: 26px;
+    }
 }
 
 /* ALTERAR ASSOCIADOS */
@@ -608,37 +543,28 @@ th{
     padding-left: 10px;
 }
 
-.info_lado {
+.alterar_user .coluna .info_lado {
     display: flex;
     gap: 25px;
 }
 
-.info_email {
+.alterar_user .coluna .info_email {
     padding-top: 25px;
     width: 140vh;
 }
 
-.info_email input {
+.alterar_user .coluna .info_email input {
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
     padding-left: 10px;
 }
 
-.foto_perfil {
-    display: flex;
-    flex-direction: row;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.info2 {
+.alterar_user .coluna .info2 {
     width: 100%;
 }
 
-.alterar_user {
+.alterar_user .coluna .alterar_user {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -667,4 +593,62 @@ th{
 
 .error-message {
     color: rgb(240, 47, 47);
+}
+@media (max-width: 800px) {
+    .alterar_user .coluna h1 {
+        font-size: 42px;
+    }
+    .alterar_user .coluna form {
+        width: 90%;
+    }
+    .alterar_user .coluna .info2 .novas_infos {
+        gap: 40px;
+    }
+    .info_lado {
+        gap: 40px;
+    }
+}
+@media (max-width: 670px) {
+    .alterar_user .coluna h1 {
+        font-size: 38px;
+    }
+    .alterar_user .coluna form {
+        width: 86%;
+    }
+    .alterar_user .coluna .info2 .novas_infos {
+        gap: 35px;
+    }
+    .info_lado {
+        gap: 35px;
+    }
+}
+@media (max-width: 510px) {
+    .alterar_user .coluna h1 {
+        font-size: 34px;
+        padding-top: 33px;
+    }
+    .alterar_user .coluna form {
+        width: 81%;
+    }
+    .alterar_user .coluna .info2 .novas_infos {
+        gap: 20px;
+    }
+    .info_lado {
+        gap: 20px;
+    }
+}
+@media (max-width: 420px) {
+    .alterar_user .coluna h1 {
+        font-size: 26px;
+        padding-top: 36px;
+    }
+    .alterar_user .coluna form {
+        width: 78%;
+    }
+    .alterar_user .coluna .info2 .novas_infos {
+        gap: 12px;
+    }
+    .info_lado {
+        gap: 12px;
+    }
 }

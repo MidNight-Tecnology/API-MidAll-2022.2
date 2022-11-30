@@ -12,8 +12,8 @@ con = criar_conexao("localhost", "root", "root", "crud")
 
 def insere_link(con, link, assoc_nome):
     cursor = con.cursor()
-    sql = "INSERT INTO pdfs (nome_assoc, link_pdf, link_pdf_filtrado, createdAt, updatedAt) values (%s, %s, %s, %s, %s)"
-    valores = (assoc_nome, link, '', datetime.date.today(), datetime.date.today())
+    sql = "INSERT INTO pdfs (nome_assoc, link_pdf, createdAt, updatedAt) values (%s, %s, %s, %s)"
+    valores = (assoc_nome, link, datetime.date.today(), datetime.date.today())
     cursor.execute(sql, valores)
     cursor.close()
     con.commit()
@@ -42,6 +42,10 @@ calendar = str(datetime.date.today())
 day = calendar[8:10]
 month = calendar[5:7]
 year = calendar[0:4]
+
+# day = 24
+# month = 11
+# year = 2022
 
 
 # GERAÇÃO/FILTRAGEM DE NOMES DOS ASSOCIADOS

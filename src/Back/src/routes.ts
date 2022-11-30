@@ -25,6 +25,8 @@ router.get("/getassoc", assocControllers.findAll);
 router.get("/getassoc/:Id", assocControllers.findOne);
 router.put("/editassoc/:Id", assocControllers.update);
 router.delete("/deleteassoc/:Id", assocControllers.destroy);
+router.get("/getAssocName/:Id", assocControllers.getAssocName);
+
 
 // essa pros btoa, mas vcs nem vão usar essas
 router.post("/createpdf", pdfControllers.create);

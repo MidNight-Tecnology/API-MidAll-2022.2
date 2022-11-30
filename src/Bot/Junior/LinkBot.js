@@ -79,29 +79,37 @@ let tramontina = [];
                 
 
                 obj.pagina = cort[1].split("fpag_")[1].split("_")[0];
-                obj.data = cort[1].split("data=")[1].split("&caderno")[0];
-                obj.caderno = cort[1].split("?link=%2f2022%2f")[1].split("%2f")[0].replace(/\+/g, " ");
+                // obj.data = cort[1].split("data=")[1].split("&caderno")[0];
+                obj.caderno = 'exec1'
                 
-                // obj.dia = cort[1].split("data=")[1].split("&caderno")[0].split("/")[0];
-                // obj.mes = cort[1].split("data=")[1].split("&caderno")[0].split("/")[1];
-                // obj.ano = cort[1].split("data=")[1].split("&caderno")[0].split("/")[2];
+                obj.dia = cort[1].split("data=")[1].split("&caderno")[0].split("/")[0];
+                obj.mes = cort[1].split("data=")[1].split("&caderno")[0].split("/")[1];
+                obj.ano = cort[1].split("data=")[1].split("&caderno")[0].split("/")[2];
                 
 
               } else if (cort[1].includes("executivo+secao+ii")) {
           
                 obj.pagina = cort[1].split("fpag_")[1].split("_")[0];
-                obj.data = cort[1].split("data=")[1].split("&caderno")[0];
-                obj.caderno = cort[1].split("?link=%2f2022%2f")[1].split("%2f")[0].replace(/\+/g, " ");
+                // obj.data = cort[1].split("data=")[1].split("&caderno")[0];
+                obj.caderno = 'exec2'
+                obj.dia = cort[1].split("data=")[1].split("&caderno")[0].split("/")[0];
+                obj.mes = cort[1].split("data=")[1].split("&caderno")[0].split("/")[1];
+                obj.ano = cort[1].split("data=")[1].split("&caderno")[0].split("/")[2];
                 
 
               } else {
             
                 obj.pagina = cort[1].split("fpag_")[1].split("_")[0];
-                obj.data = cort[1].split("data=")[1].split("&caderno")[0];
-                obj.caderno = cort[1].split("?link=%2f2022%2f")[1].split("%2f")[0].replace(/\+/g, " ");
+                // obj.data = cort[1].split("data=")[1].split("&caderno")[0];
+                obj.caderno = 'cidade'
+                obj.dia = cort[1].split("data=")[1].split("&caderno")[0].split("/")[0];
+                obj.mes = cort[1].split("data=")[1].split("&caderno")[0].split("/")[1];
+                obj.ano = cort[1].split("data=")[1].split("&caderno")[0].split("/")[2];
               
               }
-              const data = obj.data
+              const dia = obj.dia
+              const mes = obj.mes
+              const ano = obj.ano
               const caderno = obj.caderno
               const pagina = obj.pagina
               c++;
@@ -110,7 +118,9 @@ let tramontina = [];
             crud.post("/createfilterlink", {
               nome_assoc: nomes[i],
               link_pdf: cort[1],
-              data: data,
+              dia: dia,
+              mes: mes,
+              ano: ano,
               caderno: caderno,
               pagina: pagina,
               

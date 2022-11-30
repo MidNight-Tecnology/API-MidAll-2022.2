@@ -17,7 +17,13 @@ export const FilterLinksModel = db.define("filterLinks", {
         type: DataTypes.TEXT,
         allowNull: true,
     },
-    data: {
+    dia: {
+        type: DataTypes.STRING,
+    },
+    mes: {
+        type: DataTypes.STRING,
+    },
+    ano: {
         type: DataTypes.STRING,
     },
     caderno: {

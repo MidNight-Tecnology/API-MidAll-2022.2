@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "../../components/Header";
+import App from "../../components/Header/App";
 import crud from "../../services/axios";
 import { Link } from "react-router-dom";
 import "../../assets/css/style.css";
@@ -29,7 +29,7 @@ const Clipping = () => {
     return(
       <div className="container">
       <div class="container">
-        <Header />
+        <App />
       </div>
       <section className="clipping_emails">
         <div className="coluna">
@@ -50,7 +50,7 @@ const Clipping = () => {
     return (
       <div className="container">
         <div class="container">
-          <Header />
+          <App />
         </div>
         <section className="clipping_emails">
           <div className="coluna">
