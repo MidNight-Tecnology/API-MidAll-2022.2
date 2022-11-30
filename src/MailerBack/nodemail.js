@@ -5,7 +5,10 @@ module.exports = (email,nome,mensagem) => {
         auth: {
         user: 'midnight.info.sender@gmail.com',  //email que criei para enviar os emails
         pass: 'irpqvabkpklxawey' //uma chave unica que é feita por uma config no gmail para poder enviar por bot
-    }
+    },
+    tls: {
+        rejectUnauthorized: false
+      }
 });
 
 // Email: midnight.info.sender@gmail.com   Senha:MidnightSender

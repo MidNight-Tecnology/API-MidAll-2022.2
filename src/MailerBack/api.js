@@ -21,7 +21,10 @@ app.post("/send", upload.single("anexo"), (req, res, next) => {
       res.json(response);
       console.log("chegou certo");
     })
-    .catch((error) => res.json(error));
+    .catch((error) => {
+        res.json(error);
+        console.log(error)
+    });
 });
 
 const server = http.createServer(app);
