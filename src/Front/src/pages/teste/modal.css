@@ -1,0 +1,57 @@
+.Modal{
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.align_center {
+  width: 40%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  border-radius: 10px;
+  background-image: linear-gradient(115deg, #F88673, #A92364);
+}
+.align_center h3{
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  font-size: 35px;
+  width: 100%;
+  padding-bottom: 1%;
+  padding-top: 0%;
+}
+.align_center p {
+  color: white;
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+  padding: 1%;
+
+}
+.align_center hr{
+  width: 100%;
+}
+.align_center .But_Align{
+  display: flex;
+  justify-content: space-around;      
+  width: 100%;
+}
+
+.align_center .But_Align button{
+  width: 150px;
+  cursor: pointer;
+  bottom: 0;
+}
+
+.align_center .But_Align .button{
+  background-color: white !important;
+  color: black;
+}

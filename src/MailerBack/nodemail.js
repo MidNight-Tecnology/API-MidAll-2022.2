@@ -16,7 +16,7 @@ module.exports = (email,nome,mensagem) => {
 const mailOptions = {
   from: 'midnight.info.sender@gmail.com',
   to: email, //primeira variavel da função,que adiciona quando for chamar a função, ex:juliopm142@gmail.com
-  subject: `email enviador por ${nome}`, //aqui colocaria o assunto se quiser 
+  subject: `Suas Citações do Diario Oficial, Sr(a). ${nome}`, //aqui colocaria o assunto se quiser 
   text: mensagem  //segunda variavel da função,que adiciona quando for chamar a função, ex: !lorem  
 };
 

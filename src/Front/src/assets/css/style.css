@@ -13,13 +13,16 @@ section {
 }
 
 button {
-    background-image: linear-gradient(115deg, #F88673, #A92364);
-    color: white;
+    /* background-image: linear-gradient(115deg, #F88673, #A92364); */
+    /* color: white; */
     border: none;
     padding: 10px 5px 10px 5px;
     border-radius: 5px;
 }
-
+.butt{
+    background-image: linear-gradient(115deg, #F88673, #A92364);
+    color: white;
+}
 input, 
 textarea,
 select,

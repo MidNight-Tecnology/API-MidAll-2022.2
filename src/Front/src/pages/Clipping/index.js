@@ -72,7 +72,7 @@ const Clipping = () => {
                               <div class="align_buts">
                                 <td>
                                   <Link to={{ pathname: `/alteremail/${Email.id}` }}>
-                                  <button>visualizar</button>
+                                  <button className="butt">visualizar</button>
                                   </Link>
                                 </td>
                               </div>

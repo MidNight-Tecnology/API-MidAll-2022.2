@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import App from "../../components/Header/App";
 import crud from "../../services/axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../assets/css/style.css";
 
 
@@ -93,7 +93,7 @@ const GerencAssoc = () => {
                         <div className="align_buts">
                           <td>
                             <Link to={{ pathname: `/alterassoc/${assoc.id}` }}>
-                              <button type="submit">Alterar</button>
+                              <button className="butt" type="submit">Alterar</button>
                             </Link>
                           </td>
                         </div>

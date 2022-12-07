@@ -27,7 +27,9 @@ function Email({email, um, assoc}) {
 
   function handleInputChange(event){
       campos.mensagem = event.target.value;
+      email = event.target.value;
       setCampos(campos);
+      // setEmail(campos);
     }
 
   function send(){

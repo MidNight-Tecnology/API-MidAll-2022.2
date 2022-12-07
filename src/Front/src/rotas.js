@@ -8,6 +8,7 @@ import Clipping from "./pages/Clipping";
 import GerencAssoc from "./pages/GerencAssoc";
 import EmailPdf from "./pages/Alternativa/alternativo";
 import { AuthProvider, AuthContext } from "./contexts/auth";
+import { Teste } from "./pages/teste";
 
 const Rotas = () => {
   const Private = ({ children }) => {
@@ -27,6 +28,7 @@ const Rotas = () => {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/mod" element={<Teste />} />
           <Route
             path="/alterassoc/:id"
             element={

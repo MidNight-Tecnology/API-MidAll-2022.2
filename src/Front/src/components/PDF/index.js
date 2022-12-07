@@ -10,7 +10,7 @@ function PDF({link}) {
           src={link}
           title="PDF do Diario Oficial"/>
         <div className="bot">
-          <button>Download</button>
+          <a href={link}><button download formTarget="_blank">Download</button></a>
         </div>
       </div>
     </section>
