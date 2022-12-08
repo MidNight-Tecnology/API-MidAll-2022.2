@@ -33,8 +33,8 @@ Relatório de progresso de como ocorreu a entrega e como foi feito todo o proces
 
     
 > 🔗 **Links gerais** <br>
-> - Manual de instalação: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-4/Manual%20Instalação.pdf)
-> - Manual do usuário: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-4/Manual%20Usuário.pdf)
+> - Manual de instalação: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-4/Manual%20de%20Instalação.pdf)
+> - Manual do usuário: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-4/Manual%20de%20Usuário.pdf)
 
 <div align="center"> 
     
