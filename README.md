@@ -28,7 +28,9 @@ A partir da apresentação do desafio enfrentado pela empresa parceira, MidAll[B
 
 A arquitetura de software de um sistema consiste na definição dos componentes de software, suas propriedades externas, e seus relacionamentos com outros softwares. O termo também se refere à documentação da arquitetura de software do sistema.
 
-![Arqui](https://user-images.githubusercontent.com/101107794/204186302-67eb0039-59ae-4570-af26-b58ee9693429.png)
+
+![Arquitetura](https://user-images.githubusercontent.com/101107794/206338720-8b7f4bc8-0bfe-46cf-b8c9-8f5057ab6221.png)
+
 
 
 
@@ -72,8 +74,8 @@ Para melhor visualizar a interface do projeto, será apresentado um gif animado 
 
     
 > 🔗 **Links gerais** <br>
-> - Manual de instalação: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-3/Manual%20Instalação.pdf)
-> - Manual do usuário: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-3/Manual%20Usuário.pdf)
+> - Manual de instalação: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-4/Manual%20de%20Instalação.pdf)
+> - Manual do usuário: [Clique aqui para visualizar](https://github.com/MidNight-Tecnology/API-MidAll-2022.2/blob/Sprint-4/Manual%20de%20Usuário.pdf)
 > - Link Figma: [Clique aqui para visualizar](https://www.figma.com/file/yeUkyS8cgm8wVefsG9YVCU/ROBO---FRONT-(Copy)?node-id=0%3A1)
 
 <div align="center">
